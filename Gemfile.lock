@@ -1,0 +1,145 @@
+GIT
+  remote: git://github.com/amatsuda/kaminari.git
+  revision: 827c5b538d6e0f6b1a9d6a2c6fe1a15e6ead93ef
+  specs:
+    kaminari (0.9.8)
+      rails (>= 3.0.0)
+
+GIT
+  remote: git://github.com/ambethia/recaptcha.git
+  revision: f86ef39cf0dc2cc615638fbc4dd9056a9e2c84dd
+  specs:
+    recaptcha (0.3.1)
+
+GIT
+  remote: git://github.com/chriseppstein/compass.git
+  revision: 303453d9a638184ba3dd2414d60a6272e4f545fd
+  specs:
+    compass (0.11.beta.2.303453d)
+      chunky_png (~> 0.12.0)
+      sass (>= 3.1.0.alpha.218)
+
+GIT
+  remote: git://github.com/justinfrench/formtastic.git
+  revision: ea7d9c6bc38df6d31319ee7dead3a54126763414
+  specs:
+    formtastic (1.2.3)
+      actionpack (>= 2.3.7)
+      activesupport (>= 2.3.7)
+      i18n (~> 0.4)
+
+GIT
+  remote: git://github.com/plataformatec/devise.git
+  revision: f964ea526bd31a69ab1543a636976d382cee7299
+  specs:
+    devise (1.2.rc)
+      bcrypt-ruby (~> 2.1.2)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.0.3)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    abstract (1.0.0)
+    actionmailer (3.0.4)
+      actionpack (= 3.0.4)
+      mail (~> 2.2.15)
+    actionpack (3.0.4)
+      activemodel (= 3.0.4)
+      activesupport (= 3.0.4)
+      builder (~> 2.1.2)
+      erubis (~> 2.6.6)
+      i18n (~> 0.4)
+      rack (~> 1.2.1)
+      rack-mount (~> 0.6.13)
+      rack-test (~> 0.5.7)
+      tzinfo (~> 0.3.23)
+    activemodel (3.0.4)
+      activesupport (= 3.0.4)
+      builder (~> 2.1.2)
+      i18n (~> 0.4)
+    activerecord (3.0.4)
+      activemodel (= 3.0.4)
+      activesupport (= 3.0.4)
+      arel (~> 2.0.2)
+      tzinfo (~> 0.3.23)
+    activeresource (3.0.4)
+      activemodel (= 3.0.4)
+      activesupport (= 3.0.4)
+    activesupport (3.0.4)
+    arel (2.0.8)
+    bcrypt-ruby (2.1.4)
+    builder (2.1.2)
+    cancan (1.5.1)
+    chunky_png (0.12.0)
+    erubis (2.6.6)
+      abstract (>= 1.0.0)
+    haml (3.1.0.alpha.147)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
+    i18n (0.5.0)
+    jquery-rails (0.2.7)
+      rails (~> 3.0)
+      thor (~> 0.14.4)
+    json (1.5.1)
+    mail (2.2.15)
+      activesupport (>= 2.3.6)
+      i18n (>= 0.4.0)
+      mime-types (~> 1.16)
+      treetop (~> 1.4.8)
+    mime-types (1.16)
+    mysql2 (0.2.6)
+    orm_adapter (0.0.4)
+    paperclip (2.3.8)
+      activerecord
+      activesupport
+    polyglot (0.3.1)
+    rack (1.2.1)
+    rack-mount (0.6.13)
+      rack (>= 1.0.0)
+    rack-test (0.5.7)
+      rack (>= 1.0)
+    rails (3.0.4)
+      actionmailer (= 3.0.4)
+      actionpack (= 3.0.4)
+      activerecord (= 3.0.4)
+      activeresource (= 3.0.4)
+      activesupport (= 3.0.4)
+      bundler (~> 1.0)
+      railties (= 3.0.4)
+    railties (3.0.4)
+      actionpack (= 3.0.4)
+      activesupport (= 3.0.4)
+      rake (>= 0.8.7)
+      thor (~> 0.14.4)
+    rake (0.8.7)
+    sass (3.1.0.alpha.221)
+    thor (0.14.6)
+    treetop (1.4.9)
+      polyglot (>= 0.3.1)
+    tzinfo (0.3.24)
+    warden (1.0.3)
+      rack (>= 1.0.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bcrypt-ruby
+  cancan
+  compass!
+  devise!
+  formtastic!
+  haml (>= 3.1.0.alpha.147)
+  haml-rails
+  jquery-rails
+  json
+  kaminari!
+  mysql2
+  paperclip
+  rails (= 3.0.4)
+  recaptcha!
+  sass (>= 3.1.0.alpha.214)
