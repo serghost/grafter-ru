@@ -15,10 +15,10 @@ gem 'json'
 
 gem 'sass', '>= 3.1.0.alpha.214'
 gem 'haml', '>= 3.1.0.alpha.147'
-gem 'jquery-rails'
-gem 'haml-rails'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git'
 
 group :development, :test do
+  gem 'haml-rails'
+  gem 'jquery-rails'
 end
