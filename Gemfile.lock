@@ -37,9 +37,16 @@ GIT
       orm_adapter (~> 0.0.3)
       warden (~> 1.0.3)
 
+GIT
+  remote: git://github.com/timcharper/spork.git
+  revision: bda49113983b4c2fd485847d5f17731e6ff1d5a7
+  specs:
+    spork (0.9.0.rc3)
+
 GEM
   remote: http://rubygems.org/
   specs:
+    ZenTest (4.5.0)
     abstract (1.0.0)
     actionmailer (3.0.4)
       actionpack (= 3.0.4)
@@ -67,7 +74,10 @@ GEM
       activemodel (= 3.0.4)
       activesupport (= 3.0.4)
     activesupport (3.0.4)
+    annotate (2.4.0)
     arel (2.0.8)
+    autotest (4.4.6)
+      ZenTest (>= 4.4.1)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     cancan (1.5.1)
@@ -179,6 +189,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
+  autotest
   bcrypt-ruby
   cancan
   capybara
@@ -200,3 +212,4 @@ DEPENDENCIES
   rspec
   rspec-rails
   sass (>= 3.1.0.alpha.214)
+  spork!
