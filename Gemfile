@@ -21,4 +21,14 @@ gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git'
 group :development, :test do
   gem 'haml-rails'
   gem 'jquery-rails'
+  gem 'annotate'
+  gem 'autotest'
+  gem 'spork', git: 'git://github.com/timcharper/spork.git'
+
+  gem 'nokogiri'
+  gem 'cucumber'
+  gem 'cucumber-rails'
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'capybara'
 end
