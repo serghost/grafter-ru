@@ -6,6 +6,11 @@
 +blueprint
 +blueprint-scaffolding("body.bp")
 
+$header = #cddae3
+$section = #316594
+$page = #ffffff
+$footer = #d0d9e0
+
 .container
   +container
 
@@ -15,16 +20,26 @@ body.bp
   +blueprint-debug
   +blueprint-interaction
 
+  background-color: $footer
+
   .header
-    background-color: #cddae3
+    background-color: $header
 
     /* temp */
+    height: 60px
+    // border-bottom: 1px solid #5c7a92
+
+  .section
+    background: $section url("/images/section_100.png") center
     height: 100px
-    border-bottom: 1px solid #5c7a92
 
   .page
-    background-color: #5c7a92
-    border-top: 1px solid #cddae3
+    background-color: $page
+    height: 300px
+
+  .footer
+    background: $footer url("/images/footer.png") repeat-x
+    height: 200px
 
 
 form.bp

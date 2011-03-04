@@ -38,6 +38,14 @@ GIT
       warden (~> 1.0.3)
 
 GIT
+  remote: git://github.com/stonean/slim.git
+  revision: 3f48c70e1b2d2916abce224317752f2da0a35c66
+  specs:
+    slim (0.9.1.alpha.2)
+      temple (~> 0.1.7)
+      tilt (~> 1.2)
+
+GIT
   remote: git://github.com/timcharper/spork.git
   revision: bda49113983b4c2fd485847d5f17731e6ff1d5a7
   specs:
@@ -174,8 +182,10 @@ GEM
       ffi (~> 0.6.3)
       json_pure
       rubyzip
+    temple (0.1.7)
     term-ansicolor (1.0.5)
     thor (0.14.6)
+    tilt (1.2.2)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
     trollop (1.16.2)
@@ -212,4 +222,5 @@ DEPENDENCIES
   rspec
   rspec-rails
   sass (>= 3.1.0.alpha.214)
+  slim!
   spork!
