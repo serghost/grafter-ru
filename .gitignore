@@ -1,8 +1,9 @@
+.DS_Store
 .bundle
 .idea
-.DS_Store
+.sass-cache
 db/*.sqlite3
-public/stylesheets/compiled
 log/*.log
-tmp/
 public/stylesheets/compiled
+public/stylesheets/compiled
+tmp/

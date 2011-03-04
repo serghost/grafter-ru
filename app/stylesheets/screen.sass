@@ -1,0 +1,31 @@
+@import "blueprint/reset"
+@import "partials/base"
+@import "blueprint"
+@import "blueprint/scaffolding"
+
++blueprint
++blueprint-scaffolding("body.bp")
+
+.container
+  +container
+
+body.bp
+  +blueprint-typography(true)
+  +blueprint-utilities
+  +blueprint-debug
+  +blueprint-interaction
+
+  .header
+    background-color: #cddae3
+
+    /* temp */
+    height: 100px
+    border-bottom: 1px solid #5c7a92
+
+  .page
+    background-color: #5c7a92
+    border-top: 1px solid #cddae3
+
+
+form.bp
+  +blueprint-form

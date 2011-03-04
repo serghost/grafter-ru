@@ -13,6 +13,7 @@ gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'paperclip'
 gem 'json'
 
+gem 'slim', git: 'git://github.com/stonean/slim.git', require: 'slim/rails'
 gem 'sass', '>= 3.1.0.alpha.214'
 gem 'haml', '>= 3.1.0.alpha.147'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
