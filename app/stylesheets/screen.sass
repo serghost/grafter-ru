@@ -14,13 +14,16 @@ $footer = #d0d9e0
 .container
   +container
 
-body.bp
+body
   +blueprint-typography(true)
   +blueprint-utilities
-  +blueprint-debug
   +blueprint-interaction
 
   background-color: $footer
+
+  a.button
+    text-decoration: none
+    color: #3C3C3D
 
   .header
     background-color: $header
@@ -29,18 +32,101 @@ body.bp
     height: 60px
     // border-bottom: 1px solid #5c7a92
 
-  .section
+    h1
+      padding-top: 10px
+
+      a
+        font-family: 'Puritan', arial, serif
+        margin-top: 8px
+        color: #444
+        font-size: 40px
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.6)
+        text-decoration: none
+        -webkit-transition: all 0.4s
+
+      a:hover
+        color: #000
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.9)
+
+  .topside
     background: $section url("/images/section_100.png") center
     height: 100px
 
-  .page
+    .search-side
+      +column(24)
+
+      h2
+        color: white
+        +column(24)
+        margin: 0
+        padding: 10px 0 5px 0
+
+      .search
+        width: 944px
+        overflow: auto
+        padding: 3px
+        // z-index: 1000
+        -webkit-transition: all 0.4s
+
+        input[type=text]
+          width: 830px
+          margin: 0
+          padding: 0
+          height: 24px
+          border: 0
+          -webkit-box-shadow: 0 0 3px black
+          -webkit-border-top-left-radius: 6px
+          -webkit-border-bottom-left-radius: 6px
+
+        input[type=submit]
+          width: 114px
+          margin: 0
+          padding: 0
+          border: 0
+          height: 24px
+          cursor: pointer
+          -webkit-box-shadow: 0 0 3px black
+          -webkit-border-top-right-radius: 6px
+          -webkit-border-bottom-right-radius: 6px
+
+  .section
     background-color: $page
-    height: 300px
+    overflow: auto
+
+    .page
+      +column(24)
+      padding: 20px 0
+      // +showgrid
+
+      img
+        +column(8)
+
+      p
+        +column(16, true)
+        color: #222
+        font-size: 13px
+
+        &.register
+          color: black
+          background-color: rgba(55, 55, 255, 0.1)
+          padding: 10px 0
+          text-align: center
+          font-size: 14px
+          border-top: 1px solid rgba(50, 50, 250, 0.25)
+
+          span
+            text-shadow: 0 0 3px rgba(255, 255, 255, 0.3)
+
+        span.grafter
+          font-weight: bold
+          font-size: 1.3em
+          text-decoration: underline
+          color: black
+
 
   .footer
     background: $footer url("/images/footer.png") repeat-x
     height: 200px
-
 
 form.bp
   +blueprint-form
