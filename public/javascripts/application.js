@@ -8,4 +8,13 @@ $(function() {
     monochromatic: false
   });
 
+  $("#add_price").click(function(){
+    $("#price_dialog").dialog({
+      height: 140,
+      resizable: false,
+      zIndex: 10000,
+      modal: true
+    });
+  });
+
 });

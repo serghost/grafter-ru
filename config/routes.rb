@@ -3,5 +3,7 @@ Grafter::Application.routes.draw do
 
   match "/search" => "page#search"
 
-  resources :universities
+  resources :universities do
+    resources :prices
+  end
 end
