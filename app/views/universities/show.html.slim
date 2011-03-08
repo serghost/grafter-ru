@@ -1,0 +1,34 @@
+- content_for :topside do
+  .university-side
+    .logo
+      img src="/images/spbgtu.png"
+
+    .item
+      .title
+        h2 MGU
+        | Moscow department, Moscow
+
+      .edit_buttons
+        a href="#" class="pill button left"
+          span class="pen icon"
+          | Edit
+        a href="#" class="middle pill button"
+          span class="mail icon"
+          | Report
+        a href="#" class="right negative pill button"
+          span class="trash icon"
+          | Delete
+
+    ul.tabs
+      li.current
+        a href="#" Prices
+      li
+        a href="#" Reviews
+      li
+        a href="#" Feed
+
+.tab_container
+  #prices.tab_content
+    = render "prices"
+  #reviews.tab_content
+  #feed.tab_content

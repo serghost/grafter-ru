@@ -1,0 +1,46 @@
+.tab_options
+  label for="lesson" Lesson
+  select#lesson
+    option value="title" OOP
+
+  label for="sorting" Sorting
+  select#sorting
+    option value="title" Title
+
+  input#untrusted type="checkbox"
+  label for="untrusted" Show untrusted
+
+.tab_buttons
+  a href="#" class="left pill button"
+    span class="plus icon"
+    | Add price
+  a href="#" class="right negative pill button"
+    span class="trash icon"
+    | Clean all
+
+.tab_items
+  table
+    thead
+      tr
+        th width="24%" Person
+        th Score: 5
+        th Score: 4
+        th Score: 3
+        th Attestation
+        th Course work
+        th Test
+        th
+
+    tbody
+      tr
+        th.person_title
+          | Stepan T.R.
+        th $300
+        th $200
+        th $100
+        th $50
+        th $1000
+        th $150
+        th.buttons
+          a href="#" class="pill button left" Edit
+          a href="#" class="pill button right negative" Delete
