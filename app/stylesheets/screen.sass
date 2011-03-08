@@ -14,6 +14,22 @@ $footer = #d0d9e0
 .container
   +container
 
+.dialog
+  display: none
+
+  form
+
+    label.price_label
+      width: 110px
+      display: inline-block
+
+    input.price_input
+      display: inline-block
+      width: 300px
+
+    input.price_edit
+      width: 100px
+
 body
   +blueprint-typography(true)
   +blueprint-utilities
@@ -266,6 +282,3 @@ body
   .footer
     background: $footer url("/images/footer.png") repeat-x
     height: 200px
-
-form.bp
-  +blueprint-form

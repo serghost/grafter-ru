@@ -1,0 +1,47 @@
+= form_tag "/", :remote => true do
+  = label_tag :lesson, nil, :class => "price_label"
+  = text_field_tag :lesson, nil, :class => "price_input"
+
+  = label_tag :teacher, nil, :class => "price_label"
+  = text_field_tag :teacher, nil, :class => "price_input"
+
+  table
+    thead
+      tr
+        th
+          label for="attestation" Attestation
+        th
+          label for="test" Test
+        th
+          label for="course_work" Course work
+
+    tbody
+      tr
+        td
+          input.price_edit type="text" placeholder="0.0" id="attestation"
+        td
+          input.price_edit type="text" placeholder="0.0" id="test"
+        td
+          input.price_edit type="text" placeholder="0.0" id="course_work"
+
+  table
+    thead
+      tr
+        th
+          label for="5" Score: 5
+        th
+          label for="4" Score: 4
+        th
+          label for="3" Score: 3
+
+    tbody
+      tr
+        td
+          input.price_edit type="text" placeholder="0.0" id="5"
+        td
+          input.price_edit type="text" placeholder="0.0" id="4"
+        td
+          input.price_edit type="text" placeholder="0.0" id="3"
+
+  = button_to :back
+  = submit_tag :create
