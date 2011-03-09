@@ -15,6 +15,7 @@ $footer = #d0d9e0
   +container
 
 .dialog
+  +column(12)
   display: none
 
   form
@@ -50,6 +51,7 @@ body
 
     h1
       padding-top: 10px
+      +column(4)
 
       a
         font-family: 'Puritan', arial, serif
@@ -63,6 +65,14 @@ body
       a:hover
         color: #000
         text-shadow: 0 0 1px rgba(255, 255, 255, 0.9)
+
+    ul
+      list-style: none
+      +column(11)
+
+      li
+        display: inline-block
+        padding: 10px
 
   .topside
     background: $section url("/images/section_100.png") center
@@ -111,7 +121,7 @@ body
         margin: 0
         position: absolute
         bottom: 0
-        z-index: 2000
+        // z-index: 2000
 
         li
           display: inline-block

@@ -13,9 +13,9 @@ GIT
 
 GIT
   remote: git://github.com/chriseppstein/compass.git
-  revision: 303453d9a638184ba3dd2414d60a6272e4f545fd
+  revision: 132621c230f76192d3605b5e1b5ae0d58bff57bc
   specs:
-    compass (0.11.beta.2.303453d)
+    compass (0.11.beta.2.132621c)
       chunky_png (~> 0.12.0)
       sass (>= 3.1.0.alpha.218)
 
@@ -30,7 +30,7 @@ GIT
 
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: f964ea526bd31a69ab1543a636976d382cee7299
+  revision: 63b72cd512b14ebe5bbf48eb80d1aba39978735e
   specs:
     devise (1.2.rc)
       bcrypt-ruby (~> 2.1.2)

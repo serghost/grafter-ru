@@ -21,6 +21,17 @@ html
         h1
           a href="#{root_url}" Grafter
 
+        ul
+          li
+            = link_to "Universitites", universities_path
+          li
+            = link_to "Sign Up"
+          li
+            = link_to "Sign In"
+
+        = form_tag search_path, :method => :get do
+          = text_field_tag :query, nil, :placeholder => "Enter your university to search"
+
     .topside
       .container
         == yield :topside
