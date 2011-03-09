@@ -119,11 +119,6 @@ GEM
     gherkin (2.1.5)
       trollop (~> 1.16.2)
     haml (3.1.0.alpha.147)
-    haml-rails (0.3.4)
-      actionpack (~> 3.0)
-      activesupport (~> 3.0)
-      haml (~> 3.0)
-      railties (~> 3.0)
     i18n (0.5.0)
     jquery-rails (0.2.7)
       rails (~> 3.0)
@@ -210,7 +205,6 @@ DEPENDENCIES
   devise!
   formtastic!
   haml (>= 3.1.0.alpha.147)
-  haml-rails
   jquery-rails
   json
   kaminari!

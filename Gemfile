@@ -20,7 +20,6 @@ gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git'
 
 group :development, :test do
-  gem 'haml-rails'
   gem 'jquery-rails'
   gem 'annotate'
   gem 'autotest'
