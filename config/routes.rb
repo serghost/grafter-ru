@@ -7,5 +7,6 @@ Grafter::Application.routes.draw do
 
   resources :universities do
     resources :prices
+    resources :reviews
   end
 end
