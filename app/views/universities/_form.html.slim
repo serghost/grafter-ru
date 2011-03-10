@@ -1,0 +1,22 @@
+= form_tag universities_path do
+  .span-24
+    = label_tag :short, "Short name"
+    = text_field_tag :short
+
+  .span-24
+    = label_tag :title
+    = text_field_tag :title
+
+  .span-24
+    = label_tag :logo
+    = file_field_tag :logo
+
+  .span-24
+    .span-12
+      = label_tag :department
+      = select_tag :department, "<option>Moscow city</option>".html_safe
+
+    = label_tag :city
+    = select_tag :city, "<option>Moscow</option>".html_safe
+
+  = submit_tag

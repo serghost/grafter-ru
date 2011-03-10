@@ -1,0 +1,13 @@
+.span-24
+  .span-20
+    = label_tag :department
+    = select_tag :department, "<option>Moscow city</option>".html_safe
+
+    = label_tag :city
+    = select_tag :city, "<option>Moscow</option>".html_safe
+
+  .span-4.last
+    a href="#{new_university_path}" class="button pill" Add university
+
+ul
+  = render "universities/university"
