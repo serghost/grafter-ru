@@ -1300,6 +1300,66 @@ form.inline p {
 }
 
 /* line 20, ../../app/stylesheets/screen.sass */
+.bad {
+  background-color: rgba(200, 20, 20, 0.4);
+}
+
+/* line 23, ../../app/stylesheets/screen.sass */
+.good {
+  background-color: rgba(20, 200, 20, 0.4);
+}
+
+/* line 26, ../../app/stylesheets/screen.sass */
+.review {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .review {
+  overflow-x: hidden;
+}
+/* line 29, ../../app/stylesheets/screen.sass */
+.review div.gravatar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .review div.gravatar {
+  overflow-x: hidden;
+}
+/* line 32, ../../app/stylesheets/screen.sass */
+.review div.gravatar img {
+  width: 32px;
+  height: 32px;
+}
+/* line 36, ../../app/stylesheets/screen.sass */
+.review .review_title {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 910px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .review .review_title {
+  overflow-x: hidden;
+}
+/* line 39, ../../app/stylesheets/screen.sass */
+.review .comment {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html .review .comment {
+  overflow-x: hidden;
+}
+
+/* line 42, ../../app/stylesheets/screen.sass */
 .prices {
   display: inline;
   float: left;
@@ -1310,17 +1370,17 @@ form.inline p {
 * html .prices {
   overflow-x: hidden;
 }
-/* line 23, ../../app/stylesheets/screen.sass */
+/* line 45, ../../app/stylesheets/screen.sass */
+.prices .person_title {
+  display: inline-block;
+}
+/* line 48, ../../app/stylesheets/screen.sass */
 .prices img.gravatar {
   display: inline-block;
   width: 32px;
   height: 32px;
 }
-/* line 28, ../../app/stylesheets/screen.sass */
-.prices .person_title {
-  display: inline-block;
-}
-/* line 31, ../../app/stylesheets/screen.sass */
+/* line 53, ../../app/stylesheets/screen.sass */
 .prices form {
   display: inline;
   float: left;
@@ -1331,21 +1391,21 @@ form.inline p {
 * html .prices form {
   overflow-x: hidden;
 }
-/* line 34, ../../app/stylesheets/screen.sass */
+/* line 56, ../../app/stylesheets/screen.sass */
 .prices form label.price_label {
   width: 110px;
   display: inline-block;
 }
-/* line 38, ../../app/stylesheets/screen.sass */
+/* line 60, ../../app/stylesheets/screen.sass */
 .prices form input.price_input {
   display: inline-block;
   width: 300px;
 }
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 64, ../../app/stylesheets/screen.sass */
 .prices form input.price_edit {
   width: 100px;
 }
-/* line 45, ../../app/stylesheets/screen.sass */
+/* line 67, ../../app/stylesheets/screen.sass */
 .prices .prices_options {
   display: inline;
   float: left;
@@ -1356,7 +1416,7 @@ form.inline p {
 * html .prices .prices_options {
   overflow-x: hidden;
 }
-/* line 48, ../../app/stylesheets/screen.sass */
+/* line 70, ../../app/stylesheets/screen.sass */
 .prices .prices_buttons {
   display: inline;
   float: left;
@@ -1368,7 +1428,7 @@ form.inline p {
 * html .prices .prices_buttons {
   overflow-x: hidden;
 }
-/* line 52, ../../app/stylesheets/screen.sass */
+/* line 74, ../../app/stylesheets/screen.sass */
 .prices .prices_items {
   display: inline;
   float: left;
@@ -1379,13 +1439,13 @@ form.inline p {
 * html .prices .prices_items {
   overflow-x: hidden;
 }
-/* line 55, ../../app/stylesheets/screen.sass */
+/* line 77, ../../app/stylesheets/screen.sass */
 .prices th.buttons {
   text-align: right;
   padding: 0;
 }
 
-/* line 59, ../../app/stylesheets/screen.sass */
+/* line 81, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -1692,18 +1752,18 @@ body .removed {
   background: #990000;
   color: white;
 }
-/* line 66, ../../app/stylesheets/screen.sass */
+/* line 88, ../../app/stylesheets/screen.sass */
 body a.button {
   text-decoration: none;
   color: #3c3c3d;
 }
-/* line 70, ../../app/stylesheets/screen.sass */
+/* line 92, ../../app/stylesheets/screen.sass */
 body .header {
   background-color: #cddae3;
   /* temp */
   height: 60px;
 }
-/* line 77, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 body .header h1 {
   padding-top: 10px;
   display: inline;
@@ -1715,7 +1775,7 @@ body .header h1 {
 * html body .header h1 {
   overflow-x: hidden;
 }
-/* line 81, ../../app/stylesheets/screen.sass */
+/* line 103, ../../app/stylesheets/screen.sass */
 body .header h1 a {
   font-family: "Puritan", arial, serif;
   margin-top: 8px;
@@ -1725,12 +1785,12 @@ body .header h1 a {
   text-decoration: none;
   -webkit-transition: all 0.4s;
 }
-/* line 90, ../../app/stylesheets/screen.sass */
+/* line 112, ../../app/stylesheets/screen.sass */
 body .header h1 a:hover {
   color: black;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
 }
-/* line 94, ../../app/stylesheets/screen.sass */
+/* line 116, ../../app/stylesheets/screen.sass */
 body .header ul {
   list-style: none;
   display: inline;
@@ -1742,18 +1802,18 @@ body .header ul {
 * html body .header ul {
   overflow-x: hidden;
 }
-/* line 98, ../../app/stylesheets/screen.sass */
+/* line 120, ../../app/stylesheets/screen.sass */
 body .header ul li {
   display: inline-block;
   padding: 10px;
 }
-/* line 102, ../../app/stylesheets/screen.sass */
+/* line 124, ../../app/stylesheets/screen.sass */
 body .topside {
   background: #316594 url("/images/section_100.png") center;
   height: 100px;
   overflow: hidden;
 }
-/* line 107, ../../app/stylesheets/screen.sass */
+/* line 129, ../../app/stylesheets/screen.sass */
 body .topside .university-side {
   display: inline;
   float: left;
@@ -1766,7 +1826,7 @@ body .topside .university-side {
 * html body .topside .university-side {
   overflow-x: hidden;
 }
-/* line 112, ../../app/stylesheets/screen.sass */
+/* line 134, ../../app/stylesheets/screen.sass */
 body .topside .university-side .logo {
   display: inline;
   float: left;
@@ -1778,13 +1838,13 @@ body .topside .university-side .logo {
 * html body .topside .university-side .logo {
   overflow-x: hidden;
 }
-/* line 116, ../../app/stylesheets/screen.sass */
+/* line 138, ../../app/stylesheets/screen.sass */
 body .topside .university-side .logo img.side {
   width: 64px;
   height: 64px;
   display: inline-block;
 }
-/* line 121, ../../app/stylesheets/screen.sass */
+/* line 143, ../../app/stylesheets/screen.sass */
 body .topside .university-side .edit_buttons {
   display: inline;
   float: left;
@@ -1798,11 +1858,11 @@ body .topside .university-side .edit_buttons {
 * html body .topside .university-side .edit_buttons {
   overflow-x: hidden;
 }
-/* line 127, ../../app/stylesheets/screen.sass */
+/* line 149, ../../app/stylesheets/screen.sass */
 body .topside .university-side .edit_buttons:hover {
   opacity: 1;
 }
-/* line 130, ../../app/stylesheets/screen.sass */
+/* line 152, ../../app/stylesheets/screen.sass */
 body .topside .university-side .item {
   display: inline;
   float: left;
@@ -1815,7 +1875,7 @@ body .topside .university-side .item {
 * html body .topside .university-side .item {
   overflow-x: hidden;
 }
-/* line 135, ../../app/stylesheets/screen.sass */
+/* line 157, ../../app/stylesheets/screen.sass */
 body .topside .university-side .title {
   display: inline;
   float: left;
@@ -1826,12 +1886,12 @@ body .topside .university-side .title {
 * html body .topside .university-side .title {
   overflow-x: hidden;
 }
-/* line 138, ../../app/stylesheets/screen.sass */
+/* line 160, ../../app/stylesheets/screen.sass */
 body .topside .university-side .title h2 {
   margin: 0;
   padding: 0;
 }
-/* line 142, ../../app/stylesheets/screen.sass */
+/* line 164, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs {
   padding: 0;
   list-style: none;
@@ -1840,7 +1900,7 @@ body .topside .university-side ul.tabs {
   position: absolute;
   bottom: 0;
 }
-/* line 151, ../../app/stylesheets/screen.sass */
+/* line 173, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li {
   display: inline-block;
   margin-left: 3px;
@@ -1851,24 +1911,24 @@ body .topside .university-side ul.tabs li {
   opacity: 0.85;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-/* line 161, ../../app/stylesheets/screen.sass */
+/* line 183, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li.current {
   background: white;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   opacity: 1;
 }
-/* line 166, ../../app/stylesheets/screen.sass */
+/* line 188, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li.current a {
   color: black;
 }
-/* line 169, ../../app/stylesheets/screen.sass */
+/* line 191, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li a {
   color: #333344;
   text-decoration: none;
   font-weight: bold;
   font-size: 13px;
 }
-/* line 175, ../../app/stylesheets/screen.sass */
+/* line 197, ../../app/stylesheets/screen.sass */
 body .topside .search-side {
   display: inline;
   float: left;
@@ -1879,7 +1939,7 @@ body .topside .search-side {
 * html body .topside .search-side {
   overflow-x: hidden;
 }
-/* line 178, ../../app/stylesheets/screen.sass */
+/* line 200, ../../app/stylesheets/screen.sass */
 body .topside .search-side h2 {
   color: white;
   display: inline;
@@ -1893,14 +1953,14 @@ body .topside .search-side h2 {
 * html body .topside .search-side h2 {
   overflow-x: hidden;
 }
-/* line 184, ../../app/stylesheets/screen.sass */
+/* line 206, ../../app/stylesheets/screen.sass */
 body .topside .search-side .search {
   width: 944px;
   overflow: auto;
   padding: 3px;
   -webkit-transition: all 0.4s;
 }
-/* line 191, ../../app/stylesheets/screen.sass */
+/* line 213, ../../app/stylesheets/screen.sass */
 body .topside .search-side .search input[type=text] {
   width: 830px;
   margin: 0;
@@ -1911,7 +1971,7 @@ body .topside .search-side .search input[type=text] {
   -webkit-border-top-left-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;
 }
-/* line 201, ../../app/stylesheets/screen.sass */
+/* line 223, ../../app/stylesheets/screen.sass */
 body .topside .search-side .search input[type=submit] {
   width: 114px;
   margin: 0;
@@ -1923,12 +1983,12 @@ body .topside .search-side .search input[type=submit] {
   -webkit-border-top-right-radius: 6px;
   -webkit-border-bottom-right-radius: 6px;
 }
-/* line 212, ../../app/stylesheets/screen.sass */
+/* line 234, ../../app/stylesheets/screen.sass */
 body .section {
   background-color: white;
   overflow: auto;
 }
-/* line 216, ../../app/stylesheets/screen.sass */
+/* line 238, ../../app/stylesheets/screen.sass */
 body .section .page {
   display: inline;
   float: left;
@@ -1940,7 +2000,7 @@ body .section .page {
 * html body .section .page {
   overflow-x: hidden;
 }
-/* line 221, ../../app/stylesheets/screen.sass */
+/* line 243, ../../app/stylesheets/screen.sass */
 body .section .page img.university_stack {
   display: inline;
   float: left;
@@ -1951,7 +2011,7 @@ body .section .page img.university_stack {
 * html body .section .page img.university_stack {
   overflow-x: hidden;
 }
-/* line 224, ../../app/stylesheets/screen.sass */
+/* line 246, ../../app/stylesheets/screen.sass */
 body .section .page p {
   display: inline;
   float: left;
@@ -1964,7 +2024,7 @@ body .section .page p {
 * html body .section .page p {
   overflow-x: hidden;
 }
-/* line 229, ../../app/stylesheets/screen.sass */
+/* line 251, ../../app/stylesheets/screen.sass */
 body .section .page p.register {
   color: black;
   background-color: rgba(55, 55, 255, 0.1);
@@ -1973,29 +2033,29 @@ body .section .page p.register {
   font-size: 14px;
   border-top: 1px solid rgba(50, 50, 250, 0.25);
 }
-/* line 237, ../../app/stylesheets/screen.sass */
+/* line 259, ../../app/stylesheets/screen.sass */
 body .section .page p.register span {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
 }
-/* line 240, ../../app/stylesheets/screen.sass */
+/* line 262, ../../app/stylesheets/screen.sass */
 body .section .page p span.grafter {
   font-weight: bold;
   font-size: 1.3em;
   text-decoration: underline;
   color: black;
 }
-/* line 246, ../../app/stylesheets/screen.sass */
+/* line 268, ../../app/stylesheets/screen.sass */
 body .section .page ul {
   list-style: none;
   margin: 0;
   padding: 2px;
 }
-/* line 251, ../../app/stylesheets/screen.sass */
+/* line 273, ../../app/stylesheets/screen.sass */
 body .section .page ul li {
   display: inline-block;
   margin: 0 5px 5px 0;
 }
-/* line 255, ../../app/stylesheets/screen.sass */
+/* line 277, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item {
   padding: 3px 6px;
   background: #33ccff;
@@ -2004,18 +2064,18 @@ body .section .page ul li a.university_item {
   display: block;
   -webkit-transition: all 0.3s;
 }
-/* line 263, ../../app/stylesheets/screen.sass */
+/* line 285, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item:hover {
   background: #22bbee;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
-/* line 267, ../../app/stylesheets/screen.sass */
+/* line 289, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item img.icon {
   display: inline-block;
   width: 32px;
   height: 32px;
 }
-/* line 272, ../../app/stylesheets/screen.sass */
+/* line 294, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item span.feed {
   display: block;
   position: absolute;
@@ -2027,16 +2087,16 @@ body .section .page ul li a.university_item span.feed {
   color: white;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
-/* line 283, ../../app/stylesheets/screen.sass */
+/* line 305, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item .item {
   display: inline-block;
 }
-/* line 286, ../../app/stylesheets/screen.sass */
+/* line 308, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item .item h3 {
   margin: 0;
   padding: 0;
 }
-/* line 293, ../../app/stylesheets/screen.sass */
+/* line 315, ../../app/stylesheets/screen.sass */
 body .section .page .signup-footer p {
   display: inline;
   float: left;
@@ -2048,7 +2108,7 @@ body .section .page .signup-footer p {
 * html body .section .page .signup-footer p {
   overflow-x: hidden;
 }
-/* line 297, ../../app/stylesheets/screen.sass */
+/* line 319, ../../app/stylesheets/screen.sass */
 body .section .page .tab_container {
   display: inline;
   float: left;
@@ -2060,7 +2120,7 @@ body .section .page .tab_container {
 * html body .section .page .tab_container {
   overflow-x: hidden;
 }
-/* line 301, ../../app/stylesheets/screen.sass */
+/* line 323, ../../app/stylesheets/screen.sass */
 body .footer {
   background: #d0d9e0 url("/images/footer.png") repeat-x;
   height: 200px;

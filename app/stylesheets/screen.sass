@@ -17,16 +17,38 @@ $footer = #d0d9e0
 .none
   display: none
 
+.bad
+  background-color: rgba(200, 20, 20, 0.4)
+
+.good
+  background-color: rgba(20, 200, 20, 0.4)
+
+.review
+  +column(24)
+
+  div.gravatar
+    +column(1)
+
+    img
+      width: 32px
+      height: 32px
+
+  .review_title
+    +column(23, true)
+
+  .comment
+    +column(24)
+
 .prices
   +column(24)
+
+  .person_title
+    display: inline-block
 
   img.gravatar
     display: inline-block
     width: 32px
     height: 32px
-
-  .person_title
-    display: inline-block
 
   form
     +column(12)

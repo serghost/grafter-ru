@@ -1,0 +1,11 @@
+= form_tag university_reviews_path do
+  .span-24
+    = label_tag :type, "Select type for message"
+    = select_tag :type, "<option>High</option>".html_safe
+
+  .span-24
+    .span-4
+      = label_tag :text, "Review"
+    = text_area_tag :text
+
+  = submit_tag
