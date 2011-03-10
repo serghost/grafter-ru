@@ -1,0 +1,45 @@
+.prices
+  .prices_options
+    | OOP (Bagdyamyan I.O.)
+
+  .prices_buttons
+    a href="#" class="left button pill" Add price
+    a href="#" class="button pill middle" Delete all
+    a href="#" class="button pill middle" Delete old entries
+    a href="#" class="right button pill" Undo last
+
+  table id="prices_grid" style="width: 100%"
+    thead
+      tr
+        th width="24%" Author
+        th Score: 5
+        th Score: 4
+        th Score: 3
+        th Attestation
+        th Course work
+        th Test
+        th
+
+    tbody
+      tr class="price_item" title="Yeah kahfduawhui dhawui hdiuawhd iuawhdh awui haiwu" 
+        th
+          img.gravatar src="/images/teacher.png" class="photo_teacher"
+
+          .person_title
+            | xxx_9001
+            img src="/images/tick-circle.png" class="approve"
+            br
+            span class="edit_date" 12.03.11 11:45
+
+        td $300
+        td $200
+        td $100
+        td $50
+        td $1000
+        td $150
+        th.buttons
+          a href="#{university_price_path(1)}" class="pill button left" Approve
+          a href="#{edit_university_price_path(1)}" class="pill button middle" Edit
+          a href="#" class="pill button right negative" Delete
+
+  a href="#" Back

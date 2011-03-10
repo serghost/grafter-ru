@@ -4,7 +4,7 @@
 @import "blueprint/scaffolding"
 
 +blueprint
-+blueprint-scaffolding("body.bp")
++blueprint-scaffolding("body")
 
 $header = #cddae3
 $section = #316594
@@ -14,11 +14,22 @@ $footer = #d0d9e0
 .container
   +container
 
-.dialog
-  +column(12)
+.none
   display: none
 
+.prices
+  +column(24)
+
+  img.gravatar
+    display: inline-block
+    width: 32px
+    height: 32px
+
+  .person_title
+    display: inline-block
+
   form
+    +column(12)
 
     label.price_label
       width: 110px
@@ -30,6 +41,20 @@ $footer = #d0d9e0
 
     input.price_edit
       width: 100px
+
+  .prices_options
+    +column(15)
+
+  .prices_buttons
+    +column(9, true)
+    text-align: right
+
+  .prices_items
+    +column(24)
+
+  th.buttons
+    text-align: right
+    padding: 0
 
 body
   +blueprint-typography(true)
@@ -88,7 +113,7 @@ body
         +column(2)
         padding-top: 5px
 
-        img
+        img.side
           width: 64px
           height: 64px
           display: inline-block
@@ -193,7 +218,7 @@ body
       padding: 20px 0
       // +showgrid
 
-      img
+      img.university_stack
         +column(8)
 
       p
@@ -272,22 +297,6 @@ body
       .tab_container
         +column(24)
         position: relative
-
-        .tab_options
-          +column(17)
-
-        .tab_buttons
-          +column(7, true)
-          text-align: right
-
-        .tab_items
-          +column(24)
-
-          table
-
-            th.buttons
-              text-align: right
-              padding: 0
 
   .footer
     background: $footer url("/images/footer.png") repeat-x
