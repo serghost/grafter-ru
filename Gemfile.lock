@@ -46,6 +46,14 @@ GIT
       tilt (~> 1.2)
 
 GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 1738ea1dcaf65860c53088cc62ad7f0887e629ca
+  specs:
+    paperclip (2.3.8)
+      activerecord
+      activesupport
+
+GIT
   remote: git://github.com/timcharper/spork.git
   revision: bda49113983b4c2fd485847d5f17731e6ff1d5a7
   specs:
@@ -134,9 +142,6 @@ GEM
     mysql2 (0.2.6)
     nokogiri (1.4.4)
     orm_adapter (0.0.4)
-    paperclip (2.3.8)
-      activerecord
-      activesupport
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -210,7 +215,7 @@ DEPENDENCIES
   kaminari!
   mysql2
   nokogiri
-  paperclip
+  paperclip!
   rails (= 3.0.4)
   recaptcha!
   rspec

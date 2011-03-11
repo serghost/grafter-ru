@@ -1,22 +1,18 @@
-= semantic_form_for @university do |form|
+= semantic_form_for @university, :html => {:multipart => true} do |form|
   .span-24
-    = label_tag :short, "Short name"
-    = text_field_tag :short
+    = form.input :short
 
   .span-24
-    = label_tag :title
-    = text_field_tag :title
+    = form.input :title
 
   .span-24
-    = label_tag :logo
-    = file_field_tag :logo
+    = form.input :logo, :as => :file
 
   .span-24
     .span-12
       = label_tag :department
-      = select_tag :department, "<option>Moscow city</option>".html_safe
+      = select_tag :department, options_from_collection_for_select(Department.all, :id, :title)
 
-    = label_tag :city
-    = select_tag :city, "<option>Moscow</option>".html_safe
+    = form.input :city_id, :as => :select, :collection => options_from_collection_for_select(City.all, :id, :title)
 
-  = submit_tag
+  = form.submit

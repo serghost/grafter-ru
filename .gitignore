@@ -4,6 +4,7 @@
 .sass-cache
 db/*.sqlite3
 log/*.log
+public/images/universities
 public/stylesheets/compiled
 public/stylesheets/compiled
 tmp/

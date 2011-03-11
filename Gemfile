@@ -10,7 +10,7 @@ gem 'recaptcha', git: 'git://github.com/ambethia/recaptcha.git', require:  'reca
 
 gem 'kaminari', git: 'git://github.com/amatsuda/kaminari.git'
 gem 'bcrypt-ruby', require: 'bcrypt'
-gem 'paperclip'
+gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 gem 'json'
 
 gem 'slim', git: 'git://github.com/stonean/slim.git', require: 'slim/rails'
