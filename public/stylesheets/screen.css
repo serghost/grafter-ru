@@ -1760,10 +1760,11 @@ body a.button {
 /* line 92, ../../app/stylesheets/screen.sass */
 body .header {
   background-color: #cddae3;
+  border-bottom: 1px solid #6498c7;
   /* temp */
   height: 60px;
 }
-/* line 99, ../../app/stylesheets/screen.sass */
+/* line 100, ../../app/stylesheets/screen.sass */
 body .header h1 {
   padding-top: 10px;
   display: inline;
@@ -1775,7 +1776,7 @@ body .header h1 {
 * html body .header h1 {
   overflow-x: hidden;
 }
-/* line 103, ../../app/stylesheets/screen.sass */
+/* line 104, ../../app/stylesheets/screen.sass */
 body .header h1 a {
   font-family: "Puritan", arial, serif;
   margin-top: 8px;
@@ -1785,12 +1786,12 @@ body .header h1 a {
   text-decoration: none;
   -webkit-transition: all 0.4s;
 }
-/* line 112, ../../app/stylesheets/screen.sass */
+/* line 113, ../../app/stylesheets/screen.sass */
 body .header h1 a:hover {
   color: black;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
 }
-/* line 116, ../../app/stylesheets/screen.sass */
+/* line 117, ../../app/stylesheets/screen.sass */
 body .header ul {
   list-style: none;
   display: inline;
@@ -1802,18 +1803,19 @@ body .header ul {
 * html body .header ul {
   overflow-x: hidden;
 }
-/* line 120, ../../app/stylesheets/screen.sass */
+/* line 121, ../../app/stylesheets/screen.sass */
 body .header ul li {
   display: inline-block;
   padding: 10px;
 }
-/* line 124, ../../app/stylesheets/screen.sass */
+/* line 125, ../../app/stylesheets/screen.sass */
 body .topside {
   background: #316594 url("/images/section_100.png") center;
   height: 100px;
   overflow: hidden;
+  border-top: 1px solid #9aa7b0;
 }
-/* line 129, ../../app/stylesheets/screen.sass */
+/* line 131, ../../app/stylesheets/screen.sass */
 body .topside .university-side {
   display: inline;
   float: left;
@@ -1826,7 +1828,7 @@ body .topside .university-side {
 * html body .topside .university-side {
   overflow-x: hidden;
 }
-/* line 134, ../../app/stylesheets/screen.sass */
+/* line 136, ../../app/stylesheets/screen.sass */
 body .topside .university-side .logo {
   display: inline;
   float: left;
@@ -1838,13 +1840,13 @@ body .topside .university-side .logo {
 * html body .topside .university-side .logo {
   overflow-x: hidden;
 }
-/* line 138, ../../app/stylesheets/screen.sass */
+/* line 140, ../../app/stylesheets/screen.sass */
 body .topside .university-side .logo img.side {
   width: 64px;
   height: 64px;
   display: inline-block;
 }
-/* line 143, ../../app/stylesheets/screen.sass */
+/* line 145, ../../app/stylesheets/screen.sass */
 body .topside .university-side .edit_buttons {
   display: inline;
   float: left;
@@ -1858,11 +1860,11 @@ body .topside .university-side .edit_buttons {
 * html body .topside .university-side .edit_buttons {
   overflow-x: hidden;
 }
-/* line 149, ../../app/stylesheets/screen.sass */
+/* line 151, ../../app/stylesheets/screen.sass */
 body .topside .university-side .edit_buttons:hover {
   opacity: 1;
 }
-/* line 152, ../../app/stylesheets/screen.sass */
+/* line 154, ../../app/stylesheets/screen.sass */
 body .topside .university-side .item {
   display: inline;
   float: left;
@@ -1875,7 +1877,7 @@ body .topside .university-side .item {
 * html body .topside .university-side .item {
   overflow-x: hidden;
 }
-/* line 157, ../../app/stylesheets/screen.sass */
+/* line 159, ../../app/stylesheets/screen.sass */
 body .topside .university-side .title {
   display: inline;
   float: left;
@@ -1886,12 +1888,12 @@ body .topside .university-side .title {
 * html body .topside .university-side .title {
   overflow-x: hidden;
 }
-/* line 160, ../../app/stylesheets/screen.sass */
+/* line 162, ../../app/stylesheets/screen.sass */
 body .topside .university-side .title h2 {
   margin: 0;
   padding: 0;
 }
-/* line 164, ../../app/stylesheets/screen.sass */
+/* line 166, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs {
   padding: 0;
   list-style: none;
@@ -1900,7 +1902,7 @@ body .topside .university-side ul.tabs {
   position: absolute;
   bottom: 0;
 }
-/* line 173, ../../app/stylesheets/screen.sass */
+/* line 175, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li {
   display: inline-block;
   margin-left: 3px;
@@ -1911,24 +1913,24 @@ body .topside .university-side ul.tabs li {
   opacity: 0.85;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-/* line 183, ../../app/stylesheets/screen.sass */
+/* line 185, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li.current {
   background: white;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   opacity: 1;
 }
-/* line 188, ../../app/stylesheets/screen.sass */
+/* line 190, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li.current a {
   color: black;
 }
-/* line 191, ../../app/stylesheets/screen.sass */
+/* line 193, ../../app/stylesheets/screen.sass */
 body .topside .university-side ul.tabs li a {
   color: #333344;
   text-decoration: none;
   font-weight: bold;
   font-size: 13px;
 }
-/* line 197, ../../app/stylesheets/screen.sass */
+/* line 199, ../../app/stylesheets/screen.sass */
 body .topside .search-side {
   display: inline;
   float: left;
@@ -1939,7 +1941,7 @@ body .topside .search-side {
 * html body .topside .search-side {
   overflow-x: hidden;
 }
-/* line 200, ../../app/stylesheets/screen.sass */
+/* line 202, ../../app/stylesheets/screen.sass */
 body .topside .search-side h2 {
   color: white;
   display: inline;
@@ -1953,14 +1955,14 @@ body .topside .search-side h2 {
 * html body .topside .search-side h2 {
   overflow-x: hidden;
 }
-/* line 206, ../../app/stylesheets/screen.sass */
+/* line 208, ../../app/stylesheets/screen.sass */
 body .topside .search-side .search {
   width: 944px;
   overflow: auto;
   padding: 3px;
   -webkit-transition: all 0.4s;
 }
-/* line 213, ../../app/stylesheets/screen.sass */
+/* line 215, ../../app/stylesheets/screen.sass */
 body .topside .search-side .search input[type=text] {
   width: 830px;
   margin: 0;
@@ -1971,7 +1973,7 @@ body .topside .search-side .search input[type=text] {
   -webkit-border-top-left-radius: 6px;
   -webkit-border-bottom-left-radius: 6px;
 }
-/* line 223, ../../app/stylesheets/screen.sass */
+/* line 225, ../../app/stylesheets/screen.sass */
 body .topside .search-side .search input[type=submit] {
   width: 114px;
   margin: 0;
@@ -1983,12 +1985,12 @@ body .topside .search-side .search input[type=submit] {
   -webkit-border-top-right-radius: 6px;
   -webkit-border-bottom-right-radius: 6px;
 }
-/* line 234, ../../app/stylesheets/screen.sass */
+/* line 236, ../../app/stylesheets/screen.sass */
 body .section {
   background-color: white;
   overflow: auto;
 }
-/* line 238, ../../app/stylesheets/screen.sass */
+/* line 240, ../../app/stylesheets/screen.sass */
 body .section .page {
   display: inline;
   float: left;
@@ -2000,7 +2002,7 @@ body .section .page {
 * html body .section .page {
   overflow-x: hidden;
 }
-/* line 243, ../../app/stylesheets/screen.sass */
+/* line 245, ../../app/stylesheets/screen.sass */
 body .section .page img.university_stack {
   display: inline;
   float: left;
@@ -2011,7 +2013,7 @@ body .section .page img.university_stack {
 * html body .section .page img.university_stack {
   overflow-x: hidden;
 }
-/* line 246, ../../app/stylesheets/screen.sass */
+/* line 248, ../../app/stylesheets/screen.sass */
 body .section .page p {
   display: inline;
   float: left;
@@ -2024,7 +2026,7 @@ body .section .page p {
 * html body .section .page p {
   overflow-x: hidden;
 }
-/* line 251, ../../app/stylesheets/screen.sass */
+/* line 253, ../../app/stylesheets/screen.sass */
 body .section .page p.register {
   color: black;
   background-color: rgba(55, 55, 255, 0.1);
@@ -2033,29 +2035,29 @@ body .section .page p.register {
   font-size: 14px;
   border-top: 1px solid rgba(50, 50, 250, 0.25);
 }
-/* line 259, ../../app/stylesheets/screen.sass */
+/* line 261, ../../app/stylesheets/screen.sass */
 body .section .page p.register span {
   text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
 }
-/* line 262, ../../app/stylesheets/screen.sass */
+/* line 264, ../../app/stylesheets/screen.sass */
 body .section .page p span.grafter {
   font-weight: bold;
   font-size: 1.3em;
   text-decoration: underline;
   color: black;
 }
-/* line 268, ../../app/stylesheets/screen.sass */
+/* line 270, ../../app/stylesheets/screen.sass */
 body .section .page ul {
   list-style: none;
   margin: 0;
   padding: 2px;
 }
-/* line 273, ../../app/stylesheets/screen.sass */
+/* line 275, ../../app/stylesheets/screen.sass */
 body .section .page ul li {
   display: inline-block;
   margin: 0 5px 5px 0;
 }
-/* line 277, ../../app/stylesheets/screen.sass */
+/* line 279, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item {
   padding: 3px 6px;
   background: #33ccff;
@@ -2064,18 +2066,18 @@ body .section .page ul li a.university_item {
   display: block;
   -webkit-transition: all 0.3s;
 }
-/* line 285, ../../app/stylesheets/screen.sass */
+/* line 287, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item:hover {
   background: #22bbee;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
-/* line 289, ../../app/stylesheets/screen.sass */
+/* line 291, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item img.icon {
   display: inline-block;
   width: 32px;
   height: 32px;
 }
-/* line 294, ../../app/stylesheets/screen.sass */
+/* line 296, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item span.feed {
   display: block;
   position: absolute;
@@ -2087,16 +2089,16 @@ body .section .page ul li a.university_item span.feed {
   color: white;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
 }
-/* line 305, ../../app/stylesheets/screen.sass */
+/* line 307, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item .item {
   display: inline-block;
 }
-/* line 308, ../../app/stylesheets/screen.sass */
+/* line 310, ../../app/stylesheets/screen.sass */
 body .section .page ul li a.university_item .item h3 {
   margin: 0;
   padding: 0;
 }
-/* line 315, ../../app/stylesheets/screen.sass */
+/* line 317, ../../app/stylesheets/screen.sass */
 body .section .page .signup-footer p {
   display: inline;
   float: left;
@@ -2108,7 +2110,7 @@ body .section .page .signup-footer p {
 * html body .section .page .signup-footer p {
   overflow-x: hidden;
 }
-/* line 319, ../../app/stylesheets/screen.sass */
+/* line 321, ../../app/stylesheets/screen.sass */
 body .section .page .tab_container {
   display: inline;
   float: left;
@@ -2120,7 +2122,7 @@ body .section .page .tab_container {
 * html body .section .page .tab_container {
   overflow-x: hidden;
 }
-/* line 323, ../../app/stylesheets/screen.sass */
+/* line 325, ../../app/stylesheets/screen.sass */
 body .footer {
   background: #d0d9e0 url("/images/footer.png") repeat-x;
   height: 200px;
