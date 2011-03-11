@@ -1,11 +1,13 @@
-.span-24
-  .span-20
+- content_for :topside do
     = label_tag :department
     = select_tag :department, options_from_collection_for_select(Department.all, :id, :title)
-
+    br
     = label_tag :city
     = select_tag :city, options_from_collection_for_select(City.all, :id, :title)
 
+.span-24
+  .span-20
+    |&nbsp;
   .span-4.last
     a href="#{new_university_path}" class="button pill" Add university
 

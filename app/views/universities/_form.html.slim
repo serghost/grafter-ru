@@ -1,4 +1,4 @@
-= form_tag universities_path do
+= semantic_form_for @university do |form|
   .span-24
     = label_tag :short, "Short name"
     = text_field_tag :short

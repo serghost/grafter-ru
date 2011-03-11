@@ -1,4 +1,6 @@
 class UniversitiesController < ApplicationController
+  respond_to :html, :json, :xml
+
   def search
 
   end
@@ -12,7 +14,7 @@ class UniversitiesController < ApplicationController
   end
 
   def new
-    
+    @university = University.new
   end
 
   def edit
