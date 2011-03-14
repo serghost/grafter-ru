@@ -1,5 +1,6 @@
 @import "blueprint/reset"
 @import "partials/base"
+@import "partials/header"
 @import "blueprint"
 @import "blueprint/scaffolding"
 
@@ -27,7 +28,6 @@ body
   +blueprint-typography(true)
   +blueprint-utilities
   +blueprint-interaction
-
   background-color: $footer
 
   a.button
@@ -41,3 +41,5 @@ body
     #page
       +column(24)
       padding: 20px 0
+
+  +header

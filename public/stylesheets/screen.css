@@ -1286,7 +1286,7 @@ form.inline p {
   margin-bottom: 0;
 }
 
-/* line 14, ../../app/stylesheets/screen.sass */
+/* line 15, ../../app/stylesheets/screen.sass */
 .container {
   width: 950px;
   margin: 0 auto;
@@ -1294,22 +1294,22 @@ form.inline p {
   *zoom: 1;
 }
 
-/* line 17, ../../app/stylesheets/screen.sass */
+/* line 18, ../../app/stylesheets/screen.sass */
 .none {
   display: none;
 }
 
-/* line 20, ../../app/stylesheets/screen.sass */
+/* line 21, ../../app/stylesheets/screen.sass */
 .bad {
   background-color: rgba(200, 20, 20, 0.4);
 }
 
-/* line 23, ../../app/stylesheets/screen.sass */
+/* line 24, ../../app/stylesheets/screen.sass */
 .good {
   background-color: rgba(20, 200, 20, 0.4);
 }
 
-/* line 26, ../../app/stylesheets/screen.sass */
+/* line 27, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -1637,4 +1637,110 @@ body #section #page {
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body #section #page {
   overflow-x: hidden;
+}
+/* line 2, ../../app/stylesheets/partials/_header.sass */
+body #header {
+  background-color: #cddae3;
+  border-bottom: 1px solid #6498c7;
+  /* temp */
+  height: 60px;
+}
+/* line 10, ../../app/stylesheets/partials/_header.sass */
+body #header h1 {
+  padding-top: 10px;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 150px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #header h1 {
+  overflow-x: hidden;
+}
+/* line 14, ../../app/stylesheets/partials/_header.sass */
+body #header h1 a {
+  font-family: "Puritan", arial, serif;
+  margin-top: 8px;
+  color: #444444;
+  font-size: 40px;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  -webkit-transition: all 0.4s;
+}
+/* line 23, ../../app/stylesheets/partials/_header.sass */
+body #header h1 a:hover {
+  color: black;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
+}
+/* line 27, ../../app/stylesheets/partials/_header.sass */
+body #header ul {
+  list-style: none;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 430px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #header ul {
+  overflow-x: hidden;
+}
+/* line 31, ../../app/stylesheets/partials/_header.sass */
+body #header ul li {
+  display: inline-block;
+  padding: 10px;
+}
+/* line 35, ../../app/stylesheets/partials/_header.sass */
+body #header .search-side {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #header .search-side {
+  overflow-x: hidden;
+}
+/* line 38, ../../app/stylesheets/partials/_header.sass */
+body #header .search-side h2 {
+  color: white;
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  margin: 0;
+  padding: 10px 0 5px 0;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #header .search-side h2 {
+  overflow-x: hidden;
+}
+/* line 44, ../../app/stylesheets/partials/_header.sass */
+body #header .search-side .search {
+  width: 944px;
+  overflow: auto;
+  padding: 3px;
+  -webkit-transition: all 0.4s;
+}
+/* line 51, ../../app/stylesheets/partials/_header.sass */
+body #header .search-side .search input[type=text] {
+  width: 830px;
+  margin: 0;
+  padding: 0;
+  height: 24px;
+  border: 0;
+  -webkit-box-shadow: 0 0 3px black;
+  -webkit-border-top-left-radius: 6px;
+  -webkit-border-bottom-left-radius: 6px;
+}
+/* line 61, ../../app/stylesheets/partials/_header.sass */
+body #header .search-side .search input[type=submit] {
+  width: 114px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 24px;
+  cursor: pointer;
+  -webkit-box-shadow: 0 0 3px black;
+  -webkit-border-top-right-radius: 6px;
+  -webkit-border-bottom-right-radius: 6px;
 }
