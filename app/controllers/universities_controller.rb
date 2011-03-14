@@ -12,7 +12,7 @@ class UniversitiesController < ApplicationController
   end
 
   def index
-    
+    @universities = University.all
   end
 
   def new

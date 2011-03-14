@@ -6,6 +6,8 @@
     = form.input :title
 
   .span-24
+    - unless @university.logo.url == "/images/universities/missing.png"
+      = image_tag @university.logo.url
     = form.input :logo, :as => :file
 
   .span-24

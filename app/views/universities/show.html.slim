@@ -1,15 +1,15 @@
 - content_for :topside do
   .university-side
     .logo
-      img.side src="/images/spbgtu.png"
+      img.side src="#{@university.logo.url}"
 
     .item
       .title
-        h2 MGU (Moscow University etc)
-        | Moscow department, Moscow
+        h2 #{@university.short} (#{@university.city.title})
+        | #{@university.title}
 
       .edit_buttons
-        a href="#{edit_university_path(1)}" class="pill button left"
+        a href="#{edit_university_path(@university)}" class="pill button left"
           span class="pen icon"
           | Edit
         a href="#" class="middle pill button"

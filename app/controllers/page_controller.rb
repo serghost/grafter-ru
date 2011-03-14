@@ -4,6 +4,6 @@ class PageController < ApplicationController
   end
 
   def search
-
+    @universities = University.all
   end
 end

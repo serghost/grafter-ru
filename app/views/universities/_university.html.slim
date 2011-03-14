@@ -1,9 +1,9 @@
 li
-  a.university_item href="#{university_path(1)}"
+  a.university_item href="#{university_path(university)}"
     span.feed 12
 
-    img.icon src="/images/spbgtu.png"
+    img.icon src="#{university.logo.url(:thumb)}"
 
     .item
-      h3 MGTU
-      span.city Sankt_peterburg
+      h3 #{university.short}
+      span.city #{university.city.title}
