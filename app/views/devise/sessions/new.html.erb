@@ -1,7 +1,5 @@
-<% content_for :topside do %>
-  <h2>Sign in</h2>
-  <%= render :partial => "devise/shared/links" %>
-<% end %>
+<h2>Sign in</h2>
+<%= render :partial => "devise/shared/links" %>
 
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <p><%= f.label :email %><br />
