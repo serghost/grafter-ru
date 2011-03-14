@@ -1685,20 +1685,26 @@ body #header form {
   overflow-x: hidden;
 }
 /* line 31, ../../app/stylesheets/partials/_header.sass */
+body #header form input {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
+  border: 0;
+  -webkit-border-radius: 8px;
+}
+/* line 36, ../../app/stylesheets/partials/_header.sass */
 body #header form input:focus {
   outline: 0;
 }
-/* line 34, ../../app/stylesheets/partials/_header.sass */
+/* line 39, ../../app/stylesheets/partials/_header.sass */
 body #header ul {
   list-style: none;
   text-align: right;
 }
-/* line 38, ../../app/stylesheets/partials/_header.sass */
+/* line 43, ../../app/stylesheets/partials/_header.sass */
 body #header ul li {
   display: inline-block;
   padding: 0;
 }
-/* line 42, ../../app/stylesheets/partials/_header.sass */
+/* line 47, ../../app/stylesheets/partials/_header.sass */
 body #header ul li a {
   text-decoration: none;
   display: block;
@@ -1709,7 +1715,7 @@ body #header ul li a {
   color: inherit;
   -webkit-transition: all 0.1s ease-in;
 }
-/* line 52, ../../app/stylesheets/partials/_header.sass */
+/* line 57, ../../app/stylesheets/partials/_header.sass */
 body #header ul li a:hover {
   background-color: #75a9d8;
   -webkit-border-radius: 54px;
