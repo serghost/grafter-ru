@@ -1,9 +1,9 @@
 li
-  a.university_item href="#{university_path(university)}"
+  = link_to university_path(university), class: "span-6 #{cycle("", "", "", "last")}" do
     span.feed 12
 
     img.icon src="#{university.logo.url(:thumb)}"
 
     .item
-      h3 #{university.short}
+      h3 #{university.short}QWERTY
       span.city #{university.city.title}

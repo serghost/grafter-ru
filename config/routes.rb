@@ -3,7 +3,7 @@ Grafter::Application.routes.draw do
 
   root :to => "page#index"
 
-  match "/search" => "page#search"
+  match "/search" => "universities#index"
 
   resources :universities do
     resources :prices

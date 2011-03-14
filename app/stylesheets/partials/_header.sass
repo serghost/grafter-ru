@@ -1,0 +1,70 @@
+@mixin header
+  #header
+    background-color: $header
+    border-bottom: 1px solid $section + #333
+
+    /* temp */
+    height: 60px
+    // border-bottom: 1px solid #5c7a92
+
+    h1
+      padding-top: 10px
+      +column(4)
+
+      a
+        font-family: 'Puritan', arial, serif
+        margin-top: 8px
+        color: #444
+        font-size: 40px
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.6)
+        text-decoration: none
+        -webkit-transition: all 0.4s
+
+      a:hover
+        color: #000
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.9)
+
+    ul
+      list-style: none
+      +column(11)
+
+      li
+        display: inline-block
+        padding: 10px
+
+    .search-side
+      +column(24)
+
+      h2
+        color: white
+        +column(24)
+        margin: 0
+        padding: 10px 0 5px 0
+
+      .search
+        width: 944px
+        overflow: auto
+        padding: 3px
+        // z-index: 1000
+        -webkit-transition: all 0.4s
+
+        input[type=text]
+          width: 830px
+          margin: 0
+          padding: 0
+          height: 24px
+          border: 0
+          -webkit-box-shadow: 0 0 3px black
+          -webkit-border-top-left-radius: 6px
+          -webkit-border-bottom-left-radius: 6px
+
+        input[type=submit]
+          width: 114px
+          margin: 0
+          padding: 0
+          border: 0
+          height: 24px
+          cursor: pointer
+          -webkit-box-shadow: 0 0 3px black
+          -webkit-border-top-right-radius: 6px
+          -webkit-border-bottom-right-radius: 6px

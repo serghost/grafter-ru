@@ -1,0 +1,16 @@
+@mixin review
+  .review
+    +column(24)
+
+    div.gravatar
+      +column(1)
+
+      img
+        width: 32px
+        height: 32px
+
+    .review_title
+      +column(23, true)
+
+    .comment
+      +column(24)

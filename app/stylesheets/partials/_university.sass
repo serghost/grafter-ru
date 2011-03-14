@@ -1,0 +1,81 @@
+@mixin university
+  #universities
+    img.university_stack
+      +column(8)
+
+    p
+      +column(16, true)
+      color: #222
+      font-size: 13px
+
+      &.register
+        color: black
+        background-color: rgba(55, 55, 255, 0.1)
+        padding: 10px 0
+        text-align: center
+        font-size: 14px
+        border-top: 1px solid rgba(50, 50, 250, 0.25)
+
+        span
+          text-shadow: 0 0 3px rgba(255, 255, 255, 0.3)
+
+      span.grafter
+        font-weight: bold
+        font-size: 1.3em
+        text-decoration: underline
+        color: black
+
+    ul
+      list-style: none
+      margin: 0
+      padding: 2px
+
+      li
+        display: inline-block
+        margin: 0 5px 5px 0
+
+        a.university_item
+          padding: 3px 6px
+          background: #3CF
+          text-decoration: none
+          color: #333
+          display: block
+          -webkit-transition: all 0.3s
+
+          &:hover
+            background: #2BE
+            -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
+
+          img.icon
+            display: inline-block
+            width: 32px
+            height: 32px
+
+          span.feed
+            display: block
+            position: absolute
+            margin: -8px 0 0 -12px
+            background: #25F
+            padding: 0 6px
+            -webkit-border-radius: 12px
+            font-weight: bold
+            color: white
+            -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5)
+
+          .item
+            display: inline-block
+
+            h3
+              margin: 0
+              padding: 0
+
+            span.city
+
+    .signup-footer
+      p
+        +column(24)
+        margin-top: 15px
+
+    .tab_container
+      +column(24)
+      position: relative
