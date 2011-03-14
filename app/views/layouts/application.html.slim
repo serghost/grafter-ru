@@ -21,7 +21,7 @@ html
           a href="#{root_url}" Grafter
 
         = form_tag search_path, :method => :get do
-          = text_field_tag :query, nil, :placeholder => "Enter your university to search"
+          = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1
 
         ul
           /* li*/
@@ -31,9 +31,10 @@ html
           li
             = link_to "Sign Up", new_user_registration_path
 
-    #topside
-      .container
-        == yield :topside
+    - if content_for? :topside
+      #topside
+        .container
+          == yield :topside
 
     #section
       .container
