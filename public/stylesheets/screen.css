@@ -1287,7 +1287,7 @@ form.inline p {
 }
 
 /* line 2, ../../app/stylesheets/partials/_tabs.sass */
-ul.tabs {
+ul#tabs {
   padding: 0;
   list-style: none;
   list-style-type: none;
@@ -1296,7 +1296,7 @@ ul.tabs {
   bottom: 0;
 }
 /* line 11, ../../app/stylesheets/partials/_tabs.sass */
-ul.tabs li {
+ul#tabs li {
   display: inline-block;
   margin-left: 3px;
   padding: 3px 12px;
@@ -1313,7 +1313,7 @@ ul.tabs li {
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
 /* line 27, ../../app/stylesheets/partials/_tabs.sass */
-ul.tabs li.current {
+ul#tabs li.current {
   background: white;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
@@ -1321,11 +1321,11 @@ ul.tabs li.current {
   opacity: 1;
 }
 /* line 34, ../../app/stylesheets/partials/_tabs.sass */
-ul.tabs li.current a {
+ul#tabs li.current a {
   color: black;
 }
 /* line 37, ../../app/stylesheets/partials/_tabs.sass */
-ul.tabs li a {
+ul#tabs li a {
   color: #333344;
   text-decoration: none;
   font-weight: bold;
@@ -1900,7 +1900,7 @@ body #footer .copyright {
 * html body #footer .copyright {
   overflow-x: hidden;
 }
-/* line 10, ../../app/stylesheets/partials/_footer.sass */
+/* line 9, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul {
   display: inline;
   float: left;
@@ -1915,23 +1915,23 @@ body #footer ul {
 * html body #footer ul {
   overflow-x: hidden;
 }
-/* line 17, ../../app/stylesheets/partials/_footer.sass */
+/* line 16, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li {
   display: inline-block;
   padding: 5px 0;
 }
-/* line 21, ../../app/stylesheets/partials/_footer.sass */
+/* line 20, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li a {
   display: block;
   text-decoration: none;
   padding: 0 7px;
   border-left: 1px solid silver;
 }
-/* line 27, ../../app/stylesheets/partials/_footer.sass */
+/* line 26, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li a:hover {
   text-decoration: underline;
 }
-/* line 31, ../../app/stylesheets/partials/_footer.sass */
+/* line 30, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li:first-child a {
   border-left: 0;
 }
