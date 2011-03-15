@@ -1666,13 +1666,14 @@ body #header h1 a {
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.6);
   text-decoration: none;
   -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
 }
-/* line 23, ../../app/stylesheets/partials/_header.sass */
+/* line 24, ../../app/stylesheets/partials/_header.sass */
 body #header h1 a:hover {
   color: black;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
 }
-/* line 27, ../../app/stylesheets/partials/_header.sass */
+/* line 28, ../../app/stylesheets/partials/_header.sass */
 body #header form {
   display: inline;
   float: left;
@@ -1684,33 +1685,36 @@ body #header form {
 * html body #header form {
   overflow-x: hidden;
 }
-/* line 31, ../../app/stylesheets/partials/_header.sass */
+/* line 32, ../../app/stylesheets/partials/_header.sass */
 body #header form input {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
   border: 0;
   -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
   font: 14px/16px "Helvetica", arial, serif;
   padding-left: 25px;
   background: white url("/images/search.png") 5px 5px no-repeat;
 }
-/* line 39, ../../app/stylesheets/partials/_header.sass */
+/* line 43, ../../app/stylesheets/partials/_header.sass */
 body #header form input:focus {
   outline: 0;
 }
-/* line 42, ../../app/stylesheets/partials/_header.sass */
+/* line 46, ../../app/stylesheets/partials/_header.sass */
 body #header ul {
   list-style: none;
   text-align: right;
   padding: 16px 0 0;
   margin: 0;
 }
-/* line 48, ../../app/stylesheets/partials/_header.sass */
+/* line 52, ../../app/stylesheets/partials/_header.sass */
 body #header ul li {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
-/* line 53, ../../app/stylesheets/partials/_header.sass */
+/* line 57, ../../app/stylesheets/partials/_header.sass */
 body #header ul li a {
   text-decoration: none;
   display: block;
@@ -1719,12 +1723,17 @@ body #header ul li a {
   font: 16px/24px "Helvetica", arial, serif;
   color: inherit;
   -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
 }
-/* line 62, ../../app/stylesheets/partials/_header.sass */
+/* line 67, ../../app/stylesheets/partials/_header.sass */
 body #header ul li a:hover {
   background-color: #75a9d8;
   -webkit-border-radius: 54px;
+  -moz-border-radius: 54px;
+  border-radius: 54px;
   -webkit-box-shadow: inset 0 0 3px #316594;
+  -webkit-box-shadow: inset 0 0 3px #316594;
+  box-shadow: inset 0 0 3px #316594;
   color: #eeeeee;
   text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
@@ -1736,72 +1745,6 @@ body #topside {
   border-top: 1px solid #9aa7b0;
 }
 /* line 8, ../../app/stylesheets/partials/_topside.sass */
-body #topside .search-side {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-}
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #topside .search-side {
-  overflow-x: hidden;
-}
-/* line 11, ../../app/stylesheets/partials/_topside.sass */
-body #topside .search-side h2 {
-  color: white;
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-  margin: 0;
-  padding: 10px 0 5px 0;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
-}
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #topside .search-side h2 {
-  overflow-x: hidden;
-}
-/* line 18, ../../app/stylesheets/partials/_topside.sass */
-body #topside .search-side .search {
-  width: 944px;
-  overflow: auto;
-  padding: 3px;
-  -webkit-transition: all 0.4s;
-}
-/* line 25, ../../app/stylesheets/partials/_topside.sass */
-body #topside .search-side .search input[type=text] {
-  width: 830px;
-  margin: 0;
-  padding: 0 0 0 10px;
-  height: 26px;
-  border: 0;
-  -webkit-box-shadow: 0 0 3px #cacaca;
-  -webkit-border-top-left-radius: 6px;
-  -webkit-border-bottom-left-radius: 6px;
-  font: 14px "Helvetica", arial, serif;
-}
-/* line 36, ../../app/stylesheets/partials/_topside.sass */
-body #topside .search-side .search input[type=submit] {
-  width: 104px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  height: 26px;
-  cursor: pointer;
-  -webkit-box-shadow: 0 0 3px #cacaca;
-  -webkit-border-top-right-radius: 6px;
-  -webkit-border-bottom-right-radius: 6px;
-  background: #ececec url("/images/css3buttons_backgrounds.png") 0 0 no-repeat;
-  color: #3c3c3d;
-  border-left: 1px solid #cacaca;
-  text-shadow: 1px 1px 0 white;
-  font: 14px "Helvetica", arial, serif;
-}
-/* line 52, ../../app/stylesheets/partials/_topside.sass */
-body #topside .search-side .search input:focus {
-  outline: 0;
-}
-/* line 55, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side {
   display: inline;
   float: left;
@@ -1814,7 +1757,7 @@ body #topside .university-side {
 * html body #topside .university-side {
   overflow-x: hidden;
 }
-/* line 60, ../../app/stylesheets/partials/_topside.sass */
+/* line 13, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side .logo {
   display: inline;
   float: left;
@@ -1826,13 +1769,13 @@ body #topside .university-side .logo {
 * html body #topside .university-side .logo {
   overflow-x: hidden;
 }
-/* line 64, ../../app/stylesheets/partials/_topside.sass */
+/* line 17, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side .logo img.side {
   width: 64px;
   height: 64px;
   display: inline-block;
 }
-/* line 69, ../../app/stylesheets/partials/_topside.sass */
+/* line 22, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side .edit_buttons {
   display: inline;
   float: left;
@@ -1846,11 +1789,11 @@ body #topside .university-side .edit_buttons {
 * html body #topside .university-side .edit_buttons {
   overflow-x: hidden;
 }
-/* line 75, ../../app/stylesheets/partials/_topside.sass */
+/* line 28, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side .edit_buttons:hover {
   opacity: 1;
 }
-/* line 78, ../../app/stylesheets/partials/_topside.sass */
+/* line 31, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side .item {
   display: inline;
   float: left;
@@ -1863,7 +1806,7 @@ body #topside .university-side .item {
 * html body #topside .university-side .item {
   overflow-x: hidden;
 }
-/* line 83, ../../app/stylesheets/partials/_topside.sass */
+/* line 36, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side .title {
   display: inline;
   float: left;
@@ -1874,12 +1817,12 @@ body #topside .university-side .title {
 * html body #topside .university-side .title {
   overflow-x: hidden;
 }
-/* line 86, ../../app/stylesheets/partials/_topside.sass */
+/* line 39, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side .title h2 {
   margin: 0;
   padding: 0;
 }
-/* line 90, ../../app/stylesheets/partials/_topside.sass */
+/* line 43, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side ul.tabs {
   padding: 0;
   list-style: none;
@@ -1888,7 +1831,7 @@ body #topside .university-side ul.tabs {
   position: absolute;
   bottom: 0;
 }
-/* line 99, ../../app/stylesheets/partials/_topside.sass */
+/* line 52, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side ul.tabs li {
   display: inline-block;
   margin-left: 3px;
@@ -1899,17 +1842,17 @@ body #topside .university-side ul.tabs li {
   opacity: 0.85;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-/* line 109, ../../app/stylesheets/partials/_topside.sass */
+/* line 62, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side ul.tabs li.current {
   background: white;
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   opacity: 1;
 }
-/* line 114, ../../app/stylesheets/partials/_topside.sass */
+/* line 67, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side ul.tabs li.current a {
   color: black;
 }
-/* line 117, ../../app/stylesheets/partials/_topside.sass */
+/* line 70, ../../app/stylesheets/partials/_topside.sass */
 body #topside .university-side ul.tabs li a {
   color: #333344;
   text-decoration: none;
