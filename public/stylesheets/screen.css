@@ -1901,6 +1901,14 @@ body #footer .copyright {
   overflow-x: hidden;
 }
 /* line 9, ../../app/stylesheets/partials/_footer.sass */
+body #footer .copyright a {
+  text-decoration: none;
+}
+/* line 12, ../../app/stylesheets/partials/_footer.sass */
+body #footer .copyright a:hover {
+  text-decoration: underline;
+}
+/* line 15, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul {
   display: inline;
   float: left;
@@ -1915,23 +1923,23 @@ body #footer ul {
 * html body #footer ul {
   overflow-x: hidden;
 }
-/* line 16, ../../app/stylesheets/partials/_footer.sass */
+/* line 22, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li {
   display: inline-block;
   padding: 5px 0;
 }
-/* line 20, ../../app/stylesheets/partials/_footer.sass */
+/* line 26, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li a {
   display: block;
   text-decoration: none;
   padding: 0 7px;
   border-left: 1px solid silver;
 }
-/* line 26, ../../app/stylesheets/partials/_footer.sass */
+/* line 32, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li a:hover {
   text-decoration: underline;
 }
-/* line 30, ../../app/stylesheets/partials/_footer.sass */
+/* line 36, ../../app/stylesheets/partials/_footer.sass */
 body #footer ul li:first-child a {
   border-left: 0;
 }
