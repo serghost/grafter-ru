@@ -1300,23 +1300,31 @@ ul.tabs li {
   display: inline-block;
   margin-left: 3px;
   padding: 3px 12px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
   -webkit-border-top-left-radius: 5px;
   -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  -moz-border-radius-topright: 5px;
   background-color: #dddddd;
   opacity: 0.85;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-/* line 21, ../../app/stylesheets/partials/_tabs.sass */
+/* line 27, ../../app/stylesheets/partials/_tabs.sass */
 ul.tabs li.current {
   background: white;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   opacity: 1;
 }
-/* line 26, ../../app/stylesheets/partials/_tabs.sass */
+/* line 34, ../../app/stylesheets/partials/_tabs.sass */
 ul.tabs li.current a {
   color: black;
 }
-/* line 29, ../../app/stylesheets/partials/_tabs.sass */
+/* line 37, ../../app/stylesheets/partials/_tabs.sass */
 ul.tabs li a {
   color: #333344;
   text-decoration: none;
@@ -1811,10 +1819,30 @@ body #topside .university-side .logo {
 body #topside .university-side .logo img.side {
   width: 64px;
   height: 64px;
+  display: block;
+  margin-left: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+}
+/* line 29, ../../app/stylesheets/partials/_topside.sass */
+body #topside .university-side .university {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 870px;
+  padding-top: 5px;
   display: inline-block;
 }
-/* line 22, ../../app/stylesheets/partials/_topside.sass */
-body #topside .university-side .edit_buttons {
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #topside .university-side .university {
+  overflow-x: hidden;
+}
+/* line 34, ../../app/stylesheets/partials/_topside.sass */
+body #topside .university-side .university .edit_buttons {
   display: inline;
   float: left;
   margin-right: 0;
@@ -1824,39 +1852,35 @@ body #topside .university-side .edit_buttons {
   opacity: 0.5;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #topside .university-side .edit_buttons {
+* html body #topside .university-side .university .edit_buttons {
   overflow-x: hidden;
 }
-/* line 28, ../../app/stylesheets/partials/_topside.sass */
-body #topside .university-side .edit_buttons:hover {
+/* line 40, ../../app/stylesheets/partials/_topside.sass */
+body #topside .university-side .university .edit_buttons:hover {
   opacity: 1;
 }
-/* line 31, ../../app/stylesheets/partials/_topside.sass */
-body #topside .university-side .item {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 870px;
-  padding-top: 8px;
-  display: inline-block;
-}
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #topside .university-side .item {
-  overflow-x: hidden;
-}
-/* line 36, ../../app/stylesheets/partials/_topside.sass */
-body #topside .university-side .title {
+/* line 43, ../../app/stylesheets/partials/_topside.sass */
+body #topside .university-side .university .description {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 590px;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #topside .university-side .title {
+* html body #topside .university-side .university .description {
   overflow-x: hidden;
 }
-/* line 39, ../../app/stylesheets/partials/_topside.sass */
-body #topside .university-side .title h2 {
+/* line 46, ../../app/stylesheets/partials/_topside.sass */
+body #topside .university-side .university .description h2 {
   margin: 0;
   padding: 0;
+  font-family: Helvetica, arial, serif;
+  text-shadow: 0 0 3px rgba(200, 200, 200, 0.1);
+  display: inline;
+}
+/* line 53, ../../app/stylesheets/partials/_topside.sass */
+body #topside .university-side .university .description .university-title {
+  font-size: 14px;
+  color: #222222;
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.1);
 }

@@ -12,15 +12,23 @@
       display: inline-block
       margin-left: 3px
       padding: 3px 12px
+      border-top-left-radius: 5px
+      border-top-right-radius: 5px
       -webkit-border-top-left-radius: 5px
       -webkit-border-top-right-radius: 5px
+      -moz-border-radius-topleft: 5px
+      -moz-border-radius-topright: 5px
       background-color: #DDD
       opacity: 0.85
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.1)
       -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1)
+      -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1)
 
       &.current
         background: white
+        box-shadow: 0 0 2px rgba(0, 0, 0, 0.4)
         -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4)
+        -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4)
         opacity: 1
 
         a

@@ -3,10 +3,10 @@
     .logo
       img.side src="#{@university.logo.url}"
 
-    .item
-      .title
+    .university
+      .description
         h2 #{@university.short} (#{@university.city.title})
-        | #{@university.title}
+        .university-title #{@university.title}
 
       .edit_buttons
         a href="#{edit_university_path(@university)}" class="pill button left"
