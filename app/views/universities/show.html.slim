@@ -19,13 +19,8 @@
           span class="trash icon"
           | Delete
 
-    ul.tabs
-      li.current
-        a href="#" Prices
-      li
-        a href="#{university_reviews_path(1)}" Reviews
-      li
-        a href="#" Feed
+    /* Render tabs for side*/
+    = render @tabs
 
 .tab_container
   #prices.tab_content

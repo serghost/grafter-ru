@@ -1,5 +1,6 @@
 class UniversitiesController < ApplicationController
   before_filter :university_id, :except => [:search, :index, :new, :create]
+  before_filter :tabs, :only => [:show]
 
   respond_to :html, :json, :xml
 
@@ -8,7 +9,7 @@ class UniversitiesController < ApplicationController
   end
 
   def show
-
+    @tabs.active! :prices
   end
 
   def index
@@ -36,5 +37,9 @@ class UniversitiesController < ApplicationController
 private
   def university_id
     @university = University.find params[:id]
+  end
+
+  def tabs
+    @tabs = Tabs.new({prices: "#", reviews: "#", feed: "#"})
   end
 end

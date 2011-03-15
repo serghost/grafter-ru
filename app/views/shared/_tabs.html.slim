@@ -1,0 +1,8 @@
+ul.tabs
+  - tabs.each do |title, link, active|
+    - if active
+      li.current
+        = link_to title, link
+    - else
+      li
+        = link_to title, link
