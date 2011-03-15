@@ -50,10 +50,10 @@ class UniversitiesController < ApplicationController
 
 private
   def university_id
-    @university = University.find params[:id].presence || params[:university_id]
+    @university ||= University.find params[:id].presence || params[:university_id]
   end
 
   def tabs
-    @tabs = Tabs.new({prices: "#", reviews: "#", feed: "#"})
+    @tabs = Tabs.new({prices: university_path(university_id), reviews: university_reviews_path(university_id), feed: "#"})
   end
 end
