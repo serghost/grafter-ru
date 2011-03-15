@@ -1,6 +1,6 @@
 class UniversitiesController < ApplicationController
   before_filter :university_id, :except => [:search, :index, :new, :create]
-  before_filter :tabs, :only => [:show]
+  before_filter :tabs, :only => [:show, :reviews]
 
   respond_to :html, :json, :xml
 
@@ -10,6 +10,12 @@ class UniversitiesController < ApplicationController
 
   def show
     @tabs.active! :prices
+  end
+
+  def reviews
+    @tabs.active! :reviews
+
+    render "show"
   end
 
   def index
@@ -34,9 +40,17 @@ class UniversitiesController < ApplicationController
     
   end
 
+  def destroy # FIXME: Dirty dirty code
+    if @university.destroy
+      redirect_to university_path, notice: "Successfuly deleted."
+    else
+      redirect_to @university
+    end
+  end
+
 private
   def university_id
-    @university = University.find params[:id]
+    @university = University.find params[:id].presence || params[:university_id]
   end
 
   def tabs

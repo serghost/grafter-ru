@@ -12,10 +12,10 @@
         a href="#{edit_university_path(@university)}" class="pill button left"
           span class="pen icon"
           | Edit
-        a href="#" class="middle pill button"
-          span class="mail icon"
-          | Report
-        a href="#" class="right negative pill button"
+        /* a href="#" class="middle pill button"*/
+        /*   span class="mail icon"*/
+        /*   | Report*/
+        a href="#{university_path(@university)}" class="right negative pill button" data-confirm="Are you sure?" data-method="delete"
           span class="trash icon"
           | Delete
 
@@ -23,7 +23,4 @@
     = render @tabs
 
 .tab_container
-  #prices.tab_content
-    = render "prices/index"
-  #reviews.tab_content
-  #feed.tab_content
+  = render "#{@tabs.active}/index"

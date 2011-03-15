@@ -8,5 +8,7 @@ Grafter::Application.routes.draw do
   resources :universities do
     resources :prices
     resources :reviews
+
+    get "/reviews" => "universities#reviews", :as => :member
   end
 end
