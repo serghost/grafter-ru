@@ -1943,3 +1943,48 @@ body #page {
 * html body #page {
   overflow-x: hidden;
 }
+/* line 6, ../../app/stylesheets/partials/_page.sass */
+body #page img.university_stack {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 310px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #page img.university_stack {
+  overflow-x: hidden;
+}
+/* line 9, ../../app/stylesheets/partials/_page.sass */
+body #page p {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 630px;
+  color: #222222;
+  font-size: 13px;
+  padding: 30px 0;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-132621c230f7/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #page p {
+  overflow-x: hidden;
+}
+/* line 15, ../../app/stylesheets/partials/_page.sass */
+body #page p.register {
+  color: black;
+  background-color: rgba(55, 55, 255, 0.1);
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid rgba(50, 50, 250, 0.25);
+}
+/* line 23, ../../app/stylesheets/partials/_page.sass */
+body #page p.register span {
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.3);
+}
+/* line 26, ../../app/stylesheets/partials/_page.sass */
+body #page p span.grafter {
+  font-weight: bold;
+  font-size: 1.3em;
+  text-decoration: underline;
+  color: black;
+}
