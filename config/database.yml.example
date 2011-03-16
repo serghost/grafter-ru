@@ -1,19 +1,19 @@
 development:
-  adapter: pg
+  adapter: postgresql
   database: grafter_development
   pool: 5
   timeout: 5000
   username: root
 
 test: &test
-  adapter: pg
+  adapter: postgresql
   database: grafter_test
   pool: 5
   timeout: 5000
   username: root
 
 production:
-  adapter: pg
+  adapter: postgresql
   database: grafter
   pool: 5
   timeout: 5000

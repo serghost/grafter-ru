@@ -139,9 +139,9 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
-    mysql2 (0.2.6)
     nokogiri (1.4.4)
     orm_adapter (0.0.4)
+    pg (0.10.1)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-mount (0.6.13)
@@ -156,6 +156,8 @@ GEM
       activesupport (= 3.0.4)
       bundler (~> 1.0)
       railties (= 3.0.4)
+    rails-default-database (1.0.0)
+      railties
     railties (3.0.4)
       actionpack (= 3.0.4)
       activesupport (= 3.0.4)
@@ -213,10 +215,11 @@ DEPENDENCIES
   jquery-rails
   json
   kaminari!
-  mysql2
   nokogiri
   paperclip!
+  pg
   rails (= 3.0.4)
+  rails-default-database
   recaptcha!
   rspec
   rspec-rails
