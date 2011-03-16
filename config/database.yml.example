@@ -1,19 +1,19 @@
 development:
-  adapter: mysql2
+  adapter: pg
   database: grafter_development
   pool: 5
   timeout: 5000
   username: root
 
 test: &test
-  adapter: mysql2
+  adapter: pg
   database: grafter_test
   pool: 5
   timeout: 5000
   username: root
 
 production:
-  adapter: mysql2
+  adapter: pg
   database: grafter
   pool: 5
   timeout: 5000

@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.4'
-gem 'mysql2'
+gem 'pg'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 gem 'cancan'
@@ -20,6 +20,8 @@ gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git'
 
 group :development, :test do
+  gem 'rails-default-database'
+
   gem 'jquery-rails'
   gem 'annotate'
   gem 'autotest'

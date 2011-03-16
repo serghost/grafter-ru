@@ -2,6 +2,7 @@
 .bundle
 .idea
 .sass-cache
+config/database.yml
 db/*.sqlite3
 log/*.log
 public/images/universities
