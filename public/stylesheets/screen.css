@@ -1340,7 +1340,11 @@ ul#tabs li a {
   width: 350px;
   background: white;
   -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
   padding: 10px 5px 10px 10px;
 }
 /* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -1348,12 +1352,12 @@ ul#tabs li a {
   overflow-x: hidden;
 }
 
-/* line 9, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 13, ../../app/stylesheets/partials/_formtastic.sass */
 h2.form-title {
   margin-bottom: 20px;
 }
 
-/* line 12, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 16, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic {
   display: inline;
   float: left;
@@ -1364,32 +1368,38 @@ form.formtastic {
 * html form.formtastic {
   overflow-x: hidden;
 }
-/* line 15, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 19, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic li {
   list-style: none;
   overflow: hidden;
 }
-/* line 19, ../../app/stylesheets/partials/_formtastic.sass */
-form.formtastic li p {
-  padding: 0;
-  margin: 0;
-}
 /* line 23, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic li.error, form.formtastic li.alert, form.formtastic body li.alert, body form.formtastic li.alert {
   padding: 0;
-  margin: 0;
+  margin: 0 0 10px 0;
+  border: 0;
+  background: none;
 }
-/* line 27, ../../app/stylesheets/partials/_formtastic.sass */
-form.formtastic li label {
+/* line 31, ../../app/stylesheets/partials/_formtastic.sass */
+form.formtastic .form-fields li p {
+  padding: 0;
+  margin: 0 0 0 100px;
+}
+/* line 35, ../../app/stylesheets/partials/_formtastic.sass */
+form.formtastic .form-fields li p input {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+/* line 38, ../../app/stylesheets/partials/_formtastic.sass */
+form.formtastic .form-fields li label {
   display: inline-block;
   width: 100px;
 }
-/* line 31, ../../app/stylesheets/partials/_formtastic.sass */
-form.formtastic li input {
+/* line 42, ../../app/stylesheets/partials/_formtastic.sass */
+form.formtastic .form-fields li input {
   display: inline-block;
   width: 230px;
 }
-/* line 35, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 46, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic .form-buttons {
   padding-top: 15px;
   text-align: center;

@@ -20,8 +20,7 @@ $(function() {
 
   /* Sign up and sign in */
 
-  $("a#signup").click(function() {
-    // jQuery.facebox({ ajax: $(this).attr("href")+".js" });
+  $("a#signup, a#signin").click(function() {
     var _a = this;
 
     jQuery.facebox(function() {
@@ -31,8 +30,8 @@ $(function() {
     return false;
   });
 
-  $("a#register").click(function(){
-    $("form.formtastic.user").submit();
+  $("a.submit").live("click", function(){
+    $(this).parent().parent().submit();
 
     return false;
   });
