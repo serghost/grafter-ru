@@ -1,3 +1,8 @@
-p.register
-  span You don't have account and you want add your university or teacher?&nbsp;
-  a href="#{new_user_registration_path}" class="pill button big" Sign up!
+h2.form-title Sign up
+
+= semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
+  = f.input :email, :as => :email, :required => false
+  = f.input :password, :as => :password, :required => false
+
+  .form-buttons
+    a#register.button.pill.big href="#" Register

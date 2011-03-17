@@ -1,0 +1,28 @@
+@mixin formtastic
+  .fill-dialog
+    +column(9)
+    background: white
+    -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4)
+    -webkit-border-radius: 6px
+    padding: 10px 5px 10px 10px
+
+  h2.form-title
+    margin-bottom: 20px
+
+  form.formtastic
+    +column(9)
+
+    li
+      list-style: none
+
+      label
+        display: inline-block
+        width: 100px
+
+      input
+        display: inline-block
+        width: 230px
+
+    .form-buttons
+      padding-top: 15px
+      text-align: center

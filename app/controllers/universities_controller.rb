@@ -42,7 +42,7 @@ class UniversitiesController < ApplicationController
 
   def destroy # FIXME: Dirty dirty code
     if @university.destroy
-      redirect_to university_path, notice: "Successfuly deleted."
+      redirect_to universities_path, notice: "Successfuly deleted."
     else
       redirect_to @university
     end

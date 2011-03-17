@@ -13,11 +13,11 @@ gem 'bcrypt-ruby', require: 'bcrypt'
 gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 gem 'json'
 
-gem 'slim', git: 'git://github.com/stonean/slim.git', require: 'slim/rails'
+gem 'slim', git: 'git://github.com/stonean/slim.git', require: 'slim/rails', tag: 'v0.9.1'
 gem 'sass', '>= 3.1.0.alpha.214'
 gem 'haml', '>= 3.1.0.alpha.147'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
-gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git'
+gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git', tag: '1.2.3'
 
 group :development, :test do
   gem 'rails-default-database'

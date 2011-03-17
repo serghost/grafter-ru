@@ -18,4 +18,23 @@ $(function() {
     });
   });
 
+  /* Sign up and sign in */
+
+  $("a#signup").click(function() {
+    // jQuery.facebox({ ajax: $(this).attr("href")+".js" });
+    var _a = this;
+
+    jQuery.facebox(function() {
+      jQuery.get($(_a).attr("href")+".js");
+    })
+
+    return false;
+  });
+
+  $("a#register").click(function(){
+    $("form.formtastic.user").submit();
+
+    return false;
+  });
+
 });
