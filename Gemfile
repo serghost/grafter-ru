@@ -20,8 +20,6 @@ gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git', tag: '1.2.3'
 
 group :development, :test do
-  gem 'rails-default-database'
-
   gem 'jquery-rails'
   gem 'annotate'
   gem 'autotest'
