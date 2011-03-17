@@ -6,25 +6,26 @@
     img.university_stack
       +column(8)
 
-    p
-      +column(16, true)
-      color: #222
-      font-size: 13px
-      padding: 30px 0
+    .page
+      p
+        +column(16, true)
+        color: #222
+        font-size: 13px
+        padding: 30px 0
 
-      &.register
+        span
+          text-shadow: 0 0 3px rgba(255, 255, 255, 0.3)
+
+        span.grafter
+          font-weight: bold
+          font-size: 1.3em
+          text-decoration: underline
+          color: black
+
+      .register
         color: black
         background-color: rgba(55, 55, 255, 0.1)
         padding: 10px 0
         text-align: center
         font-size: 14px
         border-top: 1px solid rgba(50, 50, 250, 0.25)
-
-        span
-          text-shadow: 0 0 3px rgba(255, 255, 255, 0.3)
-
-      span.grafter
-        font-weight: bold
-        font-size: 1.3em
-        text-decoration: underline
-        color: black
