@@ -8,5 +8,4 @@ db/schema.rb
 log/*.log
 public/images/universities
 public/stylesheets/compiled
-public/stylesheets/compiled
 tmp/

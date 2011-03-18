@@ -28,7 +28,11 @@ group :development, :test do
   gem 'nokogiri'
   gem 'cucumber'
   gem 'cucumber-rails'
+  gem 'launchy'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'capybara-firebug', git: 'git://github.com/jfirebaugh/capybara-firebug.git'
+  gem 'ruby-debug19'
+  gem 'database_cleaner'
 end
