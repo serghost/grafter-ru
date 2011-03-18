@@ -6,7 +6,7 @@ Feature: Sign In and Sign Up dialogs
   Background:
     Given I am on the homepage
 
-  @javascript @firebug
+  @javascript
   Scenario: Show Sign In dialog with JavaScript
     When I follow "Sign In"
     Then I should see "Email"
