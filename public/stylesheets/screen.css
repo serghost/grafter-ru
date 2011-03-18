@@ -1381,7 +1381,7 @@ form.formtastic li.error, form.formtastic li.alert, form.formtastic body li.aler
   background: none;
 }
 /* line 29, ../../app/stylesheets/partials/_formtastic.sass */
-form.formtastic li.error input, form.formtastic li.alert input, form.formtastic body li.alert input, body form.formtastic li.alert input {
+form.formtastic li.error input, form.formtastic li.alert input, form.formtastic body li.alert input, body form.formtastic li.alert input, form.formtastic li.error select, form.formtastic li.alert select, form.formtastic body li.alert select, body form.formtastic li.alert select {
   background-color: rgba(255, 0, 0, 0.1);
 }
 /* line 34, ../../app/stylesheets/partials/_formtastic.sass */
@@ -1390,14 +1390,14 @@ form.formtastic .form-fields li p {
   margin: 0 0 0 100px;
 }
 /* line 38, ../../app/stylesheets/partials/_formtastic.sass */
-form.formtastic .form-fields li label {
-  display: inline-block;
-  width: 100px;
-}
-/* line 42, ../../app/stylesheets/partials/_formtastic.sass */
-form.formtastic .form-fields li input {
+form.formtastic .form-fields select, form.formtastic .form-fields input {
   display: inline-block;
   width: 230px;
+}
+/* line 42, ../../app/stylesheets/partials/_formtastic.sass */
+form.formtastic .form-fields label {
+  display: inline-block;
+  width: 100px;
 }
 /* line 46, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic .form-buttons {

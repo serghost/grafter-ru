@@ -1,20 +1,16 @@
 = semantic_form_for @university, :html => {:multipart => true} do |form|
-  .span-24
-    = form.input :short
+  .form-fields
+    = form.input :short, :required => false
+    = form.input :title, :required => false
 
-  .span-24
-    = form.input :title
-
-  .span-24
     - unless @university.logo.url == "/images/universities/missing.png"
       = image_tag @university.logo.url
     = form.input :logo, :as => :file
 
-  .span-24
-    .span-12
-      = label_tag :department
-      = select_tag :department, options_from_collection_for_select(Department.all, :id, :title)
+    = label_tag :department
+    = select_tag :department, options_from_collection_for_select(Department.all, :id, :title)
 
     = form.input :city_id, :as => :select, :collection => options_from_collection_for_select(City.all, :id, :title)
 
-  = form.submit
+  .form-buttons
+    a.submit.button.pill href="#" Add university
