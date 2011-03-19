@@ -1,23 +1,16 @@
-.prices
+#prices
   .prices_options
-    label for="lesson" Lesson
-    select#lesson
-      option value="title" OOP
-
-    label for="sorting" Sorting
-    select#sorting
-      option value="title" Title
-
+    input#lesson type="search" placeholder="lesson" tabindex="2"
     input#untrusted type="checkbox"
     label for="untrusted" Show untrusted
 
   .prices_buttons
     a#add_price href="#{new_university_price_path(1)}" class="left pill button"
       span class="plus icon"
-      | Add price
+      |Add price
     a href="#" class="right negative pill button"
       span class="trash icon"
-      | Clean all
+      |Clean all
 
   .prices_items
     table
@@ -43,6 +36,5 @@
           th $1000
           th $150
           th.buttons
-            a href="#{university_price_path(1)}" class="pill button left" Show
-            a href="#{edit_university_price_path(1)}" class="pill button middle" Edit
+            a href="#{edit_university_price_path(1)}" class="left pill button" Edit
             a href="#" class="pill button right negative" Delete

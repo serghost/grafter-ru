@@ -1,56 +1,59 @@
 @mixin university
+  .toolbar
+    +column(24)
+    margin-bottom: 15px
+    background-color: rgba(255, 255, 255, 0.5)
+    border-bottom: 1px solid rgba(50, 50, 250, 0.5)
+
+    .search-bar
+      +column(20)
+
+    .buttons-bar
+      +column(4, true)
+      text-align: right
+
   #universities
     ul
+      +column(24)
       list-style: none
-      margin: 0
-      padding: 2px
+      padding: 0
 
       li
         display: inline-block
-        margin: 0 5px 5px 0
+        margin: 0
+        padding: 0
+        background-color: #EEF
+        -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
+        -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.15)
+        -webkit-border-radius: 4px
+        -moz-border-radius: 4px
+        border-radius: 4px
+        margin: 5px
+        width: 180px
+        overflow: hidden
+        -webkit-transition: all 0.1s
 
-        a.university_item
-          padding: 3px 6px
-          background: #3CF
-          text-decoration: none
-          color: #333
+        &:hover
+          background-color: $section + #222
+
+        a
           display: block
-          -webkit-transition: all 0.3s
+          padding: 5px
+          color: #333
+          text-decoration: none
 
-          &:hover
-            background: #2BE
-            -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.3)
-
-          img.icon
-            display: inline-block
+          img
             width: 32px
             height: 32px
-
-          span.feed
             display: block
-            position: absolute
-            margin: -8px 0 0 -12px
-            background: #25F
-            padding: 0 6px
-            -webkit-border-radius: 12px
-            font-weight: bold
-            color: white
-            -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.5)
+            float: left
+            margin-right: 10px
 
           .item
             display: inline-block
 
             h3
-              margin: 0
               padding: 0
-
-            span.city
-
-    .signup-footer
-      p
-        +column(24)
-        margin-top: 15px
-
-    .tab_container
-      +column(24)
-      position: relative
+              margin: 0
+              text-shadow: 0 0 2px rgba(255, 255, 255, 0.2)

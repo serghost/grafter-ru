@@ -20,7 +20,7 @@ $(function() {
 
   /* Sign up and sign in */
 
-  $("a#signup, a#signin").click(function() {
+  $("a.facebox").click(function() {
     var _a = this;
 
     jQuery.facebox(function() {

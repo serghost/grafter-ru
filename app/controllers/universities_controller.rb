@@ -48,6 +48,11 @@ class UniversitiesController < ApplicationController
     end
   end
 
+  def update
+    @university.update_attributes params[:university]
+    redirect_to @university
+  end
+
 private
   def university_id
     @university ||= University.find params[:id].presence || params[:university_id]

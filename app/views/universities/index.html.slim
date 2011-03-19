@@ -1,19 +1,27 @@
+#universities
+  .toolbar
+    .search-bar
+      /* = label_tag :department*/
+      /* = select_tag :department, options_from_collection_for_select(Department.all, :id, :title)*/
+      /* = label_tag :city*/
+      /* = select_tag :city, options_from_collection_for_select(City.all, :id, :title)*/
+      = form_tag search_path, :method => :get do
+        = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1
+
+    .buttons-bar
+      a.facebox href="#{new_university_path}" class="button pill"
+        span class="plus icon"
+        |Add university
+
+  ul
+    - if @universities.present?
+      = render @universities
+    - else
+      p Not added universities yet :(
+
 .span-24
   .span-4
     |&nbsp;
 
   .page
     = render "shared/signup-banner"
-
-.span-24
-  .span-20
-    /* = label_tag :department*/
-    /* = select_tag :department, options_from_collection_for_select(Department.all, :id, :title)*/
-    /* = label_tag :city*/
-    /* = select_tag :city, options_from_collection_for_select(City.all, :id, :title)*/
-    |&nbsp;
-  .span-4.last
-    a href="#{new_university_path}" class="button pill" Add university
-
-ul
-  = render @universities

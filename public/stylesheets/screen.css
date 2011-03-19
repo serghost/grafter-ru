@@ -1319,12 +1319,13 @@ ul#tabs li.current {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   opacity: 1;
+  padding-top: 4px 13px;
 }
-/* line 34, ../../app/stylesheets/partials/_tabs.sass */
+/* line 35, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li.current a {
   color: black;
 }
-/* line 37, ../../app/stylesheets/partials/_tabs.sass */
+/* line 38, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li a {
   color: #333344;
   text-decoration: none;
@@ -1405,7 +1406,7 @@ form.formtastic .form-buttons {
   text-align: center;
 }
 
-/* line 22, ../../app/stylesheets/screen.sass */
+/* line 24, ../../app/stylesheets/screen.sass */
 .container {
   width: 950px;
   margin: 0 auto;
@@ -1413,22 +1414,22 @@ form.formtastic .form-buttons {
   *zoom: 1;
 }
 
-/* line 25, ../../app/stylesheets/screen.sass */
+/* line 27, ../../app/stylesheets/screen.sass */
 .none {
   display: none;
 }
 
-/* line 28, ../../app/stylesheets/screen.sass */
+/* line 30, ../../app/stylesheets/screen.sass */
 .bad {
   background-color: rgba(200, 20, 20, 0.4);
 }
 
-/* line 31, ../../app/stylesheets/screen.sass */
+/* line 33, ../../app/stylesheets/screen.sass */
 .good {
   background-color: rgba(20, 200, 20, 0.4);
 }
 
-/* line 34, ../../app/stylesheets/screen.sass */
+/* line 36, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -1735,12 +1736,12 @@ body .removed {
   background: #990000;
   color: white;
 }
-/* line 40, ../../app/stylesheets/screen.sass */
+/* line 42, ../../app/stylesheets/screen.sass */
 body a.button {
   text-decoration: none;
   color: #3c3c3d;
 }
-/* line 44, ../../app/stylesheets/screen.sass */
+/* line 46, ../../app/stylesheets/screen.sass */
 body #section {
   background-color: white;
   overflow: auto;
@@ -2060,4 +2061,186 @@ body #page .page .register {
   text-align: center;
   font-size: 14px;
   border-top: 1px solid rgba(50, 50, 250, 0.25);
+}
+/* line 2, ../../app/stylesheets/partials/_university.sass */
+body .toolbar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(50, 50, 250, 0.5);
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .toolbar {
+  overflow-x: hidden;
+}
+/* line 8, ../../app/stylesheets/partials/_university.sass */
+body .toolbar .search-bar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 790px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .toolbar .search-bar {
+  overflow-x: hidden;
+}
+/* line 11, ../../app/stylesheets/partials/_university.sass */
+body .toolbar .buttons-bar {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 150px;
+  text-align: right;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .toolbar .buttons-bar {
+  overflow-x: hidden;
+}
+/* line 16, ../../app/stylesheets/partials/_university.sass */
+body #universities ul {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  list-style: none;
+  padding: 0;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #universities ul {
+  overflow-x: hidden;
+}
+/* line 21, ../../app/stylesheets/partials/_university.sass */
+body #universities ul li {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background-color: #eeeeff;
+  -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  margin: 5px;
+  width: 180px;
+  overflow: hidden;
+  -webkit-transition: all 0.1s;
+}
+/* line 37, ../../app/stylesheets/partials/_university.sass */
+body #universities ul li:hover {
+  background-color: #5387b6;
+}
+/* line 40, ../../app/stylesheets/partials/_university.sass */
+body #universities ul li a {
+  display: block;
+  padding: 5px;
+  color: #333333;
+  text-decoration: none;
+}
+/* line 46, ../../app/stylesheets/partials/_university.sass */
+body #universities ul li a img {
+  width: 32px;
+  height: 32px;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+/* line 53, ../../app/stylesheets/partials/_university.sass */
+body #universities ul li a .item {
+  display: inline-block;
+}
+/* line 56, ../../app/stylesheets/partials/_university.sass */
+body #universities ul li a .item h3 {
+  padding: 0;
+  margin: 0;
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.2);
+}
+/* line 2, ../../app/stylesheets/partials/_prices.sass */
+body #prices {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #prices {
+  overflow-x: hidden;
+}
+/* line 5, ../../app/stylesheets/partials/_prices.sass */
+body #prices .person_title {
+  display: inline-block;
+}
+/* line 8, ../../app/stylesheets/partials/_prices.sass */
+body #prices img.gravatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+}
+/* line 13, ../../app/stylesheets/partials/_prices.sass */
+body #prices form {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 470px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #prices form {
+  overflow-x: hidden;
+}
+/* line 16, ../../app/stylesheets/partials/_prices.sass */
+body #prices form label.price_label {
+  width: 110px;
+  display: inline-block;
+}
+/* line 20, ../../app/stylesheets/partials/_prices.sass */
+body #prices form input.price_input {
+  display: inline-block;
+  width: 300px;
+}
+/* line 24, ../../app/stylesheets/partials/_prices.sass */
+body #prices form input.price_edit {
+  width: 100px;
+}
+/* line 27, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_options {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 590px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #prices .prices_options {
+  overflow-x: hidden;
+}
+/* line 30, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_buttons {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 350px;
+  text-align: right;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #prices .prices_buttons {
+  overflow-x: hidden;
+}
+/* line 34, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_items {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  margin-top: 15px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #prices .prices_items {
+  overflow-x: hidden;
+}
+/* line 38, ../../app/stylesheets/partials/_prices.sass */
+body #prices th.buttons {
+  text-align: right;
+  padding: 0;
 }
