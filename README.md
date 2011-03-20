@@ -4,7 +4,7 @@ No, it's not finished yet.
 # HOW TO TEST IT?
 In terminal:
 
-    git clone git://github.com/TimothyKlim/grafter.ru.git
+    git clone git://github.com/TimothyKlim/grafter-ru.git
     cd grafter.ru
     bundle install
     rake db:create
