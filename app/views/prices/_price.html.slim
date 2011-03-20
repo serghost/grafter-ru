@@ -7,5 +7,9 @@ tr
   th #{price.course_work}
   th #{price.test}
   th.buttons
-    a href="#{edit_university_price_path(price)}" class="left pill button" Edit
-    a href="#" class="pill button right negative" Delete
+    a href="#{edit_university_price_path(@university, price)}" class="left pill button"
+      span class="pen icon"
+      |Edit
+    a href="#" class="pill button right negative"
+      span class="trash icon"
+      |Delete

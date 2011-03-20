@@ -1299,7 +1299,8 @@ ul#tabs {
 ul#tabs li {
   display: inline-block;
   margin-left: 3px;
-  padding: 3px 12px;
+  margin-top: 3px;
+  padding: 2px 11px 3px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   -webkit-border-top-left-radius: 5px;
@@ -1312,20 +1313,20 @@ ul#tabs li {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-/* line 27, ../../app/stylesheets/partials/_tabs.sass */
+/* line 28, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li.current {
   background: white;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
   opacity: 1;
-  padding-top: 4px 13px;
+  padding: 3px 13px;
 }
-/* line 35, ../../app/stylesheets/partials/_tabs.sass */
+/* line 36, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li.current a {
   color: black;
 }
-/* line 38, ../../app/stylesheets/partials/_tabs.sass */
+/* line 39, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li a {
   color: #333344;
   text-decoration: none;
@@ -1406,7 +1407,7 @@ form.formtastic .form-buttons {
   text-align: center;
 }
 
-/* line 24, ../../app/stylesheets/screen.sass */
+/* line 25, ../../app/stylesheets/screen.sass */
 .container {
   width: 950px;
   margin: 0 auto;
@@ -1414,22 +1415,22 @@ form.formtastic .form-buttons {
   *zoom: 1;
 }
 
-/* line 27, ../../app/stylesheets/screen.sass */
+/* line 28, ../../app/stylesheets/screen.sass */
 .none {
   display: none;
 }
 
-/* line 30, ../../app/stylesheets/screen.sass */
+/* line 31, ../../app/stylesheets/screen.sass */
 .bad {
   background-color: rgba(200, 20, 20, 0.4);
 }
 
-/* line 33, ../../app/stylesheets/screen.sass */
+/* line 34, ../../app/stylesheets/screen.sass */
 .good {
   background-color: rgba(20, 200, 20, 0.4);
 }
 
-/* line 36, ../../app/stylesheets/screen.sass */
+/* line 37, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -1736,12 +1737,12 @@ body .removed {
   background: #990000;
   color: white;
 }
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 43, ../../app/stylesheets/screen.sass */
 body a.button {
   text-decoration: none;
   color: #3c3c3d;
 }
-/* line 46, ../../app/stylesheets/screen.sass */
+/* line 47, ../../app/stylesheets/screen.sass */
 body #section {
   background-color: white;
   overflow: auto;
@@ -2218,4 +2219,53 @@ body #prices .prices_items {
 body #prices th.buttons {
   text-align: right;
   padding: 0;
+}
+/* line 2, ../../app/stylesheets/partials/_review.sass */
+body .review {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .review {
+  overflow-x: hidden;
+}
+/* line 5, ../../app/stylesheets/partials/_review.sass */
+body .review div.gravatar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 30px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .review div.gravatar {
+  overflow-x: hidden;
+}
+/* line 8, ../../app/stylesheets/partials/_review.sass */
+body .review div.gravatar img {
+  width: 32px;
+  height: 32px;
+}
+/* line 12, ../../app/stylesheets/partials/_review.sass */
+body .review .review_title {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 910px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .review .review_title {
+  overflow-x: hidden;
+}
+/* line 15, ../../app/stylesheets/partials/_review.sass */
+body .review .comment {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+}
+/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .review .comment {
+  overflow-x: hidden;
 }

@@ -10,7 +10,7 @@ class PricesController < ApplicationController
   end
 
   def edit
-
+    @price = Price.find params[:id]
   end
 
   def show
