@@ -4,7 +4,6 @@
 .sass-cache
 config/database.yml
 db/*.sqlite3
-db/schema.rb
 log/*.log
 public/images/universities
 public/stylesheets/compiled

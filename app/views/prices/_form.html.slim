@@ -1,47 +1,14 @@
-= form_tag "/", :remote => true do
-  = label_tag :lesson, nil, :class => "price_label"
-  = text_field_tag :lesson, nil, :class => "price_input"
+= semantic_form_for [@university, @price] do |form|
+  .form-fields
+    = form.input :lesson
+    = form.input :teacher
 
-  = label_tag :teacher, nil, :class => "price_label"
-  = text_field_tag :teacher, nil, :class => "price_input"
+    = form.input :score_5
+    = form.input :score_4
+    = form.input :score_3
+    = form.input :attestation
+    = form.input :test
+    = form.input :course_work
 
-  table
-    thead
-      tr
-        th
-          label for="attestation" Attestation
-        th
-          label for="test" Test
-        th
-          label for="course_work" Course work
-
-    tbody
-      tr
-        td
-          input.price_edit type="text" placeholder="0.0" id="attestation"
-        td
-          input.price_edit type="text" placeholder="0.0" id="test"
-        td
-          input.price_edit type="text" placeholder="0.0" id="course_work"
-
-  table
-    thead
-      tr
-        th
-          label for="5" Score: 5
-        th
-          label for="4" Score: 4
-        th
-          label for="3" Score: 3
-
-    tbody
-      tr
-        td
-          input.price_edit type="text" placeholder="0.0" id="5"
-        td
-          input.price_edit type="text" placeholder="0.0" id="4"
-        td
-          input.price_edit type="text" placeholder="0.0" id="3"
-
-  = link_to "Back", university_path(1)
-  = submit_tag :create
+  .form-buttons
+    a.submit.button.pill href="#" Add price

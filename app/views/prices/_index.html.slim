@@ -26,15 +26,4 @@
           th
 
       tbody
-        tr
-          th.person_title
-            | Stepan T.R.
-          th $300
-          th $200
-          th $100
-          th $50
-          th $1000
-          th $150
-          th.buttons
-            a href="#{edit_university_price_path(1)}" class="left pill button" Edit
-            a href="#" class="pill button right negative" Delete
+        = render @university.prices

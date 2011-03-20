@@ -2179,31 +2179,6 @@ body #prices img.gravatar {
   width: 32px;
   height: 32px;
 }
-/* line 13, ../../app/stylesheets/partials/_prices.sass */
-body #prices form {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 470px;
-}
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #prices form {
-  overflow-x: hidden;
-}
-/* line 16, ../../app/stylesheets/partials/_prices.sass */
-body #prices form label.price_label {
-  width: 110px;
-  display: inline-block;
-}
-/* line 20, ../../app/stylesheets/partials/_prices.sass */
-body #prices form input.price_input {
-  display: inline-block;
-  width: 300px;
-}
-/* line 24, ../../app/stylesheets/partials/_prices.sass */
-body #prices form input.price_edit {
-  width: 100px;
-}
 /* line 27, ../../app/stylesheets/partials/_prices.sass */
 body #prices .prices_options {
   display: inline;

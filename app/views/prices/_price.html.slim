@@ -1,0 +1,11 @@
+tr
+  th.person_title #{price.teacher.personal}
+  th #{price.score_5}
+  th #{price.score_4}
+  th #{price.score_3}
+  th #{price.attestation}
+  th #{price.course_work}
+  th #{price.test}
+  th.buttons
+    a href="#{edit_university_price_path(price)}" class="left pill button" Edit
+    a href="#" class="pill button right negative" Delete
