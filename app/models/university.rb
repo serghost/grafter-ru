@@ -4,6 +4,8 @@ class University < ActiveRecord::Base
   has_many :prices, :dependent => :destroy
   has_many :teachers
 
+  paginates_per 25
+
   validates :short, :presence => true, :length => {:in => 2..10}
   validates :title, :uniqueness => true, :presence => true, :length => {:minimum => 7}
   validates :city_id, :presence => true

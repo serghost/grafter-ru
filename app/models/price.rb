@@ -3,4 +3,6 @@ class Price < ActiveRecord::Base
 
   belongs_to :university
   belongs_to :teacher
+
+  paginates_per 20
 end

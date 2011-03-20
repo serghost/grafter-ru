@@ -1422,12 +1422,12 @@ form.formtastic .form-buttons {
 
 /* line 31, ../../app/stylesheets/screen.sass */
 .bad {
-  background-color: rgba(200, 20, 20, 0.4);
+  background-color: rgba(200, 20, 20, 0.3);
 }
 
 /* line 34, ../../app/stylesheets/screen.sass */
 .good {
-  background-color: rgba(20, 200, 20, 0.4);
+  background-color: rgba(20, 200, 20, 0.3);
 }
 
 /* line 37, ../../app/stylesheets/screen.sass */
@@ -2222,32 +2222,17 @@ body #prices th.buttons {
 }
 /* line 2, ../../app/stylesheets/partials/_review.sass */
 body .review {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
+  width: 910px;
+  padding: 10px;
+  margin: 0 10px 10px;
+  display: inline-block;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border: 2px solid white;
+  -webkit-box-shadow: 0 0 3px black;
+  -webkit-border-radius: 8px;
 }
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body .review {
-  overflow-x: hidden;
-}
-/* line 5, ../../app/stylesheets/partials/_review.sass */
-body .review div.gravatar {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 30px;
-}
-/* line 147, ../../../../../.rvm/gems/ruby-1.9.2-p180/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body .review div.gravatar {
-  overflow-x: hidden;
-}
-/* line 8, ../../app/stylesheets/partials/_review.sass */
-body .review div.gravatar img {
-  width: 32px;
-  height: 32px;
-}
-/* line 12, ../../app/stylesheets/partials/_review.sass */
+/* line 13, ../../app/stylesheets/partials/_review.sass */
 body .review .review_title {
   display: inline;
   float: left;
@@ -2258,7 +2243,7 @@ body .review .review_title {
 * html body .review .review_title {
   overflow-x: hidden;
 }
-/* line 15, ../../app/stylesheets/partials/_review.sass */
+/* line 16, ../../app/stylesheets/partials/_review.sass */
 body .review .comment {
   display: inline;
   float: left;

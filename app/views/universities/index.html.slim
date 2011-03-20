@@ -14,10 +14,8 @@
         |Add university
 
   ul
-    - if @universities.present?
-      = render @universities
-    - else
-      p Not added universities yet :(
+    = render @universities
+    == paginate @universities
 
 .span-24
   .span-4

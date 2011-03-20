@@ -19,7 +19,7 @@ class UniversitiesController < ApplicationController
   end
 
   def index
-    @universities = University.all
+    @universities = University.order(:city_id).page params[:page]
   end
 
   def new
