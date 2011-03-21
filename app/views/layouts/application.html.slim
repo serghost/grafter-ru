@@ -25,13 +25,24 @@ html
             = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
 
         ul
-          - unless controller.kind_of? Devise::SessionsController
-            li
-              a.facebox href="#{new_user_session_path}" Sign In
+          - unless current_user.present?
+            - unless controller.kind_of? Devise::SessionsController
+              li
+                a.facebox href="#{new_user_session_path}" Sign In
 
-          - unless controller.kind_of? Devise::RegistrationsController
+            - unless controller.kind_of? Devise::RegistrationsController
+              li
+                a.facebox href="#{new_user_registration_path}" Sign Up
+
+          - else
             li
-              a.facebox href="#{new_user_registration_path}" Sign Up
+              a href="#" Admin
+            li
+              a href="#" Moderate
+            li
+              = link_to "Profile", current_user
+            li
+              = link_to "Log Out", destroy_user_session_path
 
     - if content_for? :topside
       #topside

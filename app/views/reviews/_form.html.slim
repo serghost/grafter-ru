@@ -1,11 +1,5 @@
-= form_tag university_reviews_path do
-  .span-24
-    = label_tag :type, "Select type for message"
-    = select_tag :type, "<option>High</option>".html_safe
-
-  .span-24
-    .span-4
-      = label_tag :text, "Review"
-    = text_area_tag :text
+= semantic_form_for [@university, @review] do |form|
+  = form.input :kind, :as => :select, :collection => {"All" => :all, "Good" => 1, "Neutral" => 0, "Bad" => -1}
+  = form.input :text, :as => :text
 
   = submit_tag

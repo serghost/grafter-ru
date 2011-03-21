@@ -1,26 +1,15 @@
-.span-22
-  | Sorting
-  a href="#" class="left button pill" All
-  a href="#" class="middle button pill" High
-  a href="#" class="middle button pill" Neitral
-  a href="#" class="right button pill" Low
+.toolbar
+  .span-19
+    |Show
+    select
+      option All
+      option Good
+      option Neutral
+      option Bad
 
-.span-2.last
-  a href="#" class="button pill" Add
+  .span-5.last
+    a href="#{new_university_review_path(@university)}" class="button pill"
+      span.icon.plus
+      |Put review
 
-.review.bad
-  .comment
-    | Очень плохой университет. Раньше был лучше. Сколько помню себя, этот университет был хороший. Но сегодня плохой, очень плохой. Преподаватели не очень, да и программа обучения уныла.
-
-.review.good
-  .gravatar
-    img src="/images/spbgtu.png"
-  .review_title
-    .span-21
-      | TimothyKlim
-      br
-      | 23.12.2011
-    .buttons.span-2.last
-      a href="#" class="button pill" Delete
-  .comment
-    | Очень плохой университет. Раньше был лучше. Сколько помню себя, этот университет был хороший. Но сегодня плохой, очень плохой. Преподаватели не очень, да и программа обучения уныла.
+= render @reviews

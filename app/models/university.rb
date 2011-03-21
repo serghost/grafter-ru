@@ -2,6 +2,7 @@ class University < ActiveRecord::Base
   belongs_to :city
 
   has_many :prices, :dependent => :destroy
+  has_many :reviews, :dependent => :destroy
   has_many :teachers
 
   validates :short, :presence => true, :length => {:in => 2..10}

@@ -11,8 +11,9 @@ class UniversitiesController < ApplicationController
   end
 
   def reviews
-    @tabs.active! :reviews
+    @reviews = @university.reviews
 
+    @tabs.active! :reviews
     render "show"
   end
 

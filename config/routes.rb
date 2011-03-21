@@ -11,4 +11,6 @@ Grafter::Application.routes.draw do
     resources :prices
     resources :reviews
   end
+
+  resources :users
 end

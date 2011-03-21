@@ -14,8 +14,13 @@
         |Add university
 
   ul
-    = render @universities
-    == paginate @universities
+    /* = @universities.empty?*/
+    - if @universities.present?
+      = render @universities
+      == paginate @universities
+
+    - else
+      p Not results for your search query.
 
 .span-24
   .span-4
