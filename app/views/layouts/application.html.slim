@@ -20,8 +20,9 @@ html
         h1
           a href="#{root_url}" Grafter
 
-        = form_tag search_path, :method => :get do
-          = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1
+        - unless @hide_search_bar
+          = form_tag search_path, {:method => :get, :class => "search"} do
+            = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
 
         ul
           - unless controller.kind_of? Devise::SessionsController

@@ -1,5 +1,5 @@
 li
-  = link_to university_path(university) do
+  = link_to university_path(university), title: university.title do
     /* span.feed 12*/
 
     img src="#{university.logo.url(:thumb)}"

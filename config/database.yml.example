@@ -1,23 +1,23 @@
 development:
   adapter: postgresql
   database: grafter_development
-  pool: 5
-  timeout: 5000
-  username: root
+  username: grafter
+  encoding: unicode
+  password: ""
 
 test: &test
   adapter: postgresql
   database: grafter_test
-  pool: 5
-  timeout: 5000
-  username: root
+  username: grafter
+  encoding: unicode
+  password: ""
 
 production:
   adapter: postgresql
   database: grafter
-  pool: 5
-  timeout: 5000
-  username: root
+  username: grafter
+  encoding: unicode
+  password: ""
 
 cucumber:
   <<: *test

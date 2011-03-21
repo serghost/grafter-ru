@@ -1,7 +1,9 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
+gem 'rails', '3.0.5'
+
 gem 'pg'
+gem 'meta_where', git: 'git://github.com/ernie/meta_where.git'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 gem 'cancan'
@@ -35,6 +37,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-firebug', git: 'git://github.com/jfirebaugh/capybara-firebug.git'
+  gem 'factory_girl'
   gem 'ruby-debug19'
   gem 'database_cleaner'
 end

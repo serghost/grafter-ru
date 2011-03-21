@@ -4,11 +4,9 @@ class UniversitiesController < ApplicationController
 
   respond_to :html, :json, :xml
 
-  def search
-
-  end
-
   def show
+    @prices = @university.prices.where("lesson ILIKE ?", "%#{params[:lesson]}%").page params[:page]
+
     @tabs.active! :prices
   end
 
@@ -19,7 +17,11 @@ class UniversitiesController < ApplicationController
   end
 
   def index
-    @universities = University.order(:city_id).page params[:page]
+    # FIXME: Move to model as scope!
+    @universities = University.where("short ILIKE ? OR title ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").order(:city_id).page params[:page]
+    @hide_search_bar = true
+
+    respond_with @universities
   end
 
   def new

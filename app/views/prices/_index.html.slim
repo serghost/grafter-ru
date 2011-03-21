@@ -1,8 +1,9 @@
 #prices
   .prices_options
-    input#lesson type="search" placeholder="lesson" tabindex="2"
-    input#untrusted type="checkbox"
-    label for="untrusted" Show untrusted
+    = form_tag @university, :method => :get do
+      input#lesson name="lesson" type="text" placeholder="lesson" tabindex="2" value="#{params[:lesson]}"
+      input#untrusted name="untrusted" type="checkbox" value="true"
+      label for="untrusted" Show untrusted
 
   .prices_buttons
     a#add_price href="#{new_university_price_path(@university)}" class="left pill button"
@@ -26,4 +27,6 @@
           th
 
       tbody
-        = render @university.prices
+        = render @prices
+
+    == paginate @prices
