@@ -11,7 +11,8 @@ class University < ActiveRecord::Base
 
   has_attached_file :logo, :styles => {:thumb => '32x32', :original => '64x64'},
     :url => "/images/:class/:attachment/:id/:style.:extension",
-    :default_url => "/images/:class/missing.png"
+    :default_url => "/images/:class/missing.png",
+    :convert_options => { :all => '-background white -flatten +matte'}
 
   paginates_per 25
 end
