@@ -25,6 +25,9 @@ html
             = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
 
         ul
+          li
+            = link_to "Universities", universities_path
+
           - unless current_user.present?
             - unless controller.kind_of? Devise::SessionsController
               li
