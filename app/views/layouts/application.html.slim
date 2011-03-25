@@ -15,6 +15,10 @@ html
     = csrf_meta_tag
 
   body
+    - flash.each do |key, msg|
+      .info
+        = msg
+
     #header
       .container
         h1
@@ -38,10 +42,10 @@ html
                 a.facebox href="#{new_user_registration_path}" Sign Up
 
           - else
-            li
-              a href="#" Admin
-            li
-              a href="#" Moderate
+            /* li*/
+            /*   a href="#" Admin*/
+            /* li*/
+            /*   a href="#" Moderate*/
             li
               = link_to "Profile", current_user
             li
