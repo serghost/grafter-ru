@@ -42,4 +42,5 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'ruby-debug19'
   gem 'database_cleaner'
+  gem 'ffaker'
 end
