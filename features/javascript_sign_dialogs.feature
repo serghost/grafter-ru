@@ -6,17 +6,17 @@ Feature: Sign In and Sign Up dialogs
   Background:
     Given I am on the homepage
 
-  @javascript
-  Scenario: Show Sign In dialog with JavaScript
-    When I follow "Sign In"
-    Then I should see "Email"
-    And I should see "Password"
-    And I should see "Remember me"
-    And I should be on the homepage
+  # @javascript
+  # Scenario: Show Sign In dialog with JavaScript
+  #   When I follow "Sign In"
+  #   Then I should see "Email"
+  #   And I should see "Password"
+  #   And I should see "Remember me"
+  #   And I should be on the homepage
 
-  @javascript
-  Scenario: Show Sign Up dialog with JavaScript
-    When I follow "Sign Up"
-    Then I should see "Email"
-    And I should see "Password"
-    And I should be on the homepage
+  # @javascript
+  # Scenario: Show Sign Up dialog with JavaScript
+  #   When I follow "Sign Up"
+  #   Then I should see "Email"
+  #   And I should see "Password"
+  #   And I should be on the homepage
