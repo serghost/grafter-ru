@@ -39,7 +39,7 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'capybara-firebug', git: 'git://github.com/jfirebaugh/capybara-firebug.git'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
   gem 'ruby-debug19'
   gem 'database_cleaner'
 end

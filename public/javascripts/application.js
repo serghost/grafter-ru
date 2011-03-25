@@ -36,4 +36,10 @@ $(function() {
     return false;
   });
 
+  // $("form.formtastic input").keypress(function(key) {
+  //   if (key.charCode == 13) {
+  //     $(this).parent().parent().parent().submit();
+  //   }
+  // });
+
 });

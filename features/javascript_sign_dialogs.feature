@@ -1,7 +1,7 @@
 Feature: Sign In and Sign Up dialogs
   In order to sign in or sign up
   As a user
-  I want to show up dialogs
+  I want to show up these dialogs
 
   Background:
     Given I am on the homepage
