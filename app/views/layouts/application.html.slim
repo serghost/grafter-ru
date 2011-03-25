@@ -22,7 +22,7 @@ html
 
         - unless @hide_search_bar
           = form_tag search_path, {:method => :get, :class => "search"} do
-            = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
+            = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field", :"data-autocomplete" => universities_autocomplete_university_short_path
 
         ul
           li
@@ -71,4 +71,4 @@ html
           li
             a href="/help" Help
           li
-            a href="/abuse" Make report!
+            a href="mailto:grafter.ru@gmail.com?subject=Abuse" Make abuse!

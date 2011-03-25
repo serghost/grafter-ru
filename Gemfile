@@ -4,6 +4,7 @@ gem 'rails', '3.0.5'
 
 gem 'pg'
 gem 'meta_where', git: 'git://github.com/ernie/meta_where.git'
+gem 'paper_trail', git: 'git://github.com/airblade/paper_trail.git'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 gem 'cancan'
@@ -20,6 +21,7 @@ gem 'sass', '>= 3.1.0.alpha.214'
 gem 'haml', '>= 3.1.0.alpha.147'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git', tag: '1.2.3'
+gem 'rails3-jquery-autocomplete'
 
 group :development, :test do
   gem 'rails-default-database'

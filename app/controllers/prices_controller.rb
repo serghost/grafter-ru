@@ -1,6 +1,4 @@
 class PricesController < ApplicationController
-  before_filter :university_id
-
   def index
 
   end

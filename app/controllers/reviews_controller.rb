@@ -1,6 +1,4 @@
 class ReviewsController < ApplicationController
-  before_filter :university_id, :only => [:new, :create]
-
   def new
     @review = @university.reviews.new
   end

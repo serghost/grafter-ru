@@ -5,6 +5,8 @@ Grafter::Application.routes.draw do
 
   match "/search" => "universities#index"
 
+  get 'universities/autocomplete_university_short'
+
   resources :universities do
     get "/reviews" => "universities#reviews", :as => :member
 

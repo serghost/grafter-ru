@@ -5,4 +5,8 @@ class Price < ActiveRecord::Base
   belongs_to :teacher
 
   paginates_per 20
+
+  def personal=(full_name)
+    
+  end
 end

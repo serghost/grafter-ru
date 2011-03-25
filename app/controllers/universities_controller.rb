@@ -1,8 +1,10 @@
 class UniversitiesController < ApplicationController
-  before_filter :university_id, :except => [:search, :index, :new, :create]
+  before_filter :get_university_id, :only => [:show, :reviews, :destroy, :edit, :update]
   before_filter :tabs, :only => [:show, :reviews]
 
   respond_to :html, :json, :xml
+
+  autocomplete :university, :short
 
   def show
     @prices = @university.prices.where("lesson ILIKE ?", "%#{params[:lesson]}%").page params[:page]
@@ -40,7 +42,6 @@ class UniversitiesController < ApplicationController
   end
 
   def edit
-    
   end
 
   def destroy # FIXME: Dirty dirty code
@@ -58,6 +59,10 @@ class UniversitiesController < ApplicationController
 
 private
   def tabs
-    @tabs = Tabs.new({prices: university_path(university_id), reviews: university_reviews_path(university_id), feed: "#"})
+    @tabs = Tabs.new({prices: university_path(@university), reviews: university_reviews_path(@university), feed: "#"})
+  end
+
+  def get_university_id
+    @university = University.find params[:id]
   end
 end
