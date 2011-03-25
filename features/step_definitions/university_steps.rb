@@ -1,5 +1,3 @@
-Given /^these are the following universities:$/ do |table|
-  table.hashes.each do |attributes|
-    @university = Factory.create(:university, attributes)
-  end
+Given /^there is a university called "([^"]*)" with "([^"]*)" title$/ do |short, title|
+  @university = Factory.create(:university, :title => title, :short => short)
 end

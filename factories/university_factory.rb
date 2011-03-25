@@ -1,5 +1,6 @@
 Factory.define :university do |university|
-  city = City.first.nil? ? 1 : City.first.id
+  @department = Department.find_or_create_by_title "Moscow department"
+  @city = City.find_or_create_by_title(:title => "Moscow", :department => @department)
 
-  university.city_id city
+  university.city_id @city
 end

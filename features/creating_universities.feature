@@ -33,12 +33,9 @@ Feature: Creating universities
     And I should see "is too short (minimum is 7 characters)"
 
   Scenario: Creating the duplicate of university
-    Given these are the following universities:
-      | short      | title                  |
-      | МГУ        | Yet Another University |
+    Given there is a university called "МГУ" with "Yet Another University" title
     And I fill in "Short name" with "МГУ"
     And I fill in "Full title" with "Yet another university"
     Then I press "Create University"
-    And show me the page
     And I should not see "Successfully created."
     And I should see "this university is already exists"
