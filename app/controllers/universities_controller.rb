@@ -53,8 +53,12 @@ class UniversitiesController < ApplicationController
   end
 
   def update
-    @university.update_attributes params[:university]
-    redirect_to @university
+    if @university.update_attributes(params[:university])
+      redirect_to @university, :notice => "University has been updated."
+    else
+      flash[:alert] = "University has not been updated."
+      render :action => "new"
+    end
   end
 
 private

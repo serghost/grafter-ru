@@ -9,14 +9,12 @@
         .university-title #{@university.title}
 
       .edit_buttons
-        - if can? :edit, @university
-          a href="#{edit_university_path(@university)}" class="button pill"
-            span class="pen icon"
-            | Edit
-        - if can? :delete, @university
-          a href="#{university_path(@university)}" class="negative button" data-confirm="Are you sure?" data-method="delete"
-            span class="trash icon"
-            | Delete
+        a href="#{edit_university_path(@university)}" class="button pill"
+          span class="pen icon"
+          | Edit
+        a href="#{university_path(@university)}" class="negative button" data-confirm="Are you sure?" data-method="delete"
+          span class="trash icon"
+          | Delete
 
     /* Render tabs for side*/
     = render @tabs
