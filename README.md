@@ -3,6 +3,7 @@ No, it's not finished yet.
 
 # HOW TO TEST IT?
 You must to have already installed a PostgreSQL for working with grafter.
+
 In terminal:
 
     git clone git://github.com/TimothyKlim/grafter-ru.git
