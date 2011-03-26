@@ -21,3 +21,9 @@ Feature: Editing university
     And I should see "Yeah (Podolsk)"
     And I should see "New university title"
     And I should see "Prices"
+
+  Scenario: Updating a university with invalid attributes
+    And I fill in "Short name" with "_"
+    And I fill in "Full title" with "_"
+    Then I press "Update University"
+    And I should not see "University has been updated."

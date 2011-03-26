@@ -14,12 +14,6 @@ module NavigationHelpers
     when /the university page for "([^"]*)"/
       university_path University.find_by_short($1)
 
-    # Add more mappings here.
-    # Here is an example that pulls values out of the Regexp:
-    #
-    #   when /^(.*)'s profile page$/i
-    #     user_profile_path(User.find_by_login($1))
-
     else
       begin
         page_name =~ /the (.*) page/
