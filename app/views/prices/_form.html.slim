@@ -1,6 +1,6 @@
 = semantic_form_for [@university, @price] do |form|
   .form-fields
-    = form.input :lesson
+    = form.input :lesson, :as => :string
     = form.input :personal
 
     = form.input :score_5
@@ -11,4 +11,5 @@
     = form.input :course_work
 
   .form-buttons
-    a.submit.button.pill href="#" Add price
+    /* a.submit.button.pill href="#" Add price*/
+    = form.submit

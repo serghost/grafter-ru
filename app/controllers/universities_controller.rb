@@ -1,5 +1,5 @@
 class UniversitiesController < ApplicationController
-  before_filter :get_university_id, :only => [:show, :reviews, :destroy, :edit, :update]
+  before_filter :find_university, :only => [:show, :reviews, :destroy, :edit, :update]
   before_filter :tabs, :only => [:show, :reviews]
 
   respond_to :html, :json, :xml
@@ -7,7 +7,7 @@ class UniversitiesController < ApplicationController
   autocomplete :university, :short
 
   def show
-    @prices = @university.prices.where("lesson ILIKE ?", "%#{params[:lesson]}%").page params[:page]
+    @prices = @university.prices.page params[:page]
 
     @tabs.active! :prices
   end
@@ -35,9 +35,10 @@ class UniversitiesController < ApplicationController
     @university = University.new params[:university]
 
     if @university.save
-      redirect_to university_path(@university), :notice => "Successfully created."
+      redirect_to university_path(@university), :notice => "University has been created."
     else
-      render "new"
+      flash[:alert] = "University has not been created."
+      render :action => "new"
     end
   end
 
@@ -66,7 +67,7 @@ private
     @tabs = Tabs.new({prices: university_path(@university), reviews: university_reviews_path(@university), feed: "#"})
   end
 
-  def get_university_id
+  def find_university
     @university = University.find params[:id]
   end
 end

@@ -1,4 +1,6 @@
 class PricesController < ApplicationController
+  before_filter :find_university, :except => :index
+
   def index
 
   end
@@ -21,9 +23,16 @@ class PricesController < ApplicationController
     @price.user_id = 1
 
     if @price.save
-      redirect_to @university, :notice => "Successfully price created."
+      redirect_to @university, :notice => "Price has been created."
     else
-      render "new"
+      flash[:alert] = "Price has not been created."
+      render :action => "new"
     end
+  end
+
+  private
+
+  def find_university
+    @university = University.find params[:university_id]
   end
 end

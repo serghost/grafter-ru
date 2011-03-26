@@ -20,7 +20,7 @@ Feature: Creating universities
     And I fill in "Full title" with "Московский государственный университет имени М.В.Ломоносова"
     And I select "Moscow" from "university[city_id]"
     Then I press "Create University"
-    And I should see "Successfully created."
+    And I should see "University has been created."
     And I should see "Prices"
     And I should see "Reviews"
 
@@ -28,7 +28,7 @@ Feature: Creating universities
     And I fill in "Short name" with "_"
     And I fill in "Full title" with "_"
     Then I press "Create University"
-    And I should not see "Successfully created."
+    And I should see "University has not been created."
     And I should see "is too short (minimum is 2 characters)"
     And I should see "is too short (minimum is 7 characters)"
 

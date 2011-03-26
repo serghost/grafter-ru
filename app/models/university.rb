@@ -1,6 +1,7 @@
 class University < ActiveRecord::Base
   belongs_to :city
 
+  has_many :lessons, :dependent => :destroy
   has_many :prices, :dependent => :destroy
   has_many :reviews, :dependent => :destroy
   has_many :teachers
