@@ -6,6 +6,13 @@ class Price < ActiveRecord::Base
   belongs_to :teacher
   belongs_to :university
 
+  validates_numericality_of :score_5,     :less_than => 100_000_000, :greater_than => 1
+  validates_numericality_of :score_4,     :less_than => 100_000_000, :greater_than => 1
+  validates_numericality_of :score_3,     :less_than => 100_000_000, :greater_than => 1
+  validates_numericality_of :test,        :less_than => 100_000_000, :greater_than => 1
+  validates_numericality_of :course_work, :less_than => 100_000_000, :greater_than => 1
+  validates_numericality_of :attestation, :less_than => 100_000_000, :greater_than => 1
+
   validates :lesson, :presence => true, :format => /^([\w\s]+)$/
   validates :personal, :presence => true,
     :format => /^([^\W0-9]+)\ ([^\W0-9]+)\ ([^\W0-9]+)$/

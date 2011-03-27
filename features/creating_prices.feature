@@ -30,3 +30,4 @@ Feature: Creating prices
     And I fill in "Attestation" with "#"
     Then I press "Create Price"
     And I should see "Price has not been created."
+    And show me the page
