@@ -10,6 +10,6 @@ tr
     a href="#{edit_university_price_path(@university, price)}" class="left pill button"
       span class="pen icon"
       |Edit
-    a href="#" class="pill button right negative"
+    a href="#{university_price_path(@university, price)}" class="pill button right negative" data-method="delete" data-confirm="Are you sure?"
       span class="trash icon"
       |Delete

@@ -14,6 +14,15 @@ module NavigationHelpers
     when /the university page for "([^"]*)"/
       university_path University.find_by_short($1)
 
+    when /the edit page for price with lesson "([^"]*)" and personal "([^"]*)"/
+      # FIXME oh my... this is very dirty code
+      lesson_id = Lesson.where("title ILIKE ?", $1).limit(1)[0].id
+      teacher_id = Teacher.where("personal ILIKE ?", $2).limit(1)[0].id
+
+      price = Price.where("lesson_id = ? AND teacher_id = ?", lesson_id, teacher_id).limit(1)[0]
+
+      edit_university_price_path(price.university_id, price)
+
     else
       begin
         page_name =~ /the (.*) page/

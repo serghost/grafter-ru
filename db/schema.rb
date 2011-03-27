@@ -10,16 +10,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110326193413) do
+ActiveRecord::Schema.define(:version => 20110326192835) do
 
   create_table "cities", :force => true do |t|
-    t.string  "title",         :null => false
-    t.integer "department_id", :null => false
+    t.string  "title"
+    t.integer "department_id"
   end
 
   create_table "departments", :force => true do |t|
-    t.string  "title",                     :null => false
-    t.integer "country_id", :default => 1, :null => false
+    t.string  "title"
+    t.integer "country_id", :default => 1
   end
 
   create_table "lessons", :force => true do |t|
@@ -30,41 +30,39 @@ ActiveRecord::Schema.define(:version => 20110326193413) do
   end
 
   create_table "prices", :force => true do |t|
-    t.boolean  "trusted",       :default => false
     t.float    "attestation"
     t.float    "course_work"
     t.float    "score_3"
     t.float    "score_4"
     t.float    "score_5"
     t.float    "test"
-    t.integer  "university_id",                    :null => false
-    t.integer  "user_id",                          :null => false
-    t.string   "teacher_id",                       :null => false
+    t.integer  "university_id"
+    t.integer  "lesson_id"
+    t.integer  "teacher_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "lesson_id"
   end
 
   create_table "reviews", :force => true do |t|
-    t.integer  "university_id",                :null => false
+    t.integer  "university_id"
     t.integer  "kind",          :default => 0
-    t.integer  "user_id",                      :null => false
-    t.string   "text",                         :null => false
+    t.integer  "user_id"
+    t.string   "text"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "teachers", :force => true do |t|
-    t.integer  "university_id", :null => false
-    t.string   "personal",      :null => false
+    t.integer  "university_id"
+    t.string   "personal"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "universities", :force => true do |t|
-    t.string   "short",             :null => false
-    t.string   "title",             :null => false
-    t.integer  "city_id",           :null => false
+    t.string   "short"
+    t.string   "title"
+    t.integer  "city_id"
     t.string   "logo_file_name"
     t.string   "logo_content_type"
     t.integer  "logo_file_size"

@@ -30,4 +30,9 @@ Feature: Creating prices
     And I fill in "Attestation" with "#"
     Then I press "Create Price"
     And I should see "Price has not been created."
-    And show me the page
+
+  Scenario: Creating duplicates for updating exists price
+    Given these are the following prices:
+      | personal              | lesson | score_5 | score_4 | score_3 | test | attestation | course_work |
+      | Ivanov Ivan Ivanovich | OOP    | 2000    | 1400    | 1000    | 1300 | 1000        | 3000        |
+    And this test isn't complete

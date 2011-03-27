@@ -1,2 +1,22 @@
 .prices
   = render "form"
+
+- if @price.versions.count > 1
+  h3 Revisions
+
+  - @price.versions[0...-1].reverse_each do |revision|
+    - if revision.event == 'update'
+      .revision
+        = revision.created_at.to_formatted_s(:short)
+        br
+        = link_to "Apply revision", university_price_revision_path(@university, @price, revision.id), :method => :put
+        br
+        = link_to "Delete", university_price_revision_path(@university, @price, revision.id), :method => :delete, :confirm => "Are you sure?"
+
+        - [:score_5, :score_4, :score_3, :test, :attestation, :course_work].each do |key|
+          - if @price[key] != revision.reify[key]
+            |&nbsp;
+            = "#{key}: #{revision.reify[key]}"
+
+        br
+        br

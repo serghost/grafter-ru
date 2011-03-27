@@ -1,8 +1,8 @@
 class CreateCities < ActiveRecord::Migration
   def self.up
     create_table :cities do |t|
-      t.string :title, :null => false
-      t.integer :department_id, :null => false
+      t.string :title
+      t.integer :department_id
     end
   end
 

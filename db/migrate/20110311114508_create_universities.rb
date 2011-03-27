@@ -1,9 +1,9 @@
 class CreateUniversities < ActiveRecord::Migration
   def self.up
     create_table :universities do |t|
-      t.string :short, :null => false
-      t.string :title, :null => false, :unique => true
-      t.integer :city_id, :null => false
+      t.string :short
+      t.string :title
+      t.integer :city_id
       t.string :logo_file_name
       t.string :logo_content_type
       t.integer :logo_file_size
