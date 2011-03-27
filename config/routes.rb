@@ -8,7 +8,7 @@ Grafter::Application.routes.draw do
   get 'universities/autocomplete_university_short'
 
   resources :universities do
-    get "/reviews" => "universities#reviews", :as => "reviews"
+    get "/reviews" => "universities#reviews", :as => "reviews", :on => :member
 
     resources :prices do
       put '/revision/:version' => "prices#revision", :as => "revision"

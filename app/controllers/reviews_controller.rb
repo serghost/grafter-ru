@@ -1,4 +1,6 @@
 class ReviewsController < ApplicationController
+  before_filter :find_university, :except => :index
+
   def new
     @review = @university.reviews.new
   end
@@ -13,5 +15,11 @@ class ReviewsController < ApplicationController
     else
       render "new"
     end
+  end
+
+  private
+
+  def find_university
+    @university = University.find params[:university_id]
   end
 end
