@@ -1,6 +1,6 @@
 class PricesController < ApplicationController
   before_filter :find_university, :except => :index
-  before_filter :find_price, :only => [:edit, :update, :show]
+  before_filter :find_price, :only => [:edit, :update, :show, :destroy]
   before_filter :find_revision, :only => [:revision, :revision_remove]
 
   def new
@@ -51,6 +51,15 @@ class PricesController < ApplicationController
     @revision.destroy
 
     redirect_to edit_university_price_path(@university, @price), :notice => "Revision has been deleted."
+  end
+
+  def destroy # FIXME: Move this code into model with callback! Thin controller, fat model!
+    @price.versions.each do |revision|
+      revision.destroy
+    end
+
+    @price.destroy # FIXME: Add disable for storing destroy action
+    redirect_to @university, notice: "Price has been deleted."
   end
 
   private

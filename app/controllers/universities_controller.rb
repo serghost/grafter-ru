@@ -48,8 +48,6 @@ class UniversitiesController < ApplicationController
   def destroy
     if @university.destroy
       redirect_to universities_path, notice: "University has been deleted."
-    else
-      redirect_to @university
     end
   end
 

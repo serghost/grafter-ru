@@ -1,5 +1,5 @@
 Feature: Viewing universities
-  In order to assign prices to a university
+  In order to view a university
   As a user
   I want to be able to see a list of available universities
 

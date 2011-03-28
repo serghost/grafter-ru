@@ -7,12 +7,11 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @university.reviews.new params[:review]
-    # FIXME
-    @review.user_id = current_user.id
 
     if @review.save
-      redirect_to university_reviews_path, :notice => "Successfully review created."
+      redirect_to university_reviews_path, :notice => "Review has been created."
     else
+      flash[:alert] = "Review has not been created."
       render "new"
     end
   end
