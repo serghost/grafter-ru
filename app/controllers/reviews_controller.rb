@@ -29,6 +29,11 @@ class ReviewsController < ApplicationController
     end
   end
 
+  def destroy
+    if @review.destroy
+      redirect_to university_reviews_path, :notice => "Review has been deleted."
+    end
+  end
   private
 
   def find_university

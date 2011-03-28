@@ -4,7 +4,7 @@
 - if @price.versions.count > 1
   h3 Revisions
 
-  - @price.versions[0...-1].reverse_each do |revision|
+  - @price.versions.reverse_each do |revision|
     - if revision.event == 'update'
       .revision
         = revision.created_at.to_formatted_s(:short)

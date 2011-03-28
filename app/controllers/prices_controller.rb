@@ -25,8 +25,20 @@ class PricesController < ApplicationController
   def create
     @price = @university.prices.new params[:price]
 
-    if @price.save
-      redirect_to [@university, @price], :notice => "Price has been created."
+    if @price.valid?
+      duplicate = @price.find_duplicate
+
+      if duplicate.present?
+        [:score_5, :score_4, :score_3, :test, :attestation, :course_work].each do |key|
+          # raise "#{params[:price][key]}"
+          duplicate[key] = params[:price][key]
+        end
+
+        redirect_to [@university, duplicate], :notice => "Price has been updated." if duplicate.save
+      else
+        redirect_to [@university, @price], :notice => "Price has been created." if @price.save
+      end
+
     else
       flash[:alert] = "Price has not been created."
       render :action => "new"

@@ -32,7 +32,27 @@ Feature: Creating prices
     And I should see "Price has not been created."
 
   Scenario: Creating duplicates for updating exists price
-    Given these are the following prices:
-      | personal              | lesson | score_5 | score_4 | score_3 | test | attestation | course_work |
-      | Ivanov Ivan Ivanovich | OOP    | 2000    | 1400    | 1000    | 1300 | 1000        | 3000        |
-    And this test isn't complete
+    And I follow "Add price"
+    And I fill in "Lesson" with "Mathematics"
+    And I fill in "Personal" with "Ivanov Ivan Ivanovich"
+    And I fill in "Score 5" with "2000"
+    And I fill in "Score 4" with "1500"
+    And I fill in "Score 3" with "1300"
+    And I fill in "Attestation" with "1000"
+    And I fill in "Test" with "1600"
+    And I fill in "Course work" with "3600"
+    And I press "Create Price"
+    And I should see "Price has been created."
+    And I am on the university page for "МГУ"
+
+    When I follow "Add price"
+    And I fill in "Lesson" with "Mathematics"
+    And I fill in "Personal" with "Ivanov Ivan Ivanovich"
+    And I fill in "Score 5" with "2001"
+    And I fill in "Score 4" with "1501"
+    And I fill in "Score 3" with "1301"
+    And I fill in "Attestation" with "1001"
+    And I fill in "Test" with "1601"
+    And I fill in "Course work" with "3601"
+    And I press "Create Price"
+    Then I should see "Price has been updated."

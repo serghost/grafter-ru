@@ -43,6 +43,14 @@ class Price < ActiveRecord::Base
     end
   end
 
+  def find_duplicate
+    if self.new_record?
+      Price.where("university_id = ? AND lesson_id = ? AND teacher_id = ?", find_university.id, find_lesson, find_teacher).limit(1)[0].presence
+    else
+      false
+    end
+  end
+
   private
 
   def find_university

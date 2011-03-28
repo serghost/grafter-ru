@@ -25,8 +25,6 @@ Feature: Editing reviews
 
   Scenario: Updating a review with invalid attributes
     And I fill in "Text" with "New note."
-    And I select "" from "review[kind]"
     When I press "Update Review"
     Then I should see "Review has not been updated."
-    And I should see "can't be blank"
     And I should see "is too short (minimum is 10 characters)"
