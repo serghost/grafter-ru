@@ -12,7 +12,7 @@
 
     /* = form.input :city_id, :as => :select, :collection => options_from_collection_for_select(City.where("department_id = 1"), :id, :title)*/
     = form.label :city_id
-    = form.select :city_id, option_groups_from_collection_for_select(Department.all, :cities, :title, :id, :title, @university.city_id)
+    = form.select :city_id, option_groups_from_collection_for_select(Department.includes(:cities), :cities, :title, :id, :city_title, @university.city_id)
 
   .form-buttons
     /* a.submit.button.pill href="#" Add university*/

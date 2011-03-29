@@ -21,7 +21,7 @@ class UniversitiesController < ApplicationController
 
   def index
     # FIXME: Move to model as scope!
-    @universities = University.where("short ILIKE ? OR title ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").order(:city_id).page params[:page]
+    @universities = University.where("short ILIKE ? OR title ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").includes(:city).order(:city_id).page params[:page]
     @hide_search_bar = true
 
     respond_with @universities

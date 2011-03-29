@@ -10,10 +10,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110326192835) do
+ActiveRecord::Schema.define(:version => 20110329052515) do
 
   create_table "cities", :force => true do |t|
-    t.string  "title"
+    t.string  "city_title"
     t.integer "department_id"
   end
 

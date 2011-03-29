@@ -4,6 +4,6 @@ russia_db = open(db_path).read
 JSON::parse(russia_db).each do |item|
   department = Department.create!(:title => item["department"])
   item["cities"].each do |city|
-    department.cities.create!(:title => city)
+    department.cities.create!(:city_title => city)
   end
 end
