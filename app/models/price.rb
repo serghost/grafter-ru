@@ -59,7 +59,7 @@ class Price < ActiveRecord::Base
 
   def find_teacher
     if @university.present?
-      teacher = @university.teachers.where("personal ILIKE ?", self.personal).limit(1) # FIXME
+      teacher = @university.teachers.where("personal LIKE ?", self.personal).limit(1) # FIXME
 
       if teacher.present?
         self.teacher_id = teacher[0].id # FIXME
@@ -73,7 +73,7 @@ class Price < ActiveRecord::Base
 
   def find_lesson
     if @university.present?
-      lesson = @university.lessons.where("title ILIKE ?", self.lesson).limit(1) # FIXME
+      lesson = @university.lessons.where("title LIKE ?", self.lesson).limit(1) # FIXME
 
       if lesson.present?
         self.lesson_id = lesson[0].id # FIXME

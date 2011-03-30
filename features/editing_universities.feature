@@ -9,6 +9,10 @@ Feature: Editing university
       | Moscow department | Moscow     |
       | Moscow department | Podolsk    |
     Given there is a university called "МГУ" with "Moscow University" title
+    Given there are the following users:
+      | email             | password |
+      | newbie@grafter.ru | qwerty   |
+    And I am signed in as them
     And I am on the university page for "МГУ"
     And I follow "Edit"
 

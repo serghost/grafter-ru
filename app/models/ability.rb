@@ -8,6 +8,12 @@ class Ability
       else
         can :edit, Price
         can :edit, University
+        can :edit, Review do |review|
+          review.user_id == user.id
+        end
+        can :destroy, Review do |review|
+          review.user_id == user.id
+        end
       end
     end
 

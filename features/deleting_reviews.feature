@@ -3,7 +3,11 @@ Feature: Deleting reviews
   As a user
   I want to click a button and delete them
 
-  Scenario:
+  Scenario: Delete a review
+    Given there are the following users:
+      | email             | password |
+      | newbie@grafter.ru | qwerty   |
+    And I am signed in as them
     Given these are the following cities:
       | department        | city       |
       | Moscow department | Moscow     |

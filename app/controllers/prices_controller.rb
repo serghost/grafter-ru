@@ -32,7 +32,6 @@ class PricesController < ApplicationController
 
       if duplicate.present?
         [:score_5, :score_4, :score_3, :test, :attestation, :course_work].each do |key|
-          # raise "#{params[:price][key]}"
           duplicate[key] = params[:price][key]
         end
 

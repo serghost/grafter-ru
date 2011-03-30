@@ -3,7 +3,7 @@ class UniversitiesController < ApplicationController
   before_filter :find_university, :only => [:show, :reviews, :destroy, :edit, :update]
   before_filter :tabs, :only => [:show, :reviews]
 
-  respond_to :html, :json, :xml
+  respond_to :html, :json
 
   def show
     @prices = @university.prices.page params[:page]
@@ -19,11 +19,15 @@ class UniversitiesController < ApplicationController
   end
 
   def index
-    # FIXME: Move to model as scope!
-    @universities = University.where("short ILIKE ? OR title ILIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").includes(:city).order(:city_id).page params[:page]
     @hide_search_bar = true
 
-    respond_with @universities
+    respond_to do |format|
+     format.html {
+       # FIXME: Move to model as scope!
+       @universities = University.where("short LIKE ? OR title LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").includes(:city).order(:city_id).page params[:page]
+     }
+     format.json {render :json => University.all.map {|university| {:id => university.id, :value => university.short}}}
+    end
   end
 
   def new

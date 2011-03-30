@@ -16,8 +16,8 @@ module NavigationHelpers
 
     when /the edit page for price with lesson "([^"]*)" and personal "([^"]*)"/
       # FIXME oh my... this is very dirty code
-      lesson_id = Lesson.where("title ILIKE ?", $1).limit(1)[0].id
-      teacher_id = Teacher.where("personal ILIKE ?", $2).limit(1)[0].id
+      lesson_id = Lesson.where("title LIKE ?", $1).limit(1)[0].id
+      teacher_id = Teacher.where("personal LIKE ?", $2).limit(1)[0].id
 
       price = Price.where("lesson_id = ? AND teacher_id = ?", lesson_id, teacher_id).limit(1)[0]
 

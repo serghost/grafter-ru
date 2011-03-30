@@ -4,6 +4,10 @@ Feature: Editing prices
   I want to be able to do that through an interface
 
   Background:
+    Given there are the following users:
+      | email             | password |
+      | newbie@grafter.ru | qwerty   |
+    And I am signed in as them
     Given these are the following cities:
       | department        | city       |
       | Moscow department | Moscow     |
@@ -35,6 +39,12 @@ Feature: Editing prices
     And I should not see "Revisions"
 
   Scenario: Viewing a price revisions
+    And I follow "Log out"
+    Given there are the following users:
+      | email             | password | admin |
+      | admin@grafter.ru  | qwerty   | true  |
+    And I am signed in as them
+    And I am on the edit page for price with lesson "OOP" and personal "Ivanov Ivan Ivanovich"
     And I fill in "Lesson" with "Mathematics"
     And I fill in "Personal" with "Boris Borisovich Borisov"
     And I fill in "Score 5" with "200"

@@ -8,6 +8,10 @@ Feature: Creating prices
       | department        | city       |
       | Moscow department | Moscow     |
     Given there is a university called "МГУ" with "Moscow University" title
+    Given there are the following users:
+      | email                  | password |
+      | newbie@ticketee.com    | qwerty   |
+    And I am signed in as them
     And I am on the university page for "МГУ"
 
   Scenario: Creating a price

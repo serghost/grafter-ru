@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.5'
 
-gem 'pg'
+gem 'mysql2'
 gem 'meta_where', git: 'git://github.com/ernie/meta_where.git'
 gem 'paper_trail', git: 'git://github.com/airblade/paper_trail.git'
 

@@ -1,4 +1,6 @@
 class Review < ActiveRecord::Base
+  attr_protected :user_id
+
   belongs_to :university
   belongs_to :user
 

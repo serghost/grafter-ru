@@ -18,4 +18,8 @@ $(function() {
     });
   });
 
+  $("#query").autocomplete({
+    minLength: 2,
+    source: "/universities"
+  });
 });

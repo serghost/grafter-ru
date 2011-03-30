@@ -2,7 +2,7 @@
 No, it's not finished yet.
 
 # HOW TO TEST IT?
-You must to have already installed a PostgreSQL for working with grafter.
+You must to have already installed a MySQL for working with grafter.
 
 In terminal:
 

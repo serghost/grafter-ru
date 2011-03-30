@@ -4,6 +4,10 @@ Feature: Viewing reviews
   I want to be able to see a list of reviews
 
   Scenario:
+    Given there are the following users:
+      | email             | password |
+      | newbie@grafter.ru | qwerty   |
+    And I am signed in as them
     Given these are the following cities:
       | department        | city       |
       | Moscow department | Moscow     |

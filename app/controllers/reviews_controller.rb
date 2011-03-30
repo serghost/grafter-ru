@@ -9,6 +9,7 @@ class ReviewsController < ApplicationController
 
   def create
     @review = @university.reviews.new params[:review]
+    @review.user_id = current_user.id
 
     if @review.save
       redirect_to university_reviews_path, :notice => "Review has been created."

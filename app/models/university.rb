@@ -22,7 +22,7 @@ class University < ActiveRecord::Base
   paginates_per 25
 
   def check_for_already_exists
-    @exists_university = University.where("title ILIKE ?", self.title).limit(1)[0]
+    @exists_university = University.where("title LIKE ?", self.title).limit(1)[0]
 
     if @exists_university.present?
       errors.add(:title, "this university is already exists")
