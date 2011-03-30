@@ -1,4 +1,12 @@
-.prices
+.span-24
+  = link_to "Back to the #{@university.short}", @university
+
+div class="span-7"
+  |&nbsp;
+
+div class="span-8 fill-dialog"
+  h2.form-title Edit price
+
   = render "form"
 
 - if can?(:review, @price) and @price.versions.count > 0

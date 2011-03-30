@@ -18,5 +18,7 @@ Grafter::Application.routes.draw do
 
   resources :users do
     get '/profile' => "users#show", :as => "profile", :on => :collection
+    get '/reset' => "users#reset", :on => :member
+    get '/give' => "users#give", :on => :member
   end
 end

@@ -1,0 +1,7 @@
+= semantic_form_for @user do |form|
+  .form-fields
+    = form.input :email, :required => false
+    = form.input :password
+
+  .form-buttons
+    = form.submit

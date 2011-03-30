@@ -1,0 +1,16 @@
+li.span-24
+  .gravatar
+    img src="#{gravatar_for(user.email)}"
+
+  .span-6
+    h3 #{user.email} #{"(Admin)" if user.admin?}
+
+  .span-5.last
+    = link_to "Edit", [:edit, user]
+    = link_to "Delete", user, :method => :delete, :confirm => "Are you sure?"
+
+    - if user.admin?
+      - unless current_user == user
+        = link_to "Reset rights", [:reset, user], :confirm => "Are you sure?"
+    - else
+      = link_to "Give rights", [:give, user]
