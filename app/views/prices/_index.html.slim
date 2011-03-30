@@ -1,10 +1,8 @@
 #prices
   .toolbar
     .prices_options
-      = form_tag @university, :method => :get do
-        input#lesson name="lesson" type="text" placeholder="lesson" tabindex="2" value="#{params[:lesson]}"
-        input#untrusted name="untrusted" type="checkbox" value="true"
-        label for="untrusted" Show untrusted
+      = form_for @university, :html => {:method => :get, :class => "search"} do
+        input#lesson.search-field name="lesson" type="text" placeholder="Enter your lesson to search them" tabindex="2" value="#{params[:lesson]}"
 
     .prices_buttons
       a#add_price href="#{new_university_price_path(@university)}" class="button pill"

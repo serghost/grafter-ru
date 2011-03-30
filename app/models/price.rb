@@ -16,7 +16,7 @@ class Price < ActiveRecord::Base
   validates :personal, :presence => true,
     :format => /^([^0-9]+)\ ([^0-9]+)\ ([^0-9]+)$/
 
-  has_paper_trail
+  has_paper_trail :ignore => [:lesson_id, :teacher_id, :university_id]
   paginates_per 20
 
   def personal=(full_name)

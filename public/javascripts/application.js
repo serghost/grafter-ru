@@ -18,28 +18,4 @@ $(function() {
     });
   });
 
-  /* Sign up and sign in */
-
-  $("a.facebox").click(function() {
-    var _a = this;
-
-    jQuery.facebox(function() {
-      jQuery.get($(_a).attr("href")+".js");
-    })
-
-    return false;
-  });
-
-  $("a.submit").live("click", function(){
-    $(this).parent().parent().submit();
-
-    return false;
-  });
-
-  // $("form.formtastic input").keypress(function(key) {
-  //   if (key.charCode == 13) {
-  //     $(this).parent().parent().parent().submit();
-  //   }
-  // });
-
 });

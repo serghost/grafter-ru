@@ -1,4 +1,5 @@
 class ReviewsController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_university, :except => :index
   before_filter :find_review, :only => [:edit, :destroy, :update]
 

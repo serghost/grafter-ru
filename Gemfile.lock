@@ -210,8 +210,6 @@ GEM
       railties (= 3.0.5)
     rails-default-database (1.0.0)
       railties
-    rails3-jquery-autocomplete (0.6.2)
-      rails (~> 3.0.0)
     railties (3.0.5)
       actionpack (= 3.0.5)
       activesupport (= 3.0.5)
@@ -291,7 +289,6 @@ DEPENDENCIES
   pg
   rails (= 3.0.5)
   rails-default-database
-  rails3-jquery-autocomplete
   recaptcha!
   rspec
   rspec-rails

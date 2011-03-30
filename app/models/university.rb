@@ -17,6 +17,8 @@ class University < ActiveRecord::Base
     :default_url => "/images/:class/missing.png",
     :convert_options => { :all => '-background white -flatten +matte'}
 
+  has_paper_trail
+
   paginates_per 25
 
   def check_for_already_exists

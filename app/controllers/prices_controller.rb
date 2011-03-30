@@ -1,4 +1,6 @@
 class PricesController < ApplicationController
+  before_filter :authorize_admin!, :only => [:destroy, :revision, :revision_remove]
+  before_filter :authenticate_user!, :except => [:show, :destroy, :revision, :revision_remove]
   before_filter :find_university, :except => :index
   before_filter :find_price, :only => [:edit, :update, :show, :destroy]
   before_filter :find_revision, :only => [:revision, :revision_remove]

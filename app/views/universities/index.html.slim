@@ -9,7 +9,7 @@
         = text_field_tag :query, params[:query].presence, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field", :"data-autocomplete" => universities_autocomplete_university_short_path
 
     .buttons-bar
-      a.facebox href="#{new_university_path}" class="button pill"
+      a href="#{new_university_path}" class="button pill"
         span class="plus icon"
         |Add university
 

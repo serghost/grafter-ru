@@ -1,8 +1,13 @@
 .review.good
   .created_at
     = review.created_at.to_formatted_s(:short)
-    br
-    = link_to "Edit review", [:edit, @university, review]
-    br
-    = link_to "Delete review", [@university, review], :method => :delete, :confirm => "Are you sure?"
+
+    - if can?(:edit, review)
+      br
+      = link_to "Edit review", [:edit, @university, review]
+
+    - if can?(:destroy, review)
+      br
+      = link_to "Delete review", [@university, review], :method => :delete, :confirm => "Are you sure?"
+
   = simple_format(review.text)

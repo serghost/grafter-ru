@@ -1,13 +1,15 @@
 .prices
   = render "form"
 
-- if @price.versions.count > 1
+- if can?(:review, @price) and @price.versions.count > 0
   h3 Revisions
 
   - @price.versions.reverse_each do |revision|
     - if revision.event == 'update'
       .revision
         = revision.created_at.to_formatted_s(:short)
+        br
+        = User.find(revision.whodunnit).email
         br
         = link_to "Apply revision", university_price_revision_path(@university, @price, revision.id), :method => :put
         br

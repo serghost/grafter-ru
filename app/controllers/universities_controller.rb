@@ -1,10 +1,9 @@
 class UniversitiesController < ApplicationController
+  before_filter :authenticate_user!, :except => [:show, :reviews, :index]
   before_filter :find_university, :only => [:show, :reviews, :destroy, :edit, :update]
   before_filter :tabs, :only => [:show, :reviews]
 
   respond_to :html, :json, :xml
-
-  autocomplete :university, :short
 
   def show
     @prices = @university.prices.page params[:page]
@@ -62,7 +61,7 @@ class UniversitiesController < ApplicationController
 
 private
   def tabs
-    @tabs = Tabs.new({prices: university_path(@university), reviews: university_reviews_path(@university), feed: "#"})
+    @tabs = Tabs.new({prices: university_path(@university), reviews: university_reviews_path(@university)})
   end
 
   def find_university

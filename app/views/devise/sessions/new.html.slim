@@ -2,4 +2,16 @@
   |&nbsp;
 
 .span-8.fill-dialog
-  = render "shared/signin"
+  h2.form-title Sign in
+
+  = semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+    .form-fields
+      = f.input :email, :as => :email, :required => false
+      = f.input :password, :as => :password, :required => false
+
+    - if devise_mapping.rememberable?
+      = f.input :remember_me, :as => :boolean
+
+    .form-buttons
+      /* a.submit.button.pill.big href="#" Sign In*/
+      = f.submit "Continue"
