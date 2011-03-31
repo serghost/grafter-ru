@@ -20,6 +20,9 @@ $(function() {
 
   $("#query").autocomplete({
     minLength: 2,
-    source: "/universities"
+    source: "/universities",
+    select: function(event, ui) {
+      window.location = location.origin+"/universities/"+ui.item.id;
+    }
   });
 });
