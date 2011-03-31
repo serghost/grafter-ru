@@ -1,19 +1,25 @@
 class UsersController < ApplicationController
-  before_filter :authorize_admin!, :except => [:show]
-  before_filter :authenticate_user!, :only => [:show]
+  before_filter :authorize_admin!, :except => [:show, :update]
+  before_filter :authenticate_user!, :only => [:show, :update]
   before_filter :find_user, :only => [:reset, :give, :edit, :update]
 
   def show
+    @user = current_user
   end
 
   def edit
   end
 
   def update
+    params[:user][:id] = current_user.id unless current_user.admin?
     params[:user].delete(:password) if params[:user][:password].blank?
 
     if @user.update_attributes(params[:user])
-      redirect_to users_path, :notice => "User has been updated."
+      if current_user.admin?
+        redirect_to users_path, :notice => "User has been updated."
+      else
+        redirect_to profile_users_path, :notice => "Profile has been updated."
+      end
     else
       flash[:alert] = "User has not been updated."
       render :action => "new"
