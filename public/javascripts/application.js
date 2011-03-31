@@ -8,21 +8,31 @@ $(function() {
     monochromatic: false
   });
 
-  $("#add_price").click(function(){
-    $("#price_dialog").dialog({
-      // height: 400,
-      width: 480,
-      resizable: false,
-      zIndex: 10000,
-      modal: true
-    });
-  });
-
   $("#query").autocomplete({
     minLength: 2,
     source: "/universities",
     select: function(event, ui) {
       window.location = location.origin+"/universities/"+ui.item.id;
     }
+  });
+
+  $("a[data-compare]").hover(function() {
+    var compareData = $(this).data("compare"),
+        compareFields = ["score_5", "score_4", "score_3", "test", "attestation", "course_work"];
+
+    _.each(compareFields, function(item) {
+      var diff = compareData[item];
+
+      if (diff != undefined) {
+        $("input[name*="+item+"]").val(diff).addClass("diff");
+      }
+    });
+  }, function() {
+    $(".diff").removeClass("diff");
+    $("input[data-previous]").each(function(item) {
+      var input = $(this);
+
+      input.val(input.data("previous"));
+    });
   });
 });

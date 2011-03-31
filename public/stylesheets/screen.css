@@ -1407,7 +1407,7 @@ form.formtastic .form-buttons {
   text-align: center;
 }
 
-/* line 26, ../../app/stylesheets/screen.sass */
+/* line 27, ../../app/stylesheets/screen.sass */
 .container {
   width: 950px;
   margin: 0 auto;
@@ -1415,27 +1415,39 @@ form.formtastic .form-buttons {
   *zoom: 1;
 }
 
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 30, ../../app/stylesheets/screen.sass */
 .none {
   display: none;
 }
 
-/* line 32, ../../app/stylesheets/screen.sass */
+/* line 33, ../../app/stylesheets/screen.sass */
 .bad {
   background-color: rgba(200, 20, 20, 0.3);
 }
 
-/* line 35, ../../app/stylesheets/screen.sass */
+/* line 36, ../../app/stylesheets/screen.sass */
 .good {
   background-color: rgba(20, 200, 20, 0.3);
 }
 
-/* line 38, ../../app/stylesheets/screen.sass */
+/* line 39, ../../app/stylesheets/screen.sass */
 .neutral {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 41, ../../app/stylesheets/screen.sass */
+/* line 42, ../../app/stylesheets/screen.sass */
+input.diff {
+  background-color: #cccccc;
+  font-weight: bold;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+/* line 52, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -1742,12 +1754,15 @@ body .removed {
   background: #990000;
   color: white;
 }
-/* line 47, ../../app/stylesheets/screen.sass */
-body a.button {
+/* line 58, ../../app/stylesheets/screen.sass */
+body a {
   text-decoration: none;
+}
+/* line 61, ../../app/stylesheets/screen.sass */
+body a.button {
   color: #3c3c3d;
 }
-/* line 51, ../../app/stylesheets/screen.sass */
+/* line 64, ../../app/stylesheets/screen.sass */
 body #section {
   background-color: white;
   overflow: auto;
@@ -2255,7 +2270,58 @@ body #users ul li a {
   text-decoration: none;
   color: #0066ff;
 }
-/* line 67, ../../app/stylesheets/screen.sass */
+/* line 2, ../../app/stylesheets/partials/_revision.sass */
+body #revisions {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 350px;
+}
+/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #revisions {
+  overflow-x: hidden;
+}
+/* line 5, ../../app/stylesheets/partials/_revision.sass */
+body #revisions h3 {
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+/* line 10, ../../app/stylesheets/partials/_revision.sass */
+body #revisions a.delete_all {
+  margin: 0 0 5px 10px;
+  display: inline-block;
+}
+/* line 14, ../../app/stylesheets/partials/_revision.sass */
+body #revisions .revision {
+  background-color: #eeeeee;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  padding: 3px;
+}
+/* line 25, ../../app/stylesheets/partials/_revision.sass */
+body #revisions .revision img {
+  float: left;
+  display: inline-block;
+  margin: 2px 6px 0 3px;
+}
+/* line 30, ../../app/stylesheets/partials/_revision.sass */
+body #revisions .revision .datetime {
+  float: right;
+  display: inline-block;
+  font-size: 11px;
+  margin-right: 2px;
+}
+/* line 36, ../../app/stylesheets/partials/_revision.sass */
+body #revisions .revision a {
+  margin-right: 10px;
+}
+/* line 81, ../../app/stylesheets/screen.sass */
 body form.search input.search-field {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
@@ -2268,7 +2334,7 @@ body form.search input.search-field {
   background: white url("/images/search.png") 5px 5px no-repeat;
   outline: 0;
 }
-/* line 79, ../../app/stylesheets/screen.sass */
+/* line 93, ../../app/stylesheets/screen.sass */
 body form.search input.search-field:focus {
   outline: 0;
 }

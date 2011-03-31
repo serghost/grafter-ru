@@ -1,7 +1,7 @@
 .span-24
   = link_to "Back to the #{@university.short}", @university
 
-div class="span-7"
+div class="#{@revisions.present? ? 'span-3' : 'span-7'}"
   |&nbsp;
 
 div class="span-8 fill-dialog"
@@ -9,24 +9,9 @@ div class="span-8 fill-dialog"
 
   = render "form"
 
-- if can?(:review, @price) and @price.versions.count > 0
-  h3 Revisions
+- if @revisions.present?
+  #revisions
+    h3 Revisions
+    = link_to "Delete all", delete_revisions_university_price_path(@price), :method => :post, :confirm => "Are you sure?", :class => "delete_all"
 
-  - @price.versions.reverse_each do |revision|
-    - if revision.event == 'update'
-      .revision
-        = revision.created_at.to_formatted_s(:short)
-        br
-        = User.find(revision.whodunnit).email
-        br
-        = link_to "Apply revision", university_price_revision_path(@university, @price, revision.id), :method => :put
-        br
-        = link_to "Delete", university_price_revision_path(@university, @price, revision.id), :method => :delete, :confirm => "Are you sure?"
-
-        - [:score_5, :score_4, :score_3, :test, :attestation, :course_work].each do |key|
-          - if @price[key] != revision.reify[key]
-            |&nbsp;
-            = "#{key}: #{revision.reify[key]}"
-
-        br
-        br
+    = render @revisions

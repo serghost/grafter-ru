@@ -9,6 +9,7 @@ Grafter::Application.routes.draw do
     get "/reviews" => "universities#reviews", :as => "reviews", :on => :member
 
     resources :prices do
+      post '/delete_revisions' => "prices#delete_revisions", :on => :member, :as => "delete_revisions"
       put '/revision/:version' => "prices#revision", :as => "revision"
       delete '/revision/:version' => "prices#revision_remove", :as => "revision_remove"
     end

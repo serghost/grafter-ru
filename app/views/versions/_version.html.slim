@@ -1,0 +1,12 @@
+- if version.event == 'update'
+  - email = User.find(version.whodunnit).email
+  .revision
+    img src="#{gravatar_for(email, 32)}"
+    = email
+
+    .datetime
+      = version.created_at.to_formatted_s(:short)
+
+    br
+    = link_to "Apply revision", university_price_revision_path(@university, @price, version.id), :method => :put, :"data-compare" => @price.compare_with(version).to_json
+    = link_to "Delete", university_price_revision_path(@university, @price, version.id), :method => :delete, :confirm => "Are you sure?"

@@ -51,6 +51,18 @@ class Price < ActiveRecord::Base
     end
   end
 
+  def compare_with(revision)
+    compare_hash = {}
+
+    [:score_5, :score_4, :score_3, :test, :attestation, :course_work].each do |key|
+      if self[key] != revision.reify[key]
+        compare_hash[key] = revision.reify[key]
+      end
+    end
+
+    compare_hash
+  end
+
   private
 
   def find_university

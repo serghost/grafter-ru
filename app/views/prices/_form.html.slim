@@ -3,12 +3,12 @@
     = form.input :lesson, :as => :string
     = form.input :personal
 
-    = form.input :score_5
-    = form.input :score_4
-    = form.input :score_3
-    = form.input :attestation
-    = form.input :test
-    = form.input :course_work
+    = form.input :score_5, :input_html => {:"data-previous" => @price.score_5}
+    = form.input :score_4, :input_html => {:"data-previous" => @price.score_4}
+    = form.input :score_3, :input_html => {:"data-previous" => @price.score_3}
+    = form.input :attestation, :input_html => {:"data-previous" => @price.attestation}
+    = form.input :test, :input_html => {:"data-previous" => @price.test}
+    = form.input :course_work, :input_html => {:"data-previous" => @price.course_work}
 
   .form-buttons
     /* a.submit.button.pill href="#" Add price*/

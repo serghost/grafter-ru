@@ -1,8 +1,8 @@
 class PricesController < ApplicationController
-  before_filter :authorize_admin!, :only => [:destroy, :revision, :revision_remove]
-  before_filter :authenticate_user!, :except => [:show, :destroy, :revision, :revision_remove]
+  before_filter :authorize_admin!, :only => [:destroy, :revision, :revision_remove, :delete_revisions]
+  before_filter :authenticate_user!, :except => [:show, :destroy, :revision, :revision_remove, :delete_revisions]
   before_filter :find_university, :except => :index
-  before_filter :find_price, :only => [:edit, :update, :show, :destroy]
+  before_filter :find_price, :only => [:edit, :update, :show, :destroy, :delete_revisions]
   before_filter :find_revision, :only => [:revision, :revision_remove]
 
   def new
@@ -10,6 +10,9 @@ class PricesController < ApplicationController
   end
 
   def edit
+    if can?(:review, @price) and @price.versions.present?
+      @revisions = @price.versions
+    end
   end
 
   def show
@@ -64,6 +67,14 @@ class PricesController < ApplicationController
     @revision.destroy
 
     redirect_to edit_university_price_path(@university, @price), :notice => "Revision has been deleted."
+  end
+
+  def delete_revisions
+    @price.versions.each do |version|
+      version.destroy
+    end
+
+    redirect_to edit_university_price_path(@university, @price), :notice => "All revisions has been deleted."
   end
 
   def destroy # FIXME: Move this code into model with callback! Thin controller, fat model!
