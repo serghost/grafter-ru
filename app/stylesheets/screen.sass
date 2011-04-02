@@ -16,6 +16,7 @@ $footer: #d0d9e0
 @import "partials/review"
 @import "partials/users"
 @import "partials/revision"
+@import "partials/lesson"
 @import "blueprint"
 @import "blueprint/scaffolding"
 @import "compass/layout/sticky-footer"
@@ -64,10 +65,12 @@ body
 
   #section
     background-color: $page
-    overflow: auto
 
-    #page
-      margin-bottom: 35px
+    .container
+      overflow: visible
+
+      #page
+        margin-bottom: 35px
 
   +header
   +topside
@@ -78,6 +81,7 @@ body
   +review
   +users
   +revisions
+  +lesson
 
   .toolbar
     +column(24)
@@ -130,5 +134,12 @@ body
       font-size: 1.4em
       text-shadow: 0 1px 1px black
       color: white
+
+  table
+    th
+      padding: 0
+
+    td
+      padding: 0
 
 +sticky-footer(35px)

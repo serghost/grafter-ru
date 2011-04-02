@@ -8,11 +8,12 @@ tr
   th #{price.test}
   th.buttons
     - if can?(:edit, price)
-      a href="#{edit_university_price_path(@university, price)}" class="#{'left' if can?(:destroy, price)} pill button"
+      a href="#{edit_university_price_path(@university, price)}" class="button"
         span class="pen icon"
         |Edit
 
     - if can?(:destroy, price)
-      a href="#{university_price_path(@university, price)}" class="pill button right negative" data-method="delete" data-confirm="Are you sure?"
+      |&nbsp;
+      a href="#{university_price_path(@university, price)}" class="button" data-method="delete" data-confirm="Are you sure?"
         span class="trash icon"
         |Delete

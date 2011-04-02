@@ -1415,7 +1415,7 @@ form.formtastic .form-buttons {
   text-align: center;
 }
 
-/* line 28, ../../app/stylesheets/screen.sass */
+/* line 29, ../../app/stylesheets/screen.sass */
 .container {
   width: 950px;
   margin: 0 auto;
@@ -1423,27 +1423,27 @@ form.formtastic .form-buttons {
   *zoom: 1;
 }
 
-/* line 31, ../../app/stylesheets/screen.sass */
+/* line 32, ../../app/stylesheets/screen.sass */
 .none {
   display: none;
 }
 
-/* line 34, ../../app/stylesheets/screen.sass */
+/* line 35, ../../app/stylesheets/screen.sass */
 .bad {
   background-color: rgba(200, 20, 20, 0.3);
 }
 
-/* line 37, ../../app/stylesheets/screen.sass */
+/* line 38, ../../app/stylesheets/screen.sass */
 .good {
   background-color: rgba(20, 200, 20, 0.3);
 }
 
-/* line 40, ../../app/stylesheets/screen.sass */
+/* line 41, ../../app/stylesheets/screen.sass */
 .neutral {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 43, ../../app/stylesheets/screen.sass */
+/* line 44, ../../app/stylesheets/screen.sass */
 input.diff {
   background-color: #cccccc;
   font-weight: bold;
@@ -1455,7 +1455,7 @@ input.diff {
   border-radius: 6px;
 }
 
-/* line 53, ../../app/stylesheets/screen.sass */
+/* line 54, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -1762,21 +1762,24 @@ body .removed {
   background: #990000;
   color: white;
 }
-/* line 59, ../../app/stylesheets/screen.sass */
+/* line 60, ../../app/stylesheets/screen.sass */
 body a {
   text-decoration: none;
 }
-/* line 62, ../../app/stylesheets/screen.sass */
+/* line 63, ../../app/stylesheets/screen.sass */
 body a.button {
   color: #3c3c3d;
 }
-/* line 65, ../../app/stylesheets/screen.sass */
+/* line 66, ../../app/stylesheets/screen.sass */
 body #section {
   background-color: white;
-  overflow: auto;
 }
 /* line 69, ../../app/stylesheets/screen.sass */
-body #section #page {
+body #section .container {
+  overflow: visible;
+}
+/* line 72, ../../app/stylesheets/screen.sass */
+body #section .container #page {
   margin-bottom: 35px;
 }
 /* line 2, ../../app/stylesheets/partials/_header.sass */
@@ -2158,7 +2161,7 @@ body #prices img.gravatar {
   width: 32px;
   height: 32px;
 }
-/* line 27, ../../app/stylesheets/partials/_prices.sass */
+/* line 13, ../../app/stylesheets/partials/_prices.sass */
 body #prices .prices_items {
   display: inline;
   float: left;
@@ -2169,10 +2172,43 @@ body #prices .prices_items {
 * html body #prices .prices_items {
   overflow-x: hidden;
 }
-/* line 30, ../../app/stylesheets/partials/_prices.sass */
-body #prices th.buttons {
+/* line 16, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_items table {
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 5px;
+}
+/* line 25, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_items table thead tr th {
+  background-color: #eeeeee;
+  background-image: -webkit-gradient(linear, 0 50%, 0 100%, from(#eeeeee), to(#e6e6e6));
+  background: -moz-linear-gradient(270deg, #eeeeee, #e6e6e6);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='rgb(238, 238, 238)' ,endColorstr='rgb(230, 230, 230)');
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-shadow: 0 1px rgba(255, 255, 255, 0.9);
+}
+/* line 33, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_items table th {
+  background-color: white;
+  padding: 2px 2px 2px 5px;
+}
+/* line 38, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_items table tbody th {
+  background-color: white;
+  font-weight: normal;
+  font-size: 14px;
+}
+/* line 43, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_items table tbody th.buttons {
   text-align: center;
   padding: 0;
+}
+/* line 47, ../../app/stylesheets/partials/_prices.sass */
+body #prices .prices_items table tbody th.buttons a.button {
+  padding: 3px;
+  border: 0;
 }
 /* line 2, ../../app/stylesheets/partials/_review.sass */
 body #reviews {
@@ -2283,7 +2319,57 @@ body #revisions .revision .datetime {
 body #revisions .revision a {
   margin-right: 10px;
 }
-/* line 82, ../../app/stylesheets/screen.sass */
+/* line 5, ../../app/stylesheets/partials/_lesson.sass */
+body .price_title h2 {
+  position: relative;
+  width: 970px;
+  color: white;
+  background: #5387b6;
+  font-size: 1.5em;
+  float: left;
+  clear: both;
+  padding: 0;
+  margin-left: -10px;
+  text-shadow: 0 -1px #6498c7, 0 1px #6498c7;
+  margin-bottom: 0;
+  text-align: center;
+}
+/* line 19, ../../app/stylesheets/partials/_lesson.sass */
+body .price_title h2:before, body .price_title h2:after {
+  content: " ";
+  background: url(/images/ribbon_left.png);
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-bottom: -10px;
+  z-index: 10;
+}
+/* line 31, ../../app/stylesheets/partials/_lesson.sass */
+body .price_title h2:after {
+  background: url(/images/ribbon_right.png);
+  right: 0;
+  left: auto;
+}
+/* line 36, ../../app/stylesheets/partials/_lesson.sass */
+body a.lesson {
+  display: inline-block;
+  padding: 3px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
+  background-color: #eeeeee;
+  margin: 0 10px 0 2px;
+  font-weight: bold;
+  color: #333333;
+  text-shadow: 0 1px 1px white;
+}
+/* line 86, ../../app/stylesheets/screen.sass */
 body .toolbar {
   display: inline;
   float: left;
@@ -2298,7 +2384,7 @@ body .toolbar {
 * html body .toolbar {
   overflow-x: hidden;
 }
-/* line 89, ../../app/stylesheets/screen.sass */
+/* line 93, ../../app/stylesheets/screen.sass */
 body .toolbar .search-bar {
   display: inline;
   float: left;
@@ -2309,11 +2395,11 @@ body .toolbar .search-bar {
 * html body .toolbar .search-bar {
   overflow-x: hidden;
 }
-/* line 92, ../../app/stylesheets/screen.sass */
+/* line 96, ../../app/stylesheets/screen.sass */
 body .toolbar .search-bar input {
   margin: 0;
 }
-/* line 95, ../../app/stylesheets/screen.sass */
+/* line 99, ../../app/stylesheets/screen.sass */
 body .toolbar .buttons-bar {
   display: inline;
   float: left;
@@ -2325,7 +2411,7 @@ body .toolbar .buttons-bar {
 * html body .toolbar .buttons-bar {
   overflow-x: hidden;
 }
-/* line 100, ../../app/stylesheets/screen.sass */
+/* line 104, ../../app/stylesheets/screen.sass */
 body form.search input.search-field {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
@@ -2338,11 +2424,11 @@ body form.search input.search-field {
   background: white url("/images/search.png") 5px 5px no-repeat;
   outline: 0;
 }
-/* line 112, ../../app/stylesheets/screen.sass */
+/* line 116, ../../app/stylesheets/screen.sass */
 body form.search input.search-field:focus {
   outline: 0;
 }
-/* line 115, ../../app/stylesheets/screen.sass */
+/* line 119, ../../app/stylesheets/screen.sass */
 body .notice, body .alert {
   margin: 0;
   padding: 0;
@@ -2354,7 +2440,7 @@ body .notice, body .alert {
   background-color: rgba(0, 0, 0, 0.85);
   text-align: center;
 }
-/* line 126, ../../app/stylesheets/screen.sass */
+/* line 130, ../../app/stylesheets/screen.sass */
 body .notice span, body .alert span {
   margin-top: 15px;
   display: block;
@@ -2362,6 +2448,14 @@ body .notice span, body .alert span {
   font-size: 1.4em;
   text-shadow: 0 1px 1px black;
   color: white;
+}
+/* line 139, ../../app/stylesheets/screen.sass */
+body table th {
+  padding: 0;
+}
+/* line 142, ../../app/stylesheets/screen.sass */
+body table td {
+  padding: 0;
 }
 
 /* line 10, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */

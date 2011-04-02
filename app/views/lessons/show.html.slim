@@ -1,0 +1,28 @@
+#prices
+  .prices_items
+    .price_title
+      h2= @lesson.title
+
+    table
+      thead
+        /* tr*/
+        /*   th colspan="8"*/
+        /*     .price_title*/
+        /*       h2= @lesson.title*/
+            
+        tr
+          th width="24%" Person
+          th Score: 5
+          th Score: 4
+          th Score: 3
+          th Attestation
+          th Course work
+          th Test
+
+          - if can?(:edit, Price)
+            th
+
+      tbody
+        = render @prices
+
+    == paginate @prices

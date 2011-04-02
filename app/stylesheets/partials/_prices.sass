@@ -10,23 +10,40 @@
       width: 32px
       height: 32px
 
-    // form
-    //   +column(12)
-
-    //   label.price_label
-    //     width: 110px
-    //     display: inline-block
-
-    //   input.price_input
-    //     display: inline-block
-    //     width: 300px
-
-    //   input.price_edit
-    //     width: 100px
-
     .prices_items
       +column(24)
 
-    th.buttons
-      text-align: center
-      padding: 0
+      table
+        -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5)
+        border-top: 1px solid rgba(0, 0, 0, 0.5)
+        padding-bottom: 5px
+
+        thead
+          tr
+            th
+              background-color: #EEE
+              background-image: -webkit-gradient(linear, 0 50%, 0 100%, from(rgb(238, 238, 238)), to(rgb(230, 230, 230)))
+              background: -moz-linear-gradient(270deg, rgb(238, 238, 238), rgb(230, 230, 230))
+              filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr='rgb(238, 238, 238)' ,endColorstr='rgb(230, 230, 230)')
+              border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+              text-shadow: 0 1px rgba(255, 255, 255, 0.9)
+
+        th
+          background-color: white
+          padding: 2px 2px 2px 5px
+
+        tbody
+          th
+            background-color: white
+            font-weight: normal
+            font-size: 14px
+
+            &.buttons
+              text-align: center
+              padding: 0
+
+              a.button
+                padding: 3px
+                border: 0

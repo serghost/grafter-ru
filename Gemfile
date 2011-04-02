@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.5'
+gem 'rails', '>= 3.0.5'
 
 gem 'mysql2'
 gem 'meta_where', git: 'git://github.com/ernie/meta_where.git'
@@ -21,7 +21,6 @@ gem 'sass', '>= 3.1.0.alpha.214'
 gem 'haml', '>= 3.1.0.alpha.147'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git', tag: '1.2.3'
-gem 'tabulatr', git: 'git://github.com/provideal/tabulatr.git'
 
 group :development, :test do
   gem 'rails-default-database'
