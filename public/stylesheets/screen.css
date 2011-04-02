@@ -1347,6 +1347,7 @@ ul#tabs li a {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+  overflow: hidden;
   padding: 10px 5px 10px 10px;
 }
 /* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
@@ -1354,12 +1355,12 @@ ul#tabs li a {
   overflow-x: hidden;
 }
 
-/* line 13, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 14, ../../app/stylesheets/partials/_formtastic.sass */
 h2.form-title {
   margin-bottom: 20px;
 }
 
-/* line 16, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 17, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic {
   display: inline;
   float: left;
@@ -1370,44 +1371,51 @@ form.formtastic {
 * html form.formtastic {
   overflow-x: hidden;
 }
-/* line 19, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 20, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic li {
   list-style: none;
   overflow: hidden;
 }
-/* line 23, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 24, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic li.error, form.formtastic li.alert, form.formtastic body li.alert, body form.formtastic li.alert {
   padding: 0;
   margin: 0 0 10px 0;
   border: 0;
   background: none;
 }
-/* line 29, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 30, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic li.error input, form.formtastic li.alert input, form.formtastic body li.alert input, body form.formtastic li.alert input, form.formtastic li.error select, form.formtastic li.alert select, form.formtastic body li.alert select, body form.formtastic li.alert select {
   background-color: rgba(255, 0, 0, 0.1);
 }
 /* line 34, ../../app/stylesheets/partials/_formtastic.sass */
+form.formtastic .form-fields li {
+  margin-bottom: 10px;
+}
+/* line 37, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic .form-fields li p {
   padding: 0;
   margin: 0 0 0 100px;
 }
-/* line 38, ../../app/stylesheets/partials/_formtastic.sass */
-form.formtastic .form-fields select, form.formtastic .form-fields input {
+/* line 41, ../../app/stylesheets/partials/_formtastic.sass */
+form.formtastic .form-fields select, form.formtastic .form-fields input, form.formtastic .form-fields textarea {
   display: inline-block;
   width: 230px;
+  max-width: 230px;
+  margin: 0;
 }
-/* line 42, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 47, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic .form-fields label {
   display: inline-block;
+  float: left;
   width: 100px;
 }
-/* line 46, ../../app/stylesheets/partials/_formtastic.sass */
+/* line 52, ../../app/stylesheets/partials/_formtastic.sass */
 form.formtastic .form-buttons {
   padding-top: 15px;
   text-align: center;
 }
 
-/* line 27, ../../app/stylesheets/screen.sass */
+/* line 28, ../../app/stylesheets/screen.sass */
 .container {
   width: 950px;
   margin: 0 auto;
@@ -1415,27 +1423,27 @@ form.formtastic .form-buttons {
   *zoom: 1;
 }
 
-/* line 30, ../../app/stylesheets/screen.sass */
+/* line 31, ../../app/stylesheets/screen.sass */
 .none {
   display: none;
 }
 
-/* line 33, ../../app/stylesheets/screen.sass */
+/* line 34, ../../app/stylesheets/screen.sass */
 .bad {
   background-color: rgba(200, 20, 20, 0.3);
 }
 
-/* line 36, ../../app/stylesheets/screen.sass */
+/* line 37, ../../app/stylesheets/screen.sass */
 .good {
   background-color: rgba(20, 200, 20, 0.3);
 }
 
-/* line 39, ../../app/stylesheets/screen.sass */
+/* line 40, ../../app/stylesheets/screen.sass */
 .neutral {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 42, ../../app/stylesheets/screen.sass */
+/* line 43, ../../app/stylesheets/screen.sass */
 input.diff {
   background-color: #cccccc;
   font-weight: bold;
@@ -1447,13 +1455,13 @@ input.diff {
   border-radius: 6px;
 }
 
-/* line 52, ../../app/stylesheets/screen.sass */
+/* line 53, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   color: #333333;
   font-size: 75%;
-  background-color: #d0d9e0;
+  background-color: white;
 }
 /* line 51, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
 body h1, body h2, body h3, body h4, body h5, body h6 {
@@ -1754,27 +1762,30 @@ body .removed {
   background: #990000;
   color: white;
 }
-/* line 58, ../../app/stylesheets/screen.sass */
+/* line 59, ../../app/stylesheets/screen.sass */
 body a {
   text-decoration: none;
 }
-/* line 61, ../../app/stylesheets/screen.sass */
+/* line 62, ../../app/stylesheets/screen.sass */
 body a.button {
   color: #3c3c3d;
 }
-/* line 64, ../../app/stylesheets/screen.sass */
+/* line 65, ../../app/stylesheets/screen.sass */
 body #section {
   background-color: white;
   overflow: auto;
+}
+/* line 69, ../../app/stylesheets/screen.sass */
+body #section #page {
+  margin-bottom: 35px;
 }
 /* line 2, ../../app/stylesheets/partials/_header.sass */
 body #header {
   background-color: #cddae3;
   border-bottom: 1px solid #6498c7;
-  /* temp */
   height: 60px;
 }
-/* line 10, ../../app/stylesheets/partials/_header.sass */
+/* line 7, ../../app/stylesheets/partials/_header.sass */
 body #header h1 {
   padding-top: 10px;
   display: inline;
@@ -1786,7 +1797,7 @@ body #header h1 {
 * html body #header h1 {
   overflow-x: hidden;
 }
-/* line 14, ../../app/stylesheets/partials/_header.sass */
+/* line 11, ../../app/stylesheets/partials/_header.sass */
 body #header h1 a {
   font-family: "Puritan", arial, serif;
   margin-top: 8px;
@@ -1797,12 +1808,12 @@ body #header h1 a {
   -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
-/* line 24, ../../app/stylesheets/partials/_header.sass */
+/* line 21, ../../app/stylesheets/partials/_header.sass */
 body #header h1 a:hover {
   color: black;
   text-shadow: 0 0 1px rgba(255, 255, 255, 0.9);
 }
-/* line 28, ../../app/stylesheets/partials/_header.sass */
+/* line 25, ../../app/stylesheets/partials/_header.sass */
 body #header form.search {
   display: inline;
   float: left;
@@ -1814,20 +1825,20 @@ body #header form.search {
 * html body #header form.search {
   overflow-x: hidden;
 }
-/* line 32, ../../app/stylesheets/partials/_header.sass */
+/* line 29, ../../app/stylesheets/partials/_header.sass */
 body #header ul {
   list-style: none;
   text-align: right;
   padding: 16px 0 0;
   margin: 0;
 }
-/* line 38, ../../app/stylesheets/partials/_header.sass */
+/* line 35, ../../app/stylesheets/partials/_header.sass */
 body #header ul li {
   display: inline-block;
   padding: 0;
   margin: 0;
 }
-/* line 43, ../../app/stylesheets/partials/_header.sass */
+/* line 40, ../../app/stylesheets/partials/_header.sass */
 body #header ul li a {
   text-decoration: none;
   display: block;
@@ -1838,7 +1849,7 @@ body #header ul li a {
   -webkit-transition: all 0.1s ease-in;
   -moz-transition: all 0.1s ease-in;
 }
-/* line 53, ../../app/stylesheets/partials/_header.sass */
+/* line 50, ../../app/stylesheets/partials/_header.sass */
 body #header ul li a:hover {
   background-color: #75a9d8;
   -webkit-border-radius: 54px;
@@ -2067,44 +2078,7 @@ body #page .page .register {
   font-size: 14px;
   border-top: 1px solid rgba(50, 50, 250, 0.25);
 }
-/* line 2, ../../app/stylesheets/partials/_university.sass */
-body .toolbar {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
-  margin-bottom: 15px;
-  background-color: rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(50, 50, 250, 0.5);
-}
-/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body .toolbar {
-  overflow-x: hidden;
-}
-/* line 8, ../../app/stylesheets/partials/_university.sass */
-body .toolbar .search-bar {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 790px;
-}
-/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body .toolbar .search-bar {
-  overflow-x: hidden;
-}
-/* line 11, ../../app/stylesheets/partials/_university.sass */
-body .toolbar .buttons-bar {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 150px;
-  text-align: right;
-}
-/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body .toolbar .buttons-bar {
-  overflow-x: hidden;
-}
-/* line 16, ../../app/stylesheets/partials/_university.sass */
+/* line 3, ../../app/stylesheets/partials/_university.sass */
 body #universities ul {
   display: inline;
   float: left;
@@ -2117,7 +2091,7 @@ body #universities ul {
 * html body #universities ul {
   overflow-x: hidden;
 }
-/* line 21, ../../app/stylesheets/partials/_university.sass */
+/* line 8, ../../app/stylesheets/partials/_university.sass */
 body #universities ul li {
   display: inline-block;
   margin: 0;
@@ -2134,18 +2108,18 @@ body #universities ul li {
   overflow: hidden;
   -webkit-transition: all 0.1s;
 }
-/* line 37, ../../app/stylesheets/partials/_university.sass */
+/* line 24, ../../app/stylesheets/partials/_university.sass */
 body #universities ul li:hover {
   background-color: #5387b6;
 }
-/* line 40, ../../app/stylesheets/partials/_university.sass */
+/* line 27, ../../app/stylesheets/partials/_university.sass */
 body #universities ul li a {
   display: block;
   padding: 5px;
   color: #333333;
   text-decoration: none;
 }
-/* line 46, ../../app/stylesheets/partials/_university.sass */
+/* line 33, ../../app/stylesheets/partials/_university.sass */
 body #universities ul li a img {
   width: 32px;
   height: 32px;
@@ -2153,11 +2127,11 @@ body #universities ul li a img {
   float: left;
   margin-right: 10px;
 }
-/* line 53, ../../app/stylesheets/partials/_university.sass */
+/* line 40, ../../app/stylesheets/partials/_university.sass */
 body #universities ul li a .item {
   display: inline-block;
 }
-/* line 56, ../../app/stylesheets/partials/_university.sass */
+/* line 43, ../../app/stylesheets/partials/_university.sass */
 body #universities ul li a .item h3 {
   padding: 0;
   margin: 0;
@@ -2185,57 +2159,45 @@ body #prices img.gravatar {
   height: 32px;
 }
 /* line 27, ../../app/stylesheets/partials/_prices.sass */
-body #prices .prices_options {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 590px;
-}
-/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #prices .prices_options {
-  overflow-x: hidden;
-}
-/* line 30, ../../app/stylesheets/partials/_prices.sass */
-body #prices .prices_buttons {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 350px;
-  text-align: right;
-}
-/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body #prices .prices_buttons {
-  overflow-x: hidden;
-}
-/* line 34, ../../app/stylesheets/partials/_prices.sass */
 body #prices .prices_items {
   display: inline;
   float: left;
   margin-right: 10px;
   width: 950px;
-  margin-top: 15px;
 }
 /* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
 * html body #prices .prices_items {
   overflow-x: hidden;
 }
-/* line 38, ../../app/stylesheets/partials/_prices.sass */
+/* line 30, ../../app/stylesheets/partials/_prices.sass */
 body #prices th.buttons {
-  text-align: right;
+  text-align: center;
   padding: 0;
 }
 /* line 2, ../../app/stylesheets/partials/_review.sass */
-body .review {
+body #reviews {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body #reviews {
+  overflow-x: hidden;
+}
+/* line 9, ../../app/stylesheets/partials/_review.sass */
+body #reviews .review {
   width: 930px;
   padding: 10px;
-  display: inline-block;
   overflow: hidden;
   margin-bottom: 10px;
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 8px;
 }
-/* line 11, ../../app/stylesheets/partials/_review.sass */
-body .review .created_at {
+/* line 17, ../../app/stylesheets/partials/_review.sass */
+body #reviews .review .created_at {
   display: inline-block;
   font-size: 0.8em;
   float: right;
@@ -2321,7 +2283,49 @@ body #revisions .revision .datetime {
 body #revisions .revision a {
   margin-right: 10px;
 }
-/* line 81, ../../app/stylesheets/screen.sass */
+/* line 82, ../../app/stylesheets/screen.sass */
+body .toolbar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 950px;
+  margin-bottom: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 1px solid rgba(50, 50, 250, 0.5);
+  padding: 4px 0;
+}
+/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .toolbar {
+  overflow-x: hidden;
+}
+/* line 89, ../../app/stylesheets/screen.sass */
+body .toolbar .search-bar {
+  display: inline;
+  float: left;
+  margin-right: 10px;
+  width: 790px;
+}
+/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .toolbar .search-bar {
+  overflow-x: hidden;
+}
+/* line 92, ../../app/stylesheets/screen.sass */
+body .toolbar .search-bar input {
+  margin: 0;
+}
+/* line 95, ../../app/stylesheets/screen.sass */
+body .toolbar .buttons-bar {
+  display: inline;
+  float: left;
+  margin-right: 0;
+  width: 150px;
+  text-align: right;
+}
+/* line 147, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
+* html body .toolbar .buttons-bar {
+  overflow-x: hidden;
+}
+/* line 100, ../../app/stylesheets/screen.sass */
 body form.search input.search-field {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
@@ -2334,7 +2338,53 @@ body form.search input.search-field {
   background: white url("/images/search.png") 5px 5px no-repeat;
   outline: 0;
 }
-/* line 93, ../../app/stylesheets/screen.sass */
+/* line 112, ../../app/stylesheets/screen.sass */
 body form.search input.search-field:focus {
   outline: 0;
+}
+/* line 115, ../../app/stylesheets/screen.sass */
+body .notice, body .alert {
+  margin: 0;
+  padding: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.85);
+  text-align: center;
+}
+/* line 126, ../../app/stylesheets/screen.sass */
+body .notice span, body .alert span {
+  margin-top: 15px;
+  display: block;
+  font-weight: bold;
+  font-size: 1.4em;
+  text-shadow: 0 1px 1px black;
+  color: white;
+}
+
+/* line 10, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 12, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#root {
+  clear: both;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin-bottom: -35px;
+}
+/* line 18, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#root #root_footer {
+  height: 35px;
+}
+
+/* line 20, ../../vendor/ruby/1.9.1/bundler/gems/compass-51e21b08b957/frameworks/compass/stylesheets/compass/layout/_sticky-footer.scss */
+#footer {
+  clear: both;
+  position: relative;
+  height: 35px;
 }

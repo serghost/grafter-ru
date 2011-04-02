@@ -1,6 +1,6 @@
 Feature: Editing university
   In order to update information
-  As a user
+  As a admin
   I want to be able to do that through an interface
 
   Background:
@@ -10,8 +10,8 @@ Feature: Editing university
       | Moscow department | Podolsk    |
     Given there is a university called "МГУ" with "Moscow University" title
     Given there are the following users:
-      | email             | password |
-      | newbie@grafter.ru | qwerty   |
+      | email             | password | admin |
+      | newbie@grafter.ru | qwerty   | true  |
     And I am signed in as them
     And I am on the university page for "МГУ"
     And I follow "Edit"

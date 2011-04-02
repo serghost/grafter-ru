@@ -1,13 +1,22 @@
 class UsersController < ApplicationController
   before_filter :authorize_admin!, :except => [:show, :update]
   before_filter :authenticate_user!, :only => [:show, :update]
-  before_filter :find_user, :only => [:reset, :give, :edit, :update]
+  before_filter :find_user, :only => [:reset, :give, :edit, :update, :destroy]
 
   def show
     @user = current_user
   end
 
   def edit
+  end
+
+  def destroy
+    unless @user == current_user
+      @user.destroy
+      redirect_to users_path, :notice => "User has been deleted."
+    else
+      redirect_to users_path, :notice => "You cannot delete yourself."
+    end
   end
 
   def update

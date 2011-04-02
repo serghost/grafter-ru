@@ -1,4 +1,5 @@
 class UniversitiesController < ApplicationController
+  before_filter :authorize_admin!, :only => [:edit, :update, :destroy]
   before_filter :authenticate_user!, :except => [:show, :reviews, :index]
   before_filter :find_university, :only => [:show, :reviews, :destroy, :edit, :update]
   before_filter :tabs, :only => [:show, :reviews]
@@ -12,7 +13,7 @@ class UniversitiesController < ApplicationController
   end
 
   def reviews
-    @reviews = @university.reviews
+    @reviews = @university.reviews.where("kind LIKE ?", params[:kind].presence || '%').page params[:page]
 
     @tabs.active! :reviews
     render "show"
@@ -26,7 +27,7 @@ class UniversitiesController < ApplicationController
        # FIXME: Move to model as scope!
        @universities = University.where("short LIKE ? OR title LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%").includes(:city).order(:city_id).page params[:page]
      }
-     format.json {render :json => University.all.map {|university| {:id => university.id, :value => university.short}}}
+     format.json {render :json => University.where("short LIKE ?", "%#{params[:term]}%").map {|university| {:id => university.id, :value => university.short}}}
     end
   end
 

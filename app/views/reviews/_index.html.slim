@@ -1,15 +1,15 @@
-.toolbar
-  .span-19
-    |Show
-    select
-      option All
-      option Good
-      option Neutral
-      option Bad
+#reviews
+  .toolbar
+    .search-bar
+      a href="#{university_reviews_path(@university)}" class="left pill button" All
+      a href="#{university_reviews_path(@university)}?kind=1" class="middle pill button" Good
+      a href="#{university_reviews_path(@university)}?kind=0" class="middle pill button" Neutral
+      a href="#{university_reviews_path(@university)}?kind=-1" class="right pill button" Bad
 
-  .span-5.last
-    a href="#{new_university_review_path(@university)}" class="button pill"
-      span.icon.plus
-      |Create review
+    .buttons-bar
+      a href="#{new_university_review_path(@university)}" class="button pill"
+        span.icon.plus
+        |Create review
 
-= render @reviews
+  = render @reviews
+  == paginate @reviews

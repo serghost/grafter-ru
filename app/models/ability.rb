@@ -7,7 +7,6 @@ class Ability
         can :manage, :all
       else
         can :edit, Price
-        can :edit, University
         can :edit, Review do |review|
           review.user_id == user.id
         end

@@ -23,19 +23,28 @@ class ReviewsController < ApplicationController
   end
 
   def update
-    if @review.update_attributes(params[:review])
-      redirect_to university_reviews_path, :notice => "Review has been updated."
+    if can?(:edit, @review)
+      if @review.update_attributes(params[:review])
+        redirect_to university_reviews_path(@university), :notice => "Review has been updated."
+      else
+        flash[:alert] = "Review has not been updated."
+        render :action => "new"
+      end
     else
-      flash[:alert] = "Review has not been updated."
-      render :action => "new"
+      redirect_to university_reviews_path(@university), :notice => "Access denied."
     end
   end
 
   def destroy
-    if @review.destroy
-      redirect_to university_reviews_path, :notice => "Review has been deleted."
+    if can?(:edit, @review)
+      if @review.destroy
+        redirect_to university_reviews_path(@university), :notice => "Review has been deleted."
+      end
+    else
+      redirect_to university_reviews_path(@university), :notice => "Access denied."
     end
   end
+
   private
 
   def find_university

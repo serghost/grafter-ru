@@ -4,7 +4,7 @@
 div class="#{@revisions.present? ? 'span-3' : 'span-7'}"
   |&nbsp;
 
-div class="span-8 fill-dialog"
+div class="fill-dialog"
   h2.form-title Edit price
 
   = render "form"
@@ -12,6 +12,6 @@ div class="span-8 fill-dialog"
 - if @revisions.present?
   #revisions
     h3 Revisions
-    = link_to "Delete all", delete_revisions_university_price_path(@price), :method => :post, :confirm => "Are you sure?", :class => "delete_all"
+    = link_to "Delete all", delete_revisions_university_price_path(@university, @price), :method => :post, :confirm => "Are you sure?", :class => "delete_all"
 
     = render @revisions

@@ -8,4 +8,5 @@ class Review < ActiveRecord::Base
   validates :kind, :presence => true
 
   REVIEW_KINDS = {"Good" => 1, "Bad" => -1, "Neutral" => 0}
+  REVIEW_CLASS = {1 => "good", -1 => "bad", 0 => "neutral"}
 end

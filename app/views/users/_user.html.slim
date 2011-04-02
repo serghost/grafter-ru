@@ -7,10 +7,11 @@ li.span-24
 
   .span-5.last
     = link_to "Edit", [:edit, user]
-    = link_to "Delete", user, :method => :delete, :confirm => "Are you sure?"
 
-    - if user.admin?
-      - unless current_user == user
+    - unless current_user == user
+      = link_to "Delete", user, :method => :delete, :confirm => "Are you sure?"
+
+      - if user.admin?
         = link_to "Reset rights", [:reset, user], :confirm => "Are you sure?"
-    - else
-      = link_to "Give rights", [:give, user]
+      - else
+        = link_to "Give rights", [:give, user]

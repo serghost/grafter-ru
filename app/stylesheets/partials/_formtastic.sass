@@ -8,6 +8,7 @@
     -webkit-border-radius: 6px
     -moz-border-radius: 6px
     border-radius: 6px
+    overflow: hidden
     padding: 10px 5px 10px 10px
 
   h2.form-title
@@ -31,16 +32,21 @@
 
     .form-fields
       li
+        margin-bottom: 10px
+
         p
           padding: 0
           margin: 0 0 0 100px
 
-      select, input
+      select, input, textarea
         display: inline-block
         width: 230px
+        max-width: 230px
+        margin: 0
 
       label
         display: inline-block
+        float: left
         width: 100px
 
     .form-buttons

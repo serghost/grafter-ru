@@ -4,7 +4,6 @@ html
     meta charset="utf-8"
     title Grafter
 
-    /* link href='http://fonts.googleapis.com/css?family=Raleway:100' rel='stylesheet' type='text/css'*/
     /* link href='http://fonts.googleapis.com/css?family=Puritan' rel='stylesheet' type='text/css'*/
 
     /* = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'*/
@@ -16,50 +15,51 @@ html
 
   body
     - flash.each do |key, msg|
-      .info
-        = msg
+      div class="#{key}"
+        span= msg
 
-    #header
-      .container
-        h1
-          a href="#{root_url}" Grafter
-
-        - unless @hide_search_bar
-          = form_tag search_path, {:method => :get, :class => "search"} do
-            = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
-
-        ul
-          li
-            = link_to "Universities", universities_path
-
-          - unless current_user.present?
-            - unless controller.kind_of? Devise::SessionsController
-              li
-                a href="#{new_user_session_path}" Sign In
-
-            - unless controller.kind_of? Devise::RegistrationsController
-              li
-                a href="#{new_user_registration_path}" Sign Up
-
-          - else
-            - if can?(:edit, User)
-              li
-                a href="#{users_path}" Users
-
-            li
-              = link_to "Profile", profile_users_path
-            li
-              = link_to "Log out", destroy_user_session_path
-
-    - if content_for? :topside
-      #topside
+    #root
+      #header
         .container
-          == yield :topside
+          h1
+            a href="#{root_url}" Grafter
 
-    #section
-      .container
-        #page
-          == yield
+          - unless @hide_search_bar
+            = form_tag search_path, {:method => :get, :class => "search"} do
+              = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
+
+          ul
+            li
+              = link_to "Universities", universities_path
+
+            - unless current_user.present?
+              - unless controller.kind_of? Devise::SessionsController
+                li
+                  a href="#{new_user_session_path}" Sign In
+
+              - unless controller.kind_of? Devise::RegistrationsController
+                li
+                  a href="#{new_user_registration_path}" Sign Up
+
+            - else
+              - if can?(:edit, User)
+                li
+                  a href="#{users_path}" Users
+
+              li
+                = link_to "Profile", profile_users_path
+              li
+                = link_to "Log out", destroy_user_session_path
+
+      - if content_for? :topside
+        #topside
+          .container
+            == yield :topside
+
+      #section
+        .container
+          #page
+            == yield
 
     #footer
       .container
@@ -72,7 +72,5 @@ html
             a href="http://twitter.com/GrafterRU" target="_blank" Twitter
           li
             a href="http://grafterru.tumblr.com" target="_blank" Blog
-          li
-            a href="/help" Help
           li
             a href="mailto:grafter.ru@gmail.com?subject=Abuse" Make abuse!

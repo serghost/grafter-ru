@@ -1,6 +1,6 @@
 $(function() {
 
-  $("#section, ul#tabs li.current").noisy({
+  $("#section, ul#tabs li.current, body").noisy({
     noise: 0.9,
     titleSize: 200,
     backgroundColor: '#fafafa',
@@ -13,6 +13,14 @@ $(function() {
     source: "/universities",
     select: function(event, ui) {
       window.location = location.origin+"/universities/"+ui.item.id;
+    }
+  });
+
+  $("#lesson").autocomplete({
+    minLength: 2,
+    source: location.origin+location.pathname+"/lessons",
+    select: function(event, ui) {
+      window.location = location.origin+location.pathname+"/lessons/"+ui.item.id;
     }
   });
 
@@ -35,4 +43,8 @@ $(function() {
       input.val(input.data("previous"));
     });
   });
+
+  setTimeout(function() {
+    $(".notice, .alert").fadeOut();
+  }, 5000);
 });

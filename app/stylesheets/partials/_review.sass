@@ -1,14 +1,20 @@
 @mixin review
-  .review
-    width: 930px
-    padding: 10px
-    display: inline-block
+  #reviews
+    +column(24)
     overflow: hidden
-    margin-bottom: 10px
-    -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4)
-    -webkit-border-radius: 8px
+    padding-bottom: 20px
 
-    .created_at
-      display: inline-block
-      font-size: .8em
-      float: right
+    .toolbar
+
+    .review
+      width: 930px
+      padding: 10px
+      overflow: hidden
+      margin-bottom: 10px
+      -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.4)
+      -webkit-border-radius: 8px
+
+      .created_at
+        display: inline-block
+        font-size: .8em
+        float: right

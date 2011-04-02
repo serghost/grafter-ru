@@ -18,6 +18,7 @@ $footer: #d0d9e0
 @import "partials/revision"
 @import "blueprint"
 @import "blueprint/scaffolding"
+@import "compass/layout/sticky-footer"
 
 +blueprint
 +blueprint-scaffolding("body")
@@ -53,7 +54,7 @@ body
   +blueprint-typography(true)
   +blueprint-utilities
   +blueprint-interaction
-  background-color: $footer
+  background-color: white
 
   a
     text-decoration: none
@@ -66,6 +67,7 @@ body
     overflow: auto
 
     #page
+      margin-bottom: 35px
 
   +header
   +topside
@@ -76,6 +78,23 @@ body
   +review
   +users
   +revisions
+
+  .toolbar
+    +column(24)
+    margin-bottom: 15px
+    background-color: rgba(255, 255, 255, 0.5)
+    border-bottom: 1px solid rgba(50, 50, 250, 0.5)
+    padding: 4px 0
+
+    .search-bar
+      +column(20)
+
+      input
+        margin: 0
+
+    .buttons-bar
+      +column(4, true)
+      text-align: right
 
   form.search
     input.search-field
@@ -92,3 +111,24 @@ body
 
     input.search-field:focus
       outline: 0
+
+  .notice, .alert
+    margin: 0
+    padding: 0
+    height: 60px
+    position: absolute
+    width: 100%
+    top: 0
+    border: 0
+    background-color: rgba(0, 0, 0, 0.85)
+    text-align: center
+
+    span
+      margin-top: 15px
+      display: block
+      font-weight: bold
+      font-size: 1.4em
+      text-shadow: 0 1px 1px black
+      color: white
+
++sticky-footer(35px)
