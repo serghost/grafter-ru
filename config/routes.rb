@@ -7,15 +7,15 @@ Grafter::Application.routes.draw do
 
   root :to => "page#index"
 
-  match "/search" => "universities#index"
+  match "/search" => "universities#index", :as => :search
 
   resources :universities do
-    get "/reviews" => "universities#reviews", :as => "reviews", :on => :member
+    get :reviews, :as => "reviews", :on => :member
 
     resources :prices do
-      post '/delete_revisions' => "prices#delete_revisions", :on => :member, :as => "delete_revisions"
-      put '/revision/:version' => "prices#revision", :as => "revision"
-      delete '/revision/:version' => "prices#revision_remove", :as => "revision_remove"
+      post :delete_revisions, :on => :member, :as => :delete_revisions
+      put '/revision/:version' => "prices#revision", :as => :revision
+      delete '/revision/:version' => "prices#revision_remove", :as => :revision_remove
     end
 
     resources :reviews
@@ -23,8 +23,8 @@ Grafter::Application.routes.draw do
   end
 
   resources :users do
-    get '/profile' => "users#show", :as => "profile", :on => :collection
-    get '/reset' => "users#reset", :on => :member
-    get '/give' => "users#give", :on => :member
+    get 'profile' => "users#show", :as => :profile, :on => :collection
+    get :reset, :on => :member
+    get :give, :on => :member
   end
 end
