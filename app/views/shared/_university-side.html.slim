@@ -1,0 +1,21 @@
+.university-side
+  .logo
+    img.side src="#{@university.logo.url}"
+
+  .university
+    .description
+      h2 #{@university.short} (#{@university.city.city_title})
+      .university-title #{@university.title}
+
+    .edit_buttons
+      - if can?(:edit, @university)
+        a href="#{edit_university_path(@university)}" class="button"
+          span class="pen icon"
+          | Edit
+
+      - if can?(:destroy, @university)
+        a href="#{university_path(@university)}" class="negative button" data-confirm="Are you sure?" data-method="delete"
+          span class="trash icon"
+          | Delete
+
+  = render @tabs
