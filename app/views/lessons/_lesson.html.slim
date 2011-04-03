@@ -1,2 +1,2 @@
-a.lesson href="#{university_lesson_url(@university, lesson)}"
-  = "#{lesson.title} (#{lesson.prices.count})"
+a.lesson href="#{university_lesson_url(@university, lesson)}" title="Count of items: (#{lesson.prices.count})"
+  = lesson.title

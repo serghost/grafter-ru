@@ -1,7 +1,7 @@
 class ReviewsController < ApplicationController
   before_filter :authenticate_user!
-  before_filter :find_university, :except => :index
-  before_filter :find_review, :only => [:edit, :destroy, :update]
+  before_filter :find_university_id, :except => :index
+  before_filter :find_review_id, :only => [:edit, :destroy, :update]
 
   def new
     @review = @university.reviews.new
@@ -43,15 +43,5 @@ class ReviewsController < ApplicationController
     else
       redirect_to university_reviews_path(@university), :notice => "Access denied."
     end
-  end
-
-  private
-
-  def find_university
-    @university = University.find params[:university_id]
-  end
-
-  def find_review
-    @review = @university.reviews.find params[:id]
   end
 end

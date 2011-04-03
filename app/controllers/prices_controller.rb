@@ -1,9 +1,9 @@
 class PricesController < ApplicationController
   before_filter :authorize_admin!, :only => [:destroy, :revision, :revision_remove, :delete_revisions]
   before_filter :authenticate_user!, :except => [:show, :destroy, :revision, :revision_remove, :delete_revisions]
-  before_filter :find_university, :except => :index
-  before_filter :find_price, :only => [:edit, :update, :show, :destroy, :delete_revisions]
-  before_filter :find_revision, :only => [:revision, :revision_remove]
+  before_filter :find_university_id, :except => :index
+  before_filter :find_price_id, :only => [:edit, :update, :show, :destroy, :delete_revisions]
+  before_filter :find_version, :only => [:revision, :revision_remove]
 
   def new
     @price = @university.prices.new
@@ -50,10 +50,10 @@ class PricesController < ApplicationController
   end
 
   def revision
-    @price = @revision.reify
+    @price = @version.reify
 
     if @price.save
-      @revision.destroy
+      @version.destroy
       flash[:notice] = "Price has been updated."
     else
       flash[:alert] = "Price has not been updated."
@@ -64,7 +64,7 @@ class PricesController < ApplicationController
 
   def revision_remove
     @price = Price.find params[:price_id]
-    @revision.destroy
+    @version.destroy
 
     redirect_to edit_university_price_path(@university, @price), :notice => "Revision has been deleted."
   end
@@ -84,19 +84,5 @@ class PricesController < ApplicationController
 
     @price.destroy # FIXME: Add disable for storing destroy action
     redirect_to @university, notice: "Price has been deleted."
-  end
-
-  private
-
-  def find_university
-    @university = University.find params[:university_id]
-  end
-
-  def find_price
-    @price = Price.find params[:id]
-  end
-
-  def find_revision
-    @revision = Version.find params[:version]
   end
 end

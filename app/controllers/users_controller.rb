@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   before_filter :authorize_admin!, :except => [:show, :update]
   before_filter :authenticate_user!, :only => [:show, :update]
-  before_filter :find_user, :only => [:reset, :give, :edit, :update, :destroy]
+  before_filter :find_user_id, :only => [:reset, :give, :edit, :update, :destroy]
 
   def show
     @user = current_user
@@ -55,11 +55,5 @@ class UsersController < ApplicationController
     @user.save
 
     redirect_to users_path, :notice => "User has admin rights."
-  end
-
-  private
-
-  def find_user
-    @user = User.find params[:id]
   end
 end
