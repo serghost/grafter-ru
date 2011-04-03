@@ -1,15 +1,23 @@
+- content_for :topside do
+  = render "shared/university-side"
+
 #prices
+  .toolbar
+    .search-bar
+      = form_for @university, :html => {:method => :get, :class => "search"} do
+        input#lesson.search-field name="lesson" type="text" placeholder="Enter your lesson to search them" tabindex="2" value="#{params[:lesson]}"
+
+    .buttons-bar
+      a#add_price href="#{new_university_price_path(@university)}" class="button pill"
+        span class="plus icon"
+        |Add price
+
   .prices_items
     .price_title
       h2= @lesson.title
 
     table
       thead
-        /* tr*/
-        /*   th colspan="8"*/
-        /*     .price_title*/
-        /*       h2= @lesson.title*/
-            
         tr
           th width="24%" Person
           th Score: 5

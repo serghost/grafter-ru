@@ -23,7 +23,7 @@ class PricesController < ApplicationController
       redirect_to [@university, @price], :notice => "Price has been updated."
     else
       flash[:alert] = "Price has not been updated."
-      render :action => "new"
+      render :action => :edit
     end
   end
 

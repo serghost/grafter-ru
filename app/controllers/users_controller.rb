@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       end
     else
       flash[:alert] = "User has not been updated."
-      render :action => "new"
+      render :action => :edit
     end
   end
 

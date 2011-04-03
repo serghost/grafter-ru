@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
         redirect_to university_reviews_path(@university), :notice => "Review has been updated."
       else
         flash[:alert] = "Review has not been updated."
-        render :action => "new"
+        render :action => :edit
       end
     else
       redirect_to university_reviews_path(@university), :notice => "Access denied."

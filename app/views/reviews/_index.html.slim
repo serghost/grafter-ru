@@ -11,5 +11,9 @@
         span.icon.plus
         |Create review
 
-  = render @reviews
-  == paginate @reviews
+  - if @reviews.present?
+    = render @reviews
+    == paginate @reviews
+  - else
+    p
+      |Reviews in this university is not exists yet. You might create a new review!

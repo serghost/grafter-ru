@@ -7,7 +7,7 @@ class UniversitiesController < ApplicationController
   respond_to :html, :json
 
   def show
-    @prices = @university.prices.page params[:page]
+    @lessons = @university.lessons.page params[:page]
 
     @tabs.active! :prices
   end
@@ -60,7 +60,7 @@ class UniversitiesController < ApplicationController
       redirect_to @university, :notice => "University has been updated."
     else
       flash[:alert] = "University has not been updated."
-      render :action => "new"
+      render :action => :edit
     end
   end
 

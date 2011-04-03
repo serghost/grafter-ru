@@ -10,19 +10,8 @@
         |Add price
 
   .prices_items
-    table
-      thead
-        tr
-          th width="24%" Person
-          th Score: 5
-          th Score: 4
-          th Score: 3
-          th Attestation
-          th Course work
-          th Test
-          th
-
-      tbody
-        = render @prices
-
-    == paginate @prices
+    - if @lessons.present?
+      = render @lessons
+    - else
+      p
+        |Prices in this university is not exists yet. You might create a new price!

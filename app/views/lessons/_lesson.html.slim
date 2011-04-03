@@ -1,2 +1,12 @@
-a.lesson href="#{university_lesson_url(@university, lesson)}" title="Count of items: (#{lesson.prices.count})"
-  = lesson.title
+.lesson
+  a href="#{university_lesson_url(@university, lesson)}" title="Count of items: (#{lesson.prices.count})"
+    = lesson.title
+  - if can?(:edit, Lesson)
+    .admins-links
+      = link_to edit_university_lesson_path(@university, lesson), :class => "button" do
+        span class="pen icon"
+        |Edit
+      |&nbsp;
+      = link_to university_lesson_path(@university, lesson), :method => :delete, :confirm => "Are you sure?", :class => "button" do
+        span class="trash icon"
+        |Delete

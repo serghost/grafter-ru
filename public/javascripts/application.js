@@ -46,5 +46,5 @@ $(function() {
 
   setTimeout(function() {
     $(".notice, .alert").fadeOut();
-  }, 5000);
+  }, 4000);
 });

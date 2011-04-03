@@ -2319,7 +2319,7 @@ body #revisions .revision .datetime {
 body #revisions .revision a {
   margin-right: 10px;
 }
-/* line 5, ../../app/stylesheets/partials/_lesson.sass */
+/* line 3, ../../app/stylesheets/partials/_lesson.sass */
 body .price_title h2 {
   background: #5387b6;
   clear: both;
@@ -2331,10 +2331,10 @@ body .price_title h2 {
   padding: 0;
   position: relative;
   text-align: center;
-  text-shadow: 0 -1px #2f7fa8, 0 1px #58b7dd;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1);
   width: 970px;
 }
-/* line 19, ../../app/stylesheets/partials/_lesson.sass */
+/* line 18, ../../app/stylesheets/partials/_lesson.sass */
 body .price_title h2:before, body .price_title h2:after {
   background: url(/images/ribbon_left.png);
   bottom: 0;
@@ -2347,14 +2347,14 @@ body .price_title h2:before, body .price_title h2:after {
   width: 10px;
   z-index: 10;
 }
-/* line 31, ../../app/stylesheets/partials/_lesson.sass */
+/* line 30, ../../app/stylesheets/partials/_lesson.sass */
 body .price_title h2:after {
   background: url(/images/ribbon_right.png);
   right: 0;
   left: auto;
 }
-/* line 36, ../../app/stylesheets/partials/_lesson.sass */
-body a.lesson {
+/* line 35, ../../app/stylesheets/partials/_lesson.sass */
+body div.lesson {
   -moz-border-radius: 4px;
   -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
   -webkit-border-radius: 4px;
@@ -2362,12 +2362,31 @@ body a.lesson {
   background-color: #eeeeee;
   border-radius: 4px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.4);
-  color: #333333;
   display: inline-block;
   font-weight: bold;
   margin: 0 10px 0 2px;
   padding: 3px;
   text-shadow: 0 1px 1px white;
+}
+/* line 49, ../../app/stylesheets/partials/_lesson.sass */
+body div.lesson a {
+  color: #333333;
+}
+/* line 52, ../../app/stylesheets/partials/_lesson.sass */
+body div.lesson .admins-links {
+  display: inline-block;
+  padding-left: 5px;
+  margin-left: 5px;
+  border-left: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* line 59, ../../app/stylesheets/partials/_lesson.sass */
+body div.lesson .admins-links a.button {
+  padding: 3px;
+  opacity: 0.7;
+}
+/* line 63, ../../app/stylesheets/partials/_lesson.sass */
+body div.lesson .admins-links a.button:hover {
+  opacity: 1;
 }
 /* line 86, ../../app/stylesheets/screen.sass */
 body .toolbar {

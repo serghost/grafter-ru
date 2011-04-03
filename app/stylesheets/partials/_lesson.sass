@@ -1,9 +1,7 @@
 @mixin lesson
   .price_title
-    $price-title: $section + #222
-
     h2
-      background: $price-title
+      background: rgb(83, 135, 182)
       clear: both
       color: #fff
       float: left
@@ -13,7 +11,8 @@
       padding: 0
       position: relative
       text-align: center
-      text-shadow: 0 -1px $price-title - #24080e, 0 1px $price-title + #053027
+      // text-shadow: 0 -1px rgb(65, 131, 175), 0 1px rgb(85, 159, 201)
+      text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1)
       width: 970px
 
     h2:before, h2:after
@@ -33,7 +32,7 @@
       right: 0
       left: auto
 
-  a.lesson
+  div.lesson
     -moz-border-radius: 4px
     -moz-box-shadow: 0 0 1px rgba(0, 0, 0, 0.4)
     -webkit-border-radius: 4px
@@ -41,9 +40,25 @@
     background-color: #EEE
     border-radius: 4px
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.4)
-    color: #333
     display: inline-block
     font-weight: bold
     margin: 0 10px 0 2px
     padding: 3px
     text-shadow: 0 1px 1px white
+
+    a
+      color: #333
+
+    .admins-links
+      display: inline-block
+      padding-left: 5px
+      margin-left: 5px
+      // background-color: rgba(200, 200, 200, 0.3)
+      border-left: 1px solid rgba(0, 0, 0, 0.2)
+
+      a.button
+        padding: 3px
+        opacity: 0.7
+
+        &:hover
+          opacity: 1
