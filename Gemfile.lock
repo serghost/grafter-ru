@@ -85,6 +85,12 @@ GIT
   specs:
     spork (0.9.0.rc4)
 
+GIT
+  remote: git://github.com/voxdolo/decent_exposure.git
+  revision: 5ad0f17386b2ce1b3cb3657fb8e78bd8547607fe
+  specs:
+    decent_exposure (1.0.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -262,6 +268,7 @@ DEPENDENCIES
   cucumber
   cucumber-rails
   database_cleaner
+  decent_exposure!
   devise!
   factory_girl_rails
   ffaker

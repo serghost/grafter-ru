@@ -1,6 +1,5 @@
 class Price < ActiveRecord::Base
   before_save :find_university, :find_teacher, :find_lesson
-  before_destroy :delete_lesson
 
   belongs_to :lesson
   belongs_to :teacher
@@ -13,7 +12,7 @@ class Price < ActiveRecord::Base
   validates_numericality_of :course_work, :less_than => 100_000_000, :greater_than => 1
   validates_numericality_of :attestation, :less_than => 100_000_000, :greater_than => 1
 
-  validates :lesson, :presence => true
+  validates :lesson_title, :presence => true
   validates :personal, :presence => true,
     :format => /^([^0-9]+)\ ([^0-9]+)\ ([^0-9]+)$/
 
@@ -32,11 +31,11 @@ class Price < ActiveRecord::Base
     end
   end
 
-  def lesson=(title)
+  def lesson_title=(title)
     @lesson_title = title.split(" ").map(&:capitalize).join(" ")
   end
 
-  def lesson
+  def lesson_title
     return @lesson_title if @lesson_title.present?
 
     if self.lesson_id.present?
@@ -64,6 +63,14 @@ class Price < ActiveRecord::Base
     compare_hash
   end
 
+  def self.delete_with_lesson(price)
+    if Price.where("lesson_id LIKE ?", price.lesson_id).count == 1
+      price.lesson.destroy
+    else
+      price.destroy
+    end
+  end
+
   private
 
   def find_university
@@ -86,23 +93,15 @@ class Price < ActiveRecord::Base
 
   def find_lesson
     if @university.present?
-      lesson = @university.lessons.where("title LIKE ?", self.lesson).limit(1) # FIXME
+      lesson = @university.lessons.where("title LIKE ?", self.lesson_title).limit(1) # FIXME
 
       if lesson.present?
         self.lesson_id = lesson[0].id # FIXME
       else
-        self.lesson_id = @university.lessons.create!(:title => self.lesson).id
+        self.lesson_id = @university.lessons.create!(:title => self.lesson_title).id
       end
     else
       raise "Lesson can't be blank"
-    end
-  end
-
-  def delete_lesson
-    lesson = Lesson.find(self.lesson_id)
-
-    if lesson.prices.count == 1
-      lesson.destroy
     end
   end
 end

@@ -5,6 +5,7 @@ gem 'rails', '>= 3.0.5'
 gem 'mysql2'
 gem 'meta_where', git: 'git://github.com/ernie/meta_where.git'
 gem 'paper_trail', git: 'git://github.com/airblade/paper_trail.git'
+gem 'decent_exposure', git: 'git://github.com/voxdolo/decent_exposure.git'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
 gem 'cancan'

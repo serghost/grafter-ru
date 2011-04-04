@@ -1,4 +1,5 @@
 $(function() {
+  var lesson = $("#lesson");
 
   $("#section, ul#tabs li.current, body").noisy({
     noise: 0.9,
@@ -16,11 +17,11 @@ $(function() {
     }
   });
 
-  $("#lesson").autocomplete({
+  lesson.autocomplete({
     minLength: 2,
-    source: $("#lesson").data("complete")+"/lessons",
+    source: lesson.data("complete")+"/lessons",
     select: function(event, ui) {
-      window.location = $("#lesson").data("complete")+"/lessons/"+ui.item.id;
+      window.location = lesson.data("complete")+"/lessons/"+ui.item.id;
     }
   });
 
@@ -42,6 +43,10 @@ $(function() {
 
       input.val(input.data("previous"));
     });
+  });
+
+  $(".notice, .alert").click(function() {
+    $(this).fadeOut();
   });
 
   setTimeout(function() {

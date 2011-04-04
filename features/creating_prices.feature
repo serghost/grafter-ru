@@ -16,7 +16,7 @@ Feature: Creating prices
 
   Scenario: Creating a price
     When I follow "Add price"
-    And I fill in "Lesson" with "Mathematics"
+    And I fill in "Lesson title" with "Mathematics"
     And I fill in "Personal" with "Ivanov Ivan Ivanovich"
     And I fill in "Score 5" with "2000"
     And I fill in "Score 4" with "1500"
@@ -29,7 +29,7 @@ Feature: Creating prices
 
   Scenario: Creating a price with invalid attributes
     When I follow "Add price"
-    And I fill in "Lesson" with "!_"
+    And I fill in "Lesson title" with "!_"
     And I fill in "Score 5" with "two"
     And I fill in "Attestation" with "#"
     Then I press "Create Price"
@@ -37,7 +37,7 @@ Feature: Creating prices
 
   Scenario: Creating duplicates for updating exists price
     And I follow "Add price"
-    And I fill in "Lesson" with "Mathematics"
+    And I fill in "Lesson title" with "Mathematics"
     And I fill in "Personal" with "Ivanov Ivan Ivanovich"
     And I fill in "Score 5" with "2000"
     And I fill in "Score 4" with "1500"
@@ -50,7 +50,7 @@ Feature: Creating prices
     And I am on the university page for "МГУ"
 
     When I follow "Add price"
-    And I fill in "Lesson" with "Mathematics"
+    And I fill in "Lesson title" with "Mathematics"
     And I fill in "Personal" with "Ivanov Ivan Ivanovich"
     And I fill in "Score 5" with "2001"
     And I fill in "Score 4" with "1501"

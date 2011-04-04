@@ -1,6 +1,6 @@
 = semantic_form_for [@university, @price] do |form|
   .form-fields
-    = form.input :lesson, :as => :string, :required => false
+    = form.input :lesson_title, :as => :string, :required => false
     = form.input :personal, :required => false
 
     = form.input :score_5, :input_html => {:"data-previous" => @price.score_5}

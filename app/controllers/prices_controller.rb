@@ -38,9 +38,11 @@ class PricesController < ApplicationController
           duplicate[key] = params[:price][key]
         end
 
-        redirect_to [@university, duplicate], :notice => "Price has been updated." if duplicate.save
+        redirect_to [@university, duplicate.lesson], :notice => "Price has been updated." if duplicate.save
       else
-        redirect_to [@university, @price], :notice => "Price has been created." if @price.save
+        @price.save
+
+        redirect_to [@university, @price.lesson], :notice => "Price has been created." if @price.save
       end
 
     else
@@ -82,7 +84,7 @@ class PricesController < ApplicationController
       revision.destroy
     end
 
-    @price.destroy # FIXME: Add disable for storing destroy action
+    Price.delete_with_lesson(@price) # FIXME: Add disable for storing destroy action
     redirect_to @university, notice: "Price has been deleted."
   end
 end

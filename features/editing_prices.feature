@@ -13,7 +13,7 @@ Feature: Editing prices
       | Moscow department | Moscow     |
     Given there is a university called "МГУ" with "Moscow University" title
     Given these are the following prices:
-      | personal              | lesson | score_5 | score_4 | score_3 | test | attestation | course_work |
+      | personal              | lesson_title | score_5 | score_4 | score_3 | test | attestation | course_work |
       | Ivanov Ivan Ivanovich | OOP    | 2000    | 1400    | 1000    | 1300 | 1000        | 3000        |
     And I am on the university page for "МГУ"
     And I am on the edit page for price with lesson "OOP" and personal "Ivanov Ivan Ivanovich"
@@ -34,7 +34,7 @@ Feature: Editing prices
   Scenario: Disable a lesson and personal fields for non-moderator
 
   Scenario: Checking a privious values for price
-    Then the "price[lesson]" field should contain "Oop"
+    Then the "price[lesson_title]" field should contain "Oop"
     And the "price[personal]" field should contain "Ivanov Ivan Ivanovich"
     And I should not see "Revisions"
 
@@ -45,7 +45,7 @@ Feature: Editing prices
       | admin@grafter.ru  | qwerty   | true  |
     And I am signed in as them
     And I am on the edit page for price with lesson "OOP" and personal "Ivanov Ivan Ivanovich"
-    And I fill in "Lesson" with "Mathematics"
+    And I fill in "Lesson title" with "Mathematics"
     And I fill in "Personal" with "Boris Borisovich Borisov"
     And I fill in "Score 5" with "200"
     And I fill in "Score 4" with "150"
