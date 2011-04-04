@@ -8,7 +8,7 @@ class LessonsController < ApplicationController
     @lessons = Lesson.where("title LIKE ? and university_id LIKE ?", "%#{params[:term]}%", @university)
 
     respond_to do |format|
-     format.html
+     format.html { redirect_to @university }
      format.json {render :json => @lessons.map {|lesson| {:id => lesson.id, :value => lesson.title}}}
     end
   end

@@ -99,6 +99,10 @@ class Price < ActiveRecord::Base
   end
 
   def delete_lesson
-    # if self.lesson
+    lesson = Lesson.find(self.lesson_id)
+
+    if lesson.prices.count == 1
+      lesson.destroy
+    end
   end
 end
