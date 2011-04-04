@@ -18,9 +18,9 @@ $(function() {
 
   $("#lesson").autocomplete({
     minLength: 2,
-    source: location.origin+location.pathname+"/lessons",
+    source: $("#lesson").data("complete")+"/lessons",
     select: function(event, ui) {
-      window.location = location.origin+location.pathname+"/lessons/"+ui.item.id;
+      window.location = $("#lesson").data("complete")+"/lessons/"+ui.item.id;
     }
   });
 

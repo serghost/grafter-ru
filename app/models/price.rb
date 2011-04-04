@@ -1,5 +1,6 @@
 class Price < ActiveRecord::Base
   before_save :find_university, :find_teacher, :find_lesson
+  before_destroy :delete_lesson
 
   belongs_to :lesson
   belongs_to :teacher
@@ -95,5 +96,9 @@ class Price < ActiveRecord::Base
     else
       raise "Lesson can't be blank"
     end
+  end
+
+  def delete_lesson
+    # if self.lesson
   end
 end

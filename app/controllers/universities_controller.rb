@@ -9,7 +9,7 @@ class UniversitiesController < ApplicationController
   def show
     @lessons = @university.lessons.page params[:page]
 
-    @tabs.active! :prices
+    @tabs.active! :lessons
   end
 
   def reviews
@@ -66,6 +66,6 @@ class UniversitiesController < ApplicationController
 
 private
   def tabs
-    @tabs = Tabs.new({prices: university_path(@university), reviews: university_reviews_path(@university)})
+    @tabs = Tabs.new({lessons: university_path(@university), reviews: university_reviews_path(@university)})
   end
 end
