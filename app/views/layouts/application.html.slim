@@ -28,7 +28,7 @@ html
       #header
         .container
           h1
-            a href="#{root_url}" Grafter
+            a href="#{root_path}" Grafter
 
           - unless @hide_search_bar
             = form_tag search_path, {:method => :get, :class => "search"} do
