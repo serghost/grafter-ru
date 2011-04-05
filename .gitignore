@@ -7,5 +7,8 @@ db/*.sqlite3
 log/*.log
 public/images/universities
 public/stylesheets/compiled
+public/stylesheets/ie.css
+public/stylesheets/print.css
+public/stylesheets/screen.css
 tmp/
 vendor/ruby
