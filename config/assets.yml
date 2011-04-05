@@ -1,0 +1,14 @@
+embeded_assets: on
+
+javascripts:
+  common:
+    - public/javascripts/*.js
+
+stylesheets:
+  screen:
+    - public/stylesheets/screen.css
+    - public/stylesheets/css3buttons.css
+  ie:
+    - public/stylesheets/ie.css
+  print:
+    - public/stylesheets/print.css

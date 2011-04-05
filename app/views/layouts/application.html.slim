@@ -6,7 +6,14 @@ html
 
     link href='http://fonts.googleapis.com/css?family=Puritan' rel='stylesheet' type='text/css'
 
-    = stylesheet_link_tag "screen", "css3buttons", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/flick/jquery-ui.css"
+    = stylesheet_link_tag "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/themes/flick/jquery-ui.css"
+    = include_stylesheets :screen, :media => 'screen, projection'
+    = include_stylesheets :print, :media => 'print'
+
+    |<!--[if lt IE 8]>
+    = include_stylesheets :ie, :media => 'screen, projection'
+    |<![endif]-->
+
     = csrf_meta_tag
 
   body
@@ -71,4 +78,5 @@ html
           li
             a href="mailto:grafter.ru@gmail.com?subject=Abuse" Make abuse!
 
-    = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js", :defaults
+            = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"
+            = include_javascripts :common

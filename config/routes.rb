@@ -1,8 +1,4 @@
 Grafter::Application.routes.draw do
-  get "lessons/index"
-
-  get "lessons/show"
-
   devise_for :users
 
   root :to => "page#index"

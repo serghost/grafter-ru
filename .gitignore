@@ -5,6 +5,7 @@
 config/database.yml
 db/*.sqlite3
 log/*.log
+public/assets/
 public/images/universities
 public/stylesheets/compiled
 public/stylesheets/ie.css

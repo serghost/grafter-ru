@@ -22,6 +22,7 @@ gem 'sass', '>= 3.1.0.alpha.214'
 gem 'haml', '>= 3.1.0.alpha.147'
 gem 'compass', git: 'git://github.com/chriseppstein/compass.git'
 gem 'formtastic', git: 'git://github.com/justinfrench/formtastic.git', tag: '1.2.3'
+gem 'jammit'
 
 group :development, :test do
   gem 'rails-default-database'
