@@ -2,9 +2,9 @@ require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
 
-# If you have a Gemfile, require the gems listed there, including any gems
-# you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
+
+IMAGES_PATH = "http://s3.amazonaws.com/grafter_static/"
 
 module Grafter
   class Application < Rails::Application
@@ -31,7 +31,7 @@ module Grafter
     config.i18n.default_locale = :en
 
     # JavaScript files you want as :defaults (application.js is always included).
-    config.action_view.javascript_expansions[:defaults] = %w(jquery jquery-ui jquery.noisy rails underscore)
+    config.action_view.javascript_expansions[:defaults] = %w(jquery.noisy rails underscore)
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

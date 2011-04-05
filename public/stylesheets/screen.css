@@ -1295,7 +1295,7 @@ ul#tabs {
   position: absolute;
   bottom: 0;
 }
-/* line 11, ../../app/stylesheets/partials/_tabs.sass */
+/* line 10, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li {
   display: inline-block;
   margin-left: 3px;
@@ -1313,7 +1313,7 @@ ul#tabs li {
   -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
 }
-/* line 28, ../../app/stylesheets/partials/_tabs.sass */
+/* line 27, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li.current {
   background: white;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
@@ -1322,11 +1322,11 @@ ul#tabs li.current {
   opacity: 1;
   padding: 3px 13px;
 }
-/* line 36, ../../app/stylesheets/partials/_tabs.sass */
+/* line 35, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li.current a {
   color: black;
 }
-/* line 39, ../../app/stylesheets/partials/_tabs.sass */
+/* line 38, ../../app/stylesheets/partials/_tabs.sass */
 ul#tabs li a {
   color: #333344;
   text-decoration: none;
@@ -1415,7 +1415,7 @@ form.formtastic .form-buttons {
   text-align: center;
 }
 
-/* line 29, ../../app/stylesheets/screen.sass */
+/* line 30, ../../app/stylesheets/screen.sass */
 .container {
   width: 950px;
   margin: 0 auto;
@@ -1423,27 +1423,27 @@ form.formtastic .form-buttons {
   *zoom: 1;
 }
 
-/* line 32, ../../app/stylesheets/screen.sass */
+/* line 33, ../../app/stylesheets/screen.sass */
 .none {
   display: none;
 }
 
-/* line 35, ../../app/stylesheets/screen.sass */
+/* line 36, ../../app/stylesheets/screen.sass */
 .bad {
   background-color: rgba(200, 20, 20, 0.3);
 }
 
-/* line 38, ../../app/stylesheets/screen.sass */
+/* line 39, ../../app/stylesheets/screen.sass */
 .good {
   background-color: rgba(20, 200, 20, 0.3);
 }
 
-/* line 41, ../../app/stylesheets/screen.sass */
+/* line 42, ../../app/stylesheets/screen.sass */
 .neutral {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* line 44, ../../app/stylesheets/screen.sass */
+/* line 45, ../../app/stylesheets/screen.sass */
 input.diff {
   background-color: #cccccc;
   font-weight: bold;
@@ -1455,7 +1455,7 @@ input.diff {
   border-radius: 6px;
 }
 
-/* line 54, ../../app/stylesheets/screen.sass */
+/* line 55, ../../app/stylesheets/screen.sass */
 body {
   line-height: 1.5;
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -1762,23 +1762,23 @@ body .removed {
   background: #990000;
   color: white;
 }
-/* line 60, ../../app/stylesheets/screen.sass */
+/* line 61, ../../app/stylesheets/screen.sass */
 body a {
   text-decoration: none;
 }
-/* line 63, ../../app/stylesheets/screen.sass */
+/* line 64, ../../app/stylesheets/screen.sass */
 body a.button {
   color: #3c3c3d;
 }
-/* line 66, ../../app/stylesheets/screen.sass */
+/* line 67, ../../app/stylesheets/screen.sass */
 body #section {
   background-color: white;
 }
-/* line 69, ../../app/stylesheets/screen.sass */
+/* line 70, ../../app/stylesheets/screen.sass */
 body #section .container {
   overflow: visible;
 }
-/* line 72, ../../app/stylesheets/screen.sass */
+/* line 73, ../../app/stylesheets/screen.sass */
 body #section .container #page {
   margin-bottom: 35px;
 }
@@ -1866,7 +1866,7 @@ body #header ul li a:hover {
 }
 /* line 2, ../../app/stylesheets/partials/_topside.sass */
 body #topside {
-  background: #316594 url("/images/section_100.png") center;
+  background: #316594 url("http://s3.amazonaws.com/grafter_static/section_100.png") center;
   height: 100px;
   overflow: hidden;
   border-top: 1px solid #9aa7b0;
@@ -1967,7 +1967,7 @@ body #topside .university-side .university .description .university-title {
 }
 /* line 2, ../../app/stylesheets/partials/_footer.sass */
 body #footer {
-  background: #d0d9e0 url("/images/footer.png") repeat-x;
+  background: #d0d9e0 url("http://s3.amazonaws.com/grafter_static/footer.png") repeat-x;
 }
 /* line 5, ../../app/stylesheets/partials/_footer.sass */
 body #footer .copyright {
@@ -2336,7 +2336,7 @@ body .price_title h2 {
 }
 /* line 18, ../../app/stylesheets/partials/_lesson.sass */
 body .price_title h2:before, body .price_title h2:after {
-  background: url(/images/ribbon_left.png);
+  background: url("http://s3.amazonaws.com/grafter_static/ribbon_left.png");
   bottom: 0;
   content: " ";
   display: block;
@@ -2349,7 +2349,7 @@ body .price_title h2:before, body .price_title h2:after {
 }
 /* line 30, ../../app/stylesheets/partials/_lesson.sass */
 body .price_title h2:after {
-  background: url(/images/ribbon_right.png);
+  background: url("http://s3.amazonaws.com/grafter_static/ribbon_right.png");
   right: 0;
   left: auto;
 }
@@ -2379,16 +2379,16 @@ body div.lesson .admins-links {
   margin-left: 5px;
   border-left: 1px solid rgba(0, 0, 0, 0.2);
 }
-/* line 59, ../../app/stylesheets/partials/_lesson.sass */
+/* line 58, ../../app/stylesheets/partials/_lesson.sass */
 body div.lesson .admins-links a.button {
   padding: 3px;
   opacity: 0.7;
 }
-/* line 63, ../../app/stylesheets/partials/_lesson.sass */
+/* line 62, ../../app/stylesheets/partials/_lesson.sass */
 body div.lesson .admins-links a.button:hover {
   opacity: 1;
 }
-/* line 86, ../../app/stylesheets/screen.sass */
+/* line 87, ../../app/stylesheets/screen.sass */
 body .toolbar {
   display: inline;
   float: left;
@@ -2403,7 +2403,7 @@ body .toolbar {
 * html body .toolbar {
   overflow-x: hidden;
 }
-/* line 93, ../../app/stylesheets/screen.sass */
+/* line 94, ../../app/stylesheets/screen.sass */
 body .toolbar .search-bar {
   display: inline;
   float: left;
@@ -2414,11 +2414,11 @@ body .toolbar .search-bar {
 * html body .toolbar .search-bar {
   overflow-x: hidden;
 }
-/* line 96, ../../app/stylesheets/screen.sass */
+/* line 97, ../../app/stylesheets/screen.sass */
 body .toolbar .search-bar input {
   margin: 0;
 }
-/* line 99, ../../app/stylesheets/screen.sass */
+/* line 100, ../../app/stylesheets/screen.sass */
 body .toolbar .buttons-bar {
   display: inline;
   float: left;
@@ -2430,7 +2430,7 @@ body .toolbar .buttons-bar {
 * html body .toolbar .buttons-bar {
   overflow-x: hidden;
 }
-/* line 104, ../../app/stylesheets/screen.sass */
+/* line 105, ../../app/stylesheets/screen.sass */
 body form.search input.search-field {
   -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.7);
@@ -2440,14 +2440,14 @@ body form.search input.search-field {
   border-radius: 8px;
   font: 14px/16px "Helvetica", arial, serif;
   padding-left: 25px;
-  background: white url("/images/search.png") 5px 5px no-repeat;
+  background: white url("http://s3.amazonaws.com/grafter_static/search.png") 5px 5px no-repeat;
   outline: 0;
 }
-/* line 116, ../../app/stylesheets/screen.sass */
+/* line 117, ../../app/stylesheets/screen.sass */
 body form.search input.search-field:focus {
   outline: 0;
 }
-/* line 119, ../../app/stylesheets/screen.sass */
+/* line 120, ../../app/stylesheets/screen.sass */
 body .notice, body .alert {
   margin: 0;
   padding: 0;
@@ -2459,7 +2459,7 @@ body .notice, body .alert {
   background-color: rgba(0, 0, 0, 0.85);
   text-align: center;
 }
-/* line 130, ../../app/stylesheets/screen.sass */
+/* line 131, ../../app/stylesheets/screen.sass */
 body .notice span, body .alert span {
   margin-top: 15px;
   display: block;
@@ -2468,11 +2468,11 @@ body .notice span, body .alert span {
   text-shadow: 0 1px 1px black;
   color: white;
 }
-/* line 139, ../../app/stylesheets/screen.sass */
+/* line 140, ../../app/stylesheets/screen.sass */
 body table th {
   padding: 0;
 }
-/* line 142, ../../app/stylesheets/screen.sass */
+/* line 143, ../../app/stylesheets/screen.sass */
 body table td {
   padding: 0;
 }

@@ -2,6 +2,7 @@ $header: #cddae3
 $section: #316594
 $page: #ffffff
 $footer: #d0d9e0
+$images_path: "http://s3.amazonaws.com/grafter_static/"
 
 @import "blueprint/reset"
 @import "partials/base"
@@ -110,7 +111,7 @@ body
       border-radius: 8px
       font: 14px/16px "Helvetica", arial, serif
       padding-left: 25px
-      background: white url("/images/search.png") 5px 5px no-repeat
+      background: white url($images_path+"search.png") 5px 5px no-repeat
       outline: 0
 
     input.search-field:focus
