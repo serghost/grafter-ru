@@ -39,9 +39,9 @@ class UniversitiesController < ApplicationController
     @university = University.new params[:university]
 
     if @university.save
-      redirect_to university_path(@university), :notice => "University has been created."
+      redirect_to university_path(@university), :notice => t(:uncr_text)
     else
-      flash[:alert] = "University has not been created."
+      flash[:alert] = t(:unnotcr_text)
       render :action => "new"
     end
   end
@@ -51,15 +51,15 @@ class UniversitiesController < ApplicationController
 
   def destroy
     if @university.destroy
-      redirect_to universities_path, notice: "University has been deleted."
+      redirect_to universities_path, notice: t(:undel_text)
     end
   end
 
   def update
     if @university.update_attributes(params[:university])
-      redirect_to @university, :notice => "University has been updated."
+      redirect_to @university, :notice => t(:unupd_text)
     else
-      flash[:alert] = "University has not been updated."
+      flash[:alert] = t(:unnotupd_text)
       render :action => :edit
     end
   end

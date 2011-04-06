@@ -41,8 +41,13 @@ ru:
   dellesson_text: Предмет удален
   uplesson_text: Предмет обновлен
   notuplesson_text: Предмет не был обновлен
+  
+  uncr_text: ВУЗ добавлен
+  unnotcr_text: ВУЗ не был создан
+  undel_text: ВУЗ удален
+  unupd_text: ВУЗ обновлен
+  unnotupd_text: ВУЗ не был обновлен 
 
- 
  #device, users
 
   edit_profile_text: Редактировать профиль
