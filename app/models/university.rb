@@ -26,7 +26,7 @@ class University < ActiveRecord::Base
       @exists_university = University.where("title LIKE ?", self.title).limit(1)[0]
 
       if @exists_university.present?
-        errors.add(:title, "this university is already exists")
+        errors.add(:title, t(:univ_dubl_text))
       end
     end
   end

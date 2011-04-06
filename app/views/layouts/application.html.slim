@@ -45,16 +45,17 @@ html
 
               - unless controller.kind_of? Devise::RegistrationsController
                 li
-                  = link_to I18n.t(:signup_text), new_user_registration_path
+                  = link_to t(:signup_text), new_user_registration_path
 
             - else
-              - if can?(:edit, User)
-                li
-                  = link_to I18n.t(:users_text), users_path
+                
+              
+                 li
+                  = link_to t(:users_text), users_path
 
-              li
+            li
                 = link_to t(:profile_text), profile_users_path
-              li
+            li
                 = link_to t(:logout_text), destroy_user_session_path
 
       - if content_for? :topside

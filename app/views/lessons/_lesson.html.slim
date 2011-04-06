@@ -5,8 +5,10 @@
     .admins-links
       = link_to edit_university_lesson_path(@university, lesson), :class => "button" do
         span class="pen icon"
-        |Edit
+        |
+        = t(:edit_text)
       |&nbsp;
       = link_to university_lesson_path(@university, lesson), :method => :delete, :confirm => t(:sure_text), :class => "button" do
         span class="trash icon"
-        |Delete
+        |
+        = t(:del_text) 

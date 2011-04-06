@@ -6,10 +6,10 @@ li.span-24
     h3 #{user.email} #{"(Admin)" if user.admin?}
 
   .span-5.last
-    = link_to "Edit", [:edit, user]
+    = link_to t(:edit_text), [:edit, user]
 
     - unless current_user == user
-      = link_to "Delete", user, :method => :delete, :confirm => t(:sure_text)
+      = link_to t(:del_text), user, :method => :delete, :confirm => t(:sure_text)
 
       - if user.admin?
         = link_to t(:reset_text), [:reset, user], :confirm => t(:sure_text)

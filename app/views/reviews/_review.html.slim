@@ -4,10 +4,10 @@ div class="review #{Review::REVIEW_CLASS[review.kind]}"
 
     - if can?(:edit, review)
       br
-      = link_to "Edit review", [:edit, @university, review]
+      = link_to t(:edit_rew_text), [:edit, @university, review]
 
     - if can?(:destroy, review)
       br
-      = link_to "Delete review", [@university, review], :method => :delete, :confirm => "Are you sure?"
+      = link_to t(:del_rew_text), [@university, review], :method => :delete, :confirm => t(:sure_text)
 
   = simple_format(review.text)

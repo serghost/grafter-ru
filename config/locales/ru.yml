@@ -40,6 +40,7 @@ ru:
   rewdel_text: Отзыв удален
   denied_text: Доступ запрещен
   edit_rew_text: Редактировать отзыв
+  del_rew_text: Удалить отзыв
   notrews_text: Отзывов пока что нет, вы можете создать первый отзыв сейчас!  
   addrew_text: Добавить отзыв
   addprice_text: Добавить расценку   
@@ -63,13 +64,15 @@ ru:
   lesson_edit_text: Редактирвать предмет
   
   univ_edit_text: Редактировать ВУЗ
-  shortname_text: Аббревиатура ВУЗа (краткое название)
-  fullname_text: Полное название ВУЗа
+  shortname_text: Аббревиатура (краткое название)
+  fullname_text: Полное название
   univ_search_text: Введите имя ВУЗа для поиска
   add_univ_text: Добавить ВУЗ
   nothing_found_text: По вашему запросу ничего не найдено
 
+  back2lessons_text: Назад к списку предметов
   back2univs_text: Назад к списку ВУЗов
+  univ_dubl_text: Этот ВУЗ уже был добавлен
  # score, person, cost
   score_text: Оценка
   att_text: Аттестация

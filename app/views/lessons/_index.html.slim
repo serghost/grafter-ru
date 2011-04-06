@@ -2,12 +2,13 @@
   .toolbar
     .search-bar
       = form_for @university, :html => {:method => :get, :class => "search"} do
-        input#lesson.search-field name="lesson" type="text" placeholder="Enter your lesson to search them" tabindex="2" value="#{params[:lesson]}" data-complete="#{university_path(@university)}"
+        input#lesson.search-field name="lesson" type="text" placeholder="#{t(:lesson_search_text)}" tabindex="2" value="#{params[:lesson]}" data-complete="#{university_path(@university)}"
 
     .buttons-bar
       a#add_price href="#{new_university_price_path(@university)}" class="button pill"
         span class="plus icon"
-        |Add price
+        |
+        = t(:addprice_text)
 
   .prices_items
     - if @lessons.present?
@@ -15,4 +16,4 @@
     - else
       p
         |
-      = t(:pls_addprice_text) 
+        = t(:pls_addprice_text) 

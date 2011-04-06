@@ -1,8 +1,0 @@
-.span-7
-  |&nbsp;
-
-.fill-dialog
-  h2.form-title 
-  = t(:lesson_edit_text)
-
-  = render "form"
