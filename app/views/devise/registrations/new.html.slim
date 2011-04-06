@@ -2,7 +2,8 @@
   |&nbsp;
 
 .span-8.fill-dialog
-  h2.form-title Sign up
+  h2.form-title 
+   = t(:signup_text)
 
   = semantic_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f|
     .form-fields
@@ -11,4 +12,4 @@
 
     .form-buttons
       /* a.submit.button.pill.big href="#" Register*/
-      = f.submit "Register"
+      = f.submit t(:signupnow_text)
