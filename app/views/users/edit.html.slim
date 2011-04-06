@@ -1,10 +1,11 @@
 .span-24
-  = link_to "Back to users", users_path
+  = link_to t(:back2users_text), users_path
 
 .span-7
   |&nbsp;
 
 .fill-dialog
-  h2.form-title Edit user
+  h2.form-title 
+  = t(:edit_profile_text)
 
   = render "form"

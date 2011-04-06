@@ -6,12 +6,13 @@
       /* = label_tag :city*/
       /* = select_tag :city, options_from_collection_for_select(City.all, :id, :title)*/
       = form_tag search_path, {:method => :get, :class => "search"} do
-        = text_field_tag :query, params[:query].presence, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
+        = text_field_tag :query, params[:query].presence, :placeholder => "#{t(:univ_search_text)}", :tabindex => 1, class: "search-field"
 
     .buttons-bar
       a href="#{new_university_path}" class="button pill"
         span class="plus icon"
-        |Add university
+        |
+        = t(:add_univ_text) 
 
   ul
     /* = @universities.empty?*/
@@ -20,7 +21,8 @@
       == paginate @universities
 
     - else
-      p Not results for your search query.
+      p 
+      = t(:nothing_found_text)  
 
 .span-24
   .span-4

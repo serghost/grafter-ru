@@ -3,6 +3,6 @@
 
 .fill-dialog
   h2.form-title 
-  = t(:add_univ_text)
+  = t(:lesson_edit_text)
 
   = render "form"

@@ -17,6 +17,8 @@ ru:
   signin_text: Вход
  
   back_text: Вернуться к 
+  count_text: Количество
+
   #Prices, revs, reviews
 
   pls_addprice_text: Пока что расценок для этого ВУЗа нет. Но вы можете быть первым, кто создаст расценку!
@@ -25,17 +27,24 @@ ru:
   prnotup_text: Расценка не была обновлена
   prnotcr_text: Расценка не была создана  
   prdel_text: Расценка удалена
-
+  predit_text: Редактировать расценку
+   
+  rev_text: Ревизии
   revdel_text: Ревизия удалена
   allrevdel_text: Все ревизии удалены
-  
+   
   rewcr_text: Отзыв добавлен
   rewnotcr_text: Отзыв не был добавлен
   rewup_text: Отзыв обновлен
   rewnotup_text: Отзыв не был обновлен
   rewdel_text: Отзыв удален
   denied_text: Доступ запрещен
-  
+  edit_rew_text: Редактировать отзыв
+  notrews_text: Отзывов пока что нет, вы можете создать первый отзыв сейчас!  
+  addrew_text: Добавить отзыв
+  addprice_text: Добавить расценку   
+   
+   
    
 #Univs,lessons
   dellesson_text: Предмет удален
@@ -50,13 +59,31 @@ ru:
    
   univ_cantbe_blank_text: Поле "ВУЗ" не может быть пустым
   lesson_cantbe_blank_text: Поле "Предмет" не может быть пустым
- #device, users
+  lesson_search_text: Введите предмет для поиска
+  lesson_edit_text: Редактирвать предмет
+  
+  univ_edit_text: Редактировать ВУЗ
+  shortname_text: Аббревиатура ВУЗа (краткое название)
+  fullname_text: Полное название ВУЗа
+  univ_search_text: Введите имя ВУЗа для поиска
+  add_univ_text: Добавить ВУЗ
+  nothing_found_text: По вашему запросу ничего не найдено
 
+  back2univs_text: Назад к списку ВУЗов
+ # score, person, cost
+  score_text: Оценка
+  att_text: Аттестация
+  course_text: Курсовая
+  test_text: Зачет
+  person_text: Преподаватель
+
+ #device, users
+  submit_text: Продолжить
   edit_profile_text: Редактировать профиль
   want_text: Не имеете аккаунта и хотите добавить ВУЗ или предмет?
  
 
-  deluser_text: Пользователь удален
+  deluser_text: Пользователь удаленx
   delyourself_text: Постойте, вы же не можете удалить себя!
 
   userup_text: Данные пользователя обновлены
@@ -70,7 +97,21 @@ ru:
   
   mustbeadmin_text: Вы должны иметь права администратора, чтобы сделать это 
   
+  sure_text: Вы уверены?
+  back2users_text: Назад к списку пользователей
+   
+  #admin  
+  adminpanel_text: Админка
+  give_text: Дать права
+  reset_text: Права по умолчанию 
+  #CRUD
+  del_text: Удалить!
+  delall_text: Удалить все
+  edit_text: Редактировать
+  
   #kinds
   g_text: Хорошо
   b_text: Плохо
   n_text: Нейтрально
+  a_text: Все
+  

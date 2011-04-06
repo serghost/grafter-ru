@@ -9,4 +9,4 @@
 
     br
     = link_to "Apply revision", university_price_revision_path(@university, @price, version.id), :method => :put, :"data-compare" => @price.compare_with(version).to_json
-    = link_to "Delete", university_price_revision_path(@university, @price, version.id), :method => :delete, :confirm => "Are you sure?"
+    = link_to t(:del_text), university_price_revision_path(@university, @price, version.id), :method => :delete, :confirm => t(:sure_text)

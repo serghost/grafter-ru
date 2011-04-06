@@ -2,7 +2,8 @@
   |&nbsp;
 
 .span-8.fill-dialog
-  h2.form-title Sign in
+  h2.form-title
+   = t(:signin_text)
 
   = semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     .form-fields
@@ -14,4 +15,4 @@
 
     .form-buttons
       /* a.submit.button.pill.big href="#" Sign In*/
-      = f.submit "Continue"
+      = f.submit t(:submit_text)

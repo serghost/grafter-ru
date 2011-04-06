@@ -10,10 +10,12 @@ tr
     - if can?(:edit, price)
       a href="#{edit_university_price_path(@university, price)}" class="button"
         span class="pen icon"
-        |Edit
+        |
+        = t(:edit_text)
 
     - if can?(:destroy, price)
       |&nbsp;
-      a href="#{university_price_path(@university, price)}" class="button" data-method="delete" data-confirm="Are you sure?"
+      a href="#{university_price_path(@university, price)}" class="button" data-method="delete" data-confirm="#{t(:sure_text)}"
         span class="trash icon"
-        |Delete
+        | 
+        = t(:del_text)

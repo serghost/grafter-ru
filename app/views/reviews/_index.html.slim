@@ -1,19 +1,21 @@
 #reviews
   .toolbar
     .search-bar
-      a href="#{university_reviews_path(@university)}" class="left pill button" All
-      a href="#{university_reviews_path(@university)}?kind=1" class="middle pill button" Good
-      a href="#{university_reviews_path(@university)}?kind=0" class="middle pill button" Neutral
-      a href="#{university_reviews_path(@university)}?kind=-1" class="right pill button" Bad
+      a href="#{university_reviews_path(@university)}" class="left pill button" "#{t(:a_text)}"
+      a href="#{university_reviews_path(@university)}?kind=1" class="middle pill button" "#{t(:g_text)}"
+      a href="#{university_reviews_path(@university)}?kind=0" class="middle pill button" "#{t(:n_text)}" 
+      a href="#{university_reviews_path(@university)}?kind=-1" class="right pill button" "#{t(:b_text)}" 
 
     .buttons-bar
       a href="#{new_university_review_path(@university)}" class="button pill"
         span.icon.plus
-        |Create review
+        |
+        = t(:addrew_text)
 
   - if @reviews.present?
     = render @reviews
     == paginate @reviews
   - else
     p
-      |Reviews in this university is not exists yet. You might create a new review!
+      |
+      = t(:notrews_text)

@@ -1,7 +1,7 @@
 = semantic_form_for @university, :html => {:multipart => true} do |form|
   .form-fields
-    = form.input :short, :required => false, :label => "Short name"
-    = form.input :title, :required => false, :label => "Full title"
+    = form.input :short, :required => false, :label => t(:shortname_text)
+    = form.input :title, :required => false, :label => t(:fullname_text)
 
     - unless @university.logo.url == "/images/universities/missing.png"
       = image_tag @university.logo.url

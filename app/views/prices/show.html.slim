@@ -5,16 +5,26 @@
     table
       thead
         tr
-          th width="24%" Person
-          th Score: 5
-          th Score: 4
-          th Score: 3
-          th Attestation
-          th Course work
-          th Test
+          th width="24%"
+          = t(:person_text)
+          th 
+           = t(:score_text)
+           5
+          th 
+           = t(:score_text)
+           4
+          th
+           = t(:score_text)
+           3
+          th
+           = t(:att_text)
+          th 
+           = t(:course_text)
+          th 
+           = t(:person_text)
           th
 
       tbody
         = render @price
 
-= link_to "Back to university", @university
+= link_to t(:back2univs_text), @university

@@ -11,11 +11,13 @@
       - if can?(:edit, @university)
         a href="#{edit_university_path(@university)}" class="button"
           span class="pen icon"
-          | Edit
+          |
+          = t(:edit_text)
 
       - if can?(:destroy, @university)
-        a href="#{university_path(@university)}" class="negative button" data-confirm="Are you sure?" data-method="delete"
+        a href="#{university_path(@university)}" class="negative button" data-confirm="#{t(:sure_text)}" data-method="delete"
           span class="trash icon"
-          | Delete
+          | 
+          = t(:del_text)
 
   = render @tabs
