@@ -32,30 +32,30 @@ html
 
           - unless @hide_search_bar
             = form_tag search_path, {:method => :get, :class => "search"} do
-              = text_field_tag :query, nil, :placeholder => "Enter your university to search", :tabindex => 1, class: "search-field"
+              = text_field_tag :query, nil, :placeholder => t(:search_text), :tabindex => 1, class: "search-field"
 
           ul
             li
-              = link_to "Universities", universities_path
+              = link_to t(:univ_text), universities_path
 
             - unless current_user.present?
               - unless controller.kind_of? Devise::SessionsController
                 li
-                  a href="#{new_user_session_path}" Sign In
+                  = link_to t(:signin_text), new_user_session_path
 
               - unless controller.kind_of? Devise::RegistrationsController
                 li
-                  a href="#{new_user_registration_path}" Sign Up
+                  = link_to t(:signup_text), new_user_registration_path
 
             - else
               - if can?(:edit, User)
                 li
-                  a href="#{users_path}" Users
+                  = link_to t(:users_text), users_path
 
               li
-                = link_to "Profile", profile_users_path
+                = link_to t(:profile_text), profile_users_path
               li
-                = link_to "Log out", destroy_user_session_path
+                = link_to t(:logout_text), destroy_user_session_path
 
       - if content_for? :topside
         #topside
@@ -77,9 +77,10 @@ html
           li
             a href="http://twitter.com/GrafterRU" target="_blank" Twitter
           li
-            a href="http://grafterru.tumblr.com" target="_blank" Blog
+            = link_to t(:blog_text), "http://grafterru.tumblr.com/", :target => "_blank"
           li
-            a href="mailto:grafter.ru@gmail.com?subject=Abuse" Make abuse!
+            = link_to t(:abuse_text), "mailto:grafter.ru@gmail.com?subject=Abuse" 
+            
 
             = javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.11/jquery-ui.min.js"
             = include_javascripts :common
