@@ -20,9 +20,9 @@ class PricesController < ApplicationController
 
   def update
     if @price.update_attributes(params[:price])
-      redirect_to [@university, @price], :notice => "Price has been updated."
+      redirect_to [@university, @price], :notice => t(:prup_text)
     else
-      flash[:alert] = "Price has not been updated."
+      flash[:alert] = t(:prnotup_text)
       render :action => :edit
     end
   end
@@ -38,15 +38,15 @@ class PricesController < ApplicationController
           duplicate[key] = params[:price][key]
         end
 
-        redirect_to [@university, duplicate.lesson], :notice => "Price has been updated." if duplicate.save
+        redirect_to [@university, duplicate.lesson], :notice => t(:prup_text) if duplicate.save
       else
         @price.save
 
-        redirect_to [@university, @price.lesson], :notice => "Price has been created." if @price.save
+        redirect_to [@university, @price.lesson], :notice => t(:prnotup_text) if @price.save
       end
 
     else
-      flash[:alert] = "Price has not been created."
+      flash[:alert] = t(:prnotcr_text)
       render :action => "new"
     end
   end
@@ -56,9 +56,9 @@ class PricesController < ApplicationController
 
     if @price.save
       @version.destroy
-      flash[:notice] = "Price has been updated."
+      flash[:notice] = t(:prup_text)
     else
-      flash[:alert] = "Price has not been updated."
+      flash[:alert] = t(:prnotup_text)
     end
 
     redirect_to edit_university_price_path(@university, @price)
@@ -68,7 +68,7 @@ class PricesController < ApplicationController
     @price = Price.find params[:price_id]
     @version.destroy
 
-    redirect_to edit_university_price_path(@university, @price), :notice => "Revision has been deleted."
+    redirect_to edit_university_price_path(@university, @price), :notice => t(:revdel_text)
   end
 
   def delete_revisions
@@ -76,7 +76,7 @@ class PricesController < ApplicationController
       version.destroy
     end
 
-    redirect_to edit_university_price_path(@university, @price), :notice => "All revisions has been deleted."
+    redirect_to edit_university_price_path(@university, @price), :notice => t(:allrevdel_text)
   end
 
   def destroy # FIXME: Move this code into model with callback! Thin controller, fat model!
@@ -85,6 +85,6 @@ class PricesController < ApplicationController
     end
 
     Price.delete_with_lesson(@price) # FIXME: Add disable for storing destroy action
-    redirect_to @university, notice: "Price has been deleted."
+    redirect_to @university, notice: t(:prdel_text)
   end
 end

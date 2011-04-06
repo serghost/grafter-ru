@@ -23,7 +23,7 @@ class LessonsController < ApplicationController
   def destroy
     @lesson.destroy
 
-    redirect_to @university, :notice => "Lesson has been deleted."
+    redirect_to @university, :notice => t(:dellesson_text)
   end
 
   def edit
@@ -31,9 +31,9 @@ class LessonsController < ApplicationController
 
   def update
     if @lesson.update_attributes(params[:lesson])
-      redirect_to @university, :notice => "Lesson has been updated."
+      redirect_to @university, :notice => t(:uplesson_text)
     else
-      flash[:alert] = "Lesson has not been updated."
+      flash[:alert] = t(:notuplesson_text)
       render :action => :edit
     end
   end

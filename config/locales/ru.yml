@@ -17,11 +17,23 @@ ru:
   signin_text: Вход
  
   back_text: Вернуться к 
-  #Prices
+  #Prices, revs
 
   pls_addprice_text: Пока что расценок для этого ВУЗа нет. Но вы можете быть первым, кто создаст расценку!
- 
- #Univs
+  
+  prup_text: Расценка обновлена
+  prnotup_text: Расценка не была обновлена
+  prnotcr_text: Расценка не была создана  
+  prdel_text: Расценка удалена
+
+  revdel_text: Ревизия удалена
+  allrevdel_text: Все ревизии удалены
+  
+ #Univs,lessons
+  dellesson_text: Предмет удален
+  uplesson_text: Предмет обновлен
+  notuplesson_text: Предмет не был обновлен
+
  
  #device, users
 
@@ -29,3 +41,16 @@ ru:
   want_text: Не имеете аккаунта и хотите добавить ВУЗ или предмет?
  
 
+  deluser_text: Пользователь удален
+  delyourself_text: Постойте, вы же не можете удалить себя!
+
+  userup_text: Данные пользователя обновлены
+  profup_text: Профиль обновлен
+  
+  notupdated_user_text: Данные пользователя не были обновлены
+  
+  hasnorights_text: Пользователь не имеет прав администратора
+  dropadminrights_text: Постойте, вы же не можете лишить себя права администрирования
+  hasrights_text: Пользователь имеет права администратора
+  
+  mustbeadmin_text: Вы должны иметь права администратора, чтобы сделать это 

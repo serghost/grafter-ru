@@ -13,9 +13,9 @@ class UsersController < ApplicationController
   def destroy
     unless @user == current_user
       @user.destroy
-      redirect_to users_path, :notice => "User has been deleted."
+      redirect_to users_path, :notice => t(:deluser_text)
     else
-      redirect_to users_path, :notice => "You cannot delete yourself."
+      redirect_to users_path, :notice => t(:delyourself_text)
     end
   end
 
@@ -25,12 +25,12 @@ class UsersController < ApplicationController
 
     if @user.update_attributes(params[:user])
       if current_user.admin?
-        redirect_to users_path, :notice => "User has been updated."
+        redirect_to users_path, :notice => t(:userup_text)
       else
-        redirect_to profile_users_path, :notice => "Profile has been updated."
+        redirect_to profile_users_path, :notice => t(:profup_text)
       end
     else
-      flash[:alert] = "User has not been updated."
+      flash[:alert] = t(:notupdated_user_text)
       render :action => :edit
     end
   end
@@ -44,9 +44,9 @@ class UsersController < ApplicationController
       @user.admin = false
       @user.save
 
-      redirect_to users_path, :notice => "User has no admin rights."
+      redirect_to users_path, :notice => t(:hasnorights_text)
     else
-      redirect_to users_path, :notice => "You cannot drop out your admin rights."
+      redirect_to users_path, :notice => t(:dropadminrights_text)
     end
   end
 
@@ -54,6 +54,6 @@ class UsersController < ApplicationController
     @user.admin = true
     @user.save
 
-    redirect_to users_path, :notice => "User has admin rights."
+    redirect_to users_path, :notice => t(:hasrights_text)
   end
 end
