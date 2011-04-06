@@ -87,7 +87,7 @@ class Price < ActiveRecord::Base
         self.teacher_id = @university.teachers.create!(:personal => self.personal).id
       end
     else
-      raise "University can't be blank"
+      raise t(:univ_cantbe_blank_text)
     end
   end
 
@@ -101,7 +101,7 @@ class Price < ActiveRecord::Base
         self.lesson_id = @university.lessons.create!(:title => self.lesson_title).id
       end
     else
-      raise "Lesson can't be blank"
+      raise t(:lesson_cantbe_blank_text)
     end
   end
 end

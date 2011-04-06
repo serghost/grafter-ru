@@ -41,8 +41,15 @@ ru:
   dellesson_text: Предмет удален
   uplesson_text: Предмет обновлен
   notuplesson_text: Предмет не был обновлен
-
- 
+  
+  uncr_text: ВУЗ добавлен
+  unnotcr_text: ВУЗ не был создан
+  undel_text: ВУЗ удален
+  unupd_text: ВУЗ обновлен
+  unnotupd_text: ВУЗ не был обновлен 
+   
+  univ_cantbe_blank_text: Поле "ВУЗ" не может быть пустым
+  lesson_cantbe_blank_text: Поле "Предмет" не может быть пустым
  #device, users
 
   edit_profile_text: Редактировать профиль
@@ -62,3 +69,8 @@ ru:
   hasrights_text: Пользователь имеет права администратора
   
   mustbeadmin_text: Вы должны иметь права администратора, чтобы сделать это 
+  
+  #kinds
+  g_text: Хорошо
+  b_text: Плохо
+  n_text: Нейтрально
