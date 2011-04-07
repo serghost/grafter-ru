@@ -118,3 +118,11 @@ ru:
   n_text: Нейтрально
   a_text: Все
   
+  formtastic:
+    :yes: 'Да'
+    :no: 'Нет'
+    :create: 'Создать %{model}'
+    :update: 'Обновить %{model}'
+    :remember_me: 'Запомнить меня'
+    :commit: 'Создать ВУЗ'
+    

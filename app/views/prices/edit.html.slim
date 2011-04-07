@@ -1,19 +1,19 @@
 .span-24
-  = link_to t(:back_text) "#{@university.short}", @university
+  = link_to t(:back_text) #{@university.short}, @university
 
 div class="#{@revisions.present? ? 'span-3' : 'span-7'}"
   |&nbsp;
 
 div class="fill-dialog"
   h2.form-title 
-  = t(:predit_text)
+   = t(:predit_text)
 
   = render "form"
 
 - if @revisions.present?
   #revisions
     h3 
-    = t(:rev_text)
+     = t(:rev_text)
     = link_to t(:delall_text), delete_revisions_university_price_path(@university, @price), :method => :post, :confirm => t(:sure_text), :class => "delete_all"
 
     = render @revisions
