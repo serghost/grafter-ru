@@ -1,5 +1,5 @@
 .lesson
-  a href="#{university_lesson_url(@university, lesson)}" title="#{t:(count_text) ({lesson.prices.count})
+  a href="#{university_lesson_url(@university, lesson)}" title="#{t(:count_text)} (#{lesson.prices.count})"
     = lesson.title
   - if can?(:edit, Lesson)
     .admins-links

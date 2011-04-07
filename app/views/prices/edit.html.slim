@@ -1,5 +1,5 @@
 .span-24
-  = link_to t(:back_text) #{@university.short}, @university
+  = link_to "#{t(:back_text)} #{@university.short}", @university
 
 div class="#{@revisions.present? ? 'span-3' : 'span-7'}"
   |&nbsp;
