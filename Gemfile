@@ -8,7 +8,7 @@ gem 'paper_trail', git: 'git://github.com/airblade/paper_trail.git'
 gem 'decent_exposure', git: 'git://github.com/voxdolo/decent_exposure.git'
 
 gem 'devise', git: 'git://github.com/plataformatec/devise.git'
-gem 'cancan'
+gem 'cancan', git:  'git://github.com/ryanb/cancan.git' 
 
 gem 'recaptcha', git: 'git://github.com/ambethia/recaptcha.git', require:  'recaptcha/rails'
 

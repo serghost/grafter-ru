@@ -49,7 +49,7 @@ html
 
             - else
                 
-              
+               - if can?(:edit, User) 
                  li
                   = link_to t(:users_text), users_path
 

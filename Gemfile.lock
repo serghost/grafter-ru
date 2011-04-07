@@ -63,6 +63,12 @@ GIT
       warden (~> 1.0.3)
 
 GIT
+  remote: git://github.com/ryanb/cancan.git
+  revision: b1424dfa493202db3726565022bc09d381d89727
+  specs:
+    cancan (1.6.4)
+
+GIT
   remote: git://github.com/stonean/slim.git
   revision: b7f259e3d0cf7a21fadcac74257bcb2a524d8fa8
   tag: v0.9.1
@@ -133,7 +139,6 @@ GEM
       ZenTest (>= 4.4.1)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
-    cancan (1.6.2)
     capybara (0.4.1.2)
       celerity (>= 0.7.9)
       culerity (>= 0.2.4)
@@ -272,7 +277,7 @@ DEPENDENCIES
   annotate
   autotest
   bcrypt-ruby
-  cancan
+  cancan!
   capybara
   capybara-firebug!
   compass!
