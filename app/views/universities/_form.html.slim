@@ -5,10 +5,10 @@
 
     - unless @university.logo.url == "/images/universities/missing.png"
       = image_tag @university.logo.url
-    = form.input :logo, :as => :file
+    = form.input :logo, :label => t(:logo),  :as => :file
 
-    = form.label :city_id
+    = form.label t(:city)
     = form.select :city_id, option_groups_from_collection_for_select(Department.includes(:cities), :cities, :title, :id, :city_title, @university.city_id)
 
   .form-buttons
-    = form.submit
+    = form.submit :value => t(:add_text)

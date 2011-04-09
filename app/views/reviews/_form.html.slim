@@ -1,7 +1,7 @@
 = semantic_form_for [@university, @review] do |form|
   .form-fields
-    = form.input :kind, :as => :select, :collection => Review::REVIEW_KINDS, :include_blank => false, :required => false
-    = form.input :text, :as => :text, :required => false
+    = form.input :kind, :label => t(:kind_text), :as => :select, :collection => Review::REVIEW_KINDS, :include_blank => false, :required => false
+    = form.input :text, :label => t(:message_text), :as => :text, :required => false
 
   .form-buttons
-    = form.submit
+    = form.submit :value => t(:send_text)

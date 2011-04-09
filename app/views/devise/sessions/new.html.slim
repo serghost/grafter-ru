@@ -7,11 +7,11 @@
 
   = semantic_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
     .form-fields
-      = f.input :email, :as => :email, :required => false
-      = f.input :password, :as => :password, :required => false
+      = f.input :email, :label => t(:email),  :as => :email, :required => false
+      = f.input :password, :label => t(:password), :as => :password, :required => false
 
     - if devise_mapping.rememberable?
-      = f.input :remember_me, :as => :boolean
+      = f.input :remember_me, :label => t(:rem_me), :as => :boolean
 
     .form-buttons
       /* a.submit.button.pill.big href="#" Sign In*/

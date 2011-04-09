@@ -1,6 +1,6 @@
 = semantic_form_for [@university, @lesson] do |form|
   .form-fields
-    = form.input :title, :required => false
+    = form.input :title, :label => t(:title_text), :required => false
 
   .form-buttons
-    = form.submit
+    = form.submit :value => t(:updlesson_text)

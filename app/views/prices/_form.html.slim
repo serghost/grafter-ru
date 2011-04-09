@@ -1,14 +1,14 @@
 = semantic_form_for [@university, @price] do |form|
   .form-fields
-    = form.input :lesson_title, :as => :string, :required => false
-    = form.input :personal, :required => false
+    = form.input :lesson_title, :label => t(:les_text), :as => :string, :required => false
+    = form.input :personal,  :label => t(:person_text), :required => false
 
-    = form.input :score_5, :input_html => {:"data-previous" => @price.score_5}
-    = form.input :score_4, :input_html => {:"data-previous" => @price.score_4}
-    = form.input :score_3, :input_html => {:"data-previous" => @price.score_3}
-    = form.input :attestation, :input_html => {:"data-previous" => @price.attestation}
-    = form.input :test, :input_html => {:"data-previous" => @price.test}
-    = form.input :course_work, :input_html => {:"data-previous" => @price.course_work}
+    = form.input :score_5, :label => "#{t(:score_text)} 5", :input_html => {:"data-previous" => @price.score_5}
+    = form.input :score_4, :label => "#{t(:score_text)} 4", :input_html => {:"data-previous" => @price.score_4}
+    = form.input :score_3, :label => "#{t(:score_text)} 3", :input_html => {:"data-previous" => @price.score_3}
+    = form.input :attestation, :label => t(:att_text), :input_html => {:"data-previous" => @price.attestation}
+    = form.input :test, :label => t(:test_text), :input_html => {:"data-previous" => @price.test}
+    = form.input :course_work, :label => t(:course_text), :input_html => {:"data-previous" => @price.course_work}
 
   .form-buttons
-    = form.submit
+    = form.submit :value => t(:addprice2_text) 
